@@ -1,0 +1,2 @@
+# rogalik
+Roguelike game prototype
