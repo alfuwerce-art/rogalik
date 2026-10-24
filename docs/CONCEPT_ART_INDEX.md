@@ -25,6 +25,21 @@
 
 Остальные враги утверждены по составу, не по картинке. Не выдумывать им статус `VISUAL_APPROVED`.
 
+
+## Оружие — 5 утверждённых концепт-листов (20 разновидностей)
+
+Все оригиналы получены повторно от владельца 2026-10-25 и сохранены без пересжатия в обновлённом локальном архиве. **В GitHub статус `PNG_IN_REPO = false` до фактической проверки бинарных файлов.**
+
+| Семейство | Целевой путь | Художественный статус |
+|---|---|---|
+| two handed | `assets/references/weapons/01_two_handed_weapons.png` | APPROVED |
+| magic | `assets/references/weapons/02_magic_staves.png` | APPROVED |
+| dual | `assets/references/weapons/03_dual_weapons.png` | APPROVED |
+|  | `assets/references/weapons/04_bows.png` | APPROVED |
+| combat | `assets/references/weapons/05_combat_staves.png` | APPROVED |
+
+Подробная расшифровка 20 видов и хеши: [WEAPON_REFERENCES.md](WEAPON_REFERENCES.md).
+
 ## Первая локация — пять кандидатов, пока НЕ утверждены
 
 - `assets/references/locations/first_location/first_location_master_candidate.png`
