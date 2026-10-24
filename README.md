@@ -5,6 +5,7 @@ Roguelike game prototype
 
 - [Полный бестиарий: 9 боссов и 10 семейств врагов](docs/BESTIARY.md)
 - [Утверждённые референсы боссов](docs/BOSS_REFERENCES.md)
+- [Индекс концепт-артов и статусов изображений](docs/CONCEPT_ART_INDEX.md)
 
 - [Система умений, благословений и деревьев развития](docs/SKILLS_AND_BOONS.md)
 - [Визуальные референсы оружия и список файлов](docs/WEAPON_REFERENCES.md)
@@ -18,6 +19,8 @@ Roguelike game prototype
 - [Структура папок и правила импорта концепт-артов](docs/REPOSITORY_STRUCTURE.md)
 
 ## Автономная разработка с DeepSeek Harness
+
+- [Основные правила работы DeepSeek](docs/DEEPSEEK_GAME_DEV_RULES.md)
 
 - [Рабочий регламент агента и шаблон задач](docs/AI_STUDIO_PLAYBOOK.md)
 - [**Обязательные общие этапы разработки ВСЕХ моделей и анимаций**](docs/GLOBAL_ASSET_PASSES.md)
