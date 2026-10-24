@@ -11,6 +11,11 @@ Roguelike game prototype
 - [Художественное направление: древнерусская кошмарная готика](docs/ART_DIRECTION.md)
 - [Ранние референсы игровых арен](docs/VISUAL_REFERENCES.md)
 - [Кандидат первой локации — «Проклятая слобода»](docs/FIRST_LOCATION_CONCEPT.md)
+- [Правила дизайна и проверки первой локации](docs/FIRST_LOCATION_ART_RULES.md)
+
+## Структура проекта
+
+- [Структура папок и правила импорта концепт-артов](docs/REPOSITORY_STRUCTURE.md)
 
 ## Автономная разработка с DeepSeek Harness
 
