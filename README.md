@@ -14,6 +14,7 @@ Roguelike game prototype
 ## Автономная разработка с DeepSeek Harness
 
 - [Рабочий регламент агента и шаблон задач](docs/AI_STUDIO_PLAYBOOK.md)
+- [**Этапы моделей, ригов, анимаций и проверки качества**](docs/CHARACTER_PRODUCTION_PIPELINE.md)
 - [Библиотека подсказок для типовых блокеров](docs/AI_HINT_LIBRARY.md)
 
 > Процесс для DeepSeek описан как план; его автоматическое выполнение ещё не проверено.
