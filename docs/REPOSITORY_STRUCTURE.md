@@ -65,6 +65,15 @@ rogalik/
 
 **Рядовые враги:** `fallen_warriors/{fallen_warrior_base,fallen_warrior_variants_triptych}.png`, `bellringers/{bellringer_base,bellringer_variants_triptych}.png`, `morovoi_volkhv/{morovoi_volkhv_base,morovoi_volkhv_variants_triptych}.png`, `dead_archer/dead_archer_base.png` — УТВЕРЖДЕНЫ; `dead_archer/dead_archer_variants_triptych_candidate.png` — только кандидат.
 
+**Оружие — пять оригинальных референс-листов, 20 разновидностей (2026-10-25):**
+- `weapons/01_two_handed_weapons.png`
+- `weapons/02_magic_staves.png`
+- `weapons/03_dual_weapons.png`
+- `weapons/04_bows.png`
+- `weapons/05_combat_staves.png`
+
+Указанные пути относительны к `assets/references/`; источники предоставлены владельцем и включены в импортный ZIP. Подробные SHA-256 и статус загрузки — в [WEAPON_REFERENCES.md](WEAPON_REFERENCES.md).
+
 **Первая локация (ПОКА КАНДИДАТЫ):**
 - `locations/first_location/first_location_master_candidate.png` — ранняя сводка.
 - `locations/first_location/cursed_sloboda_master_concept.png` — единый общий вид.
