@@ -144,6 +144,8 @@
 | `45603db` | запись публикации REFS-2 в память (D14) — **`PUSHED`**; было последним подтверждённым удалённым HEAD до задачи 3.1b |
 | `130e116` | задача 3.1b: калибровочная сцена (`calibration.tscn`, `calibration.gd`), 19 новых ассетов + `.pxo` + исходники, инструменты `tools/stage3_calibration/`, герой 3.1b (`author_hero.py`, PNG, `.pxo`), кадры/клип/лист сравнения, отчёт, память (111 файлов: 74 бинарника 24,70 MB, 37 текстов 296 KB) — **`PUSHED`** в `origin/stage3-hero`: `git ls-remote` = `130e116`, blob-и `izba_24.png` (`398a7e4…`), `stage3b_calib_frame.png` (`7c794dd…`) и `STAGE_03.md` (`ee6b3af…`) совпали с локальными |
 | `382b78b` | запись публикации задачи 3.1b в память (D14) — **`PUSHED`**: `git ls-remote --heads origin stage3-hero` = `382b78b` на момент проверки; следующий коммит памяти идёт после него и по определению не может содержать собственный SHA |
+| `130e116` → `3e9dad0` | задачи 3.1c и 3.1d (см. PROJECT_STATE §3) — **`PUSHED`** |
+| `137573e` | задача 3.1e: решение **D22** и правила (`AGENTS.md` §10, `PIXEL_ART_STYLE_GUIDE` §12.5/§13, `ART_DIRECTION`, `AI_STUDIO_PLAYBOOK` §3, `DEVELOPMENT_PLAN`), мастер-образ героя 96 и 48 px + редактируемые `.pxo`, инструменты `tools/hero_master/`, кадры Godot, лист сравнения, отчёт, память (35 файлов) — **`PUSHED`** в `origin/stage3-hero`: `git ls-remote` = `137573ec…` = локальный `HEAD`; blob-и `hero_master_96.png` (`76a87b1…`), `hero_master_96.pxo` (`f3d3fb4…`), `DECISIONS.md` (`7b32905…`), `stage3e_compare_sheet.png` (`24e4eb9…`) совпали с локальными |
 
 ## 7. Результаты технических проверок
 
