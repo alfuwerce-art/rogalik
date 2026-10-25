@@ -24,6 +24,7 @@
 |---|---|---|---|
 | 3.1 | Первый игровой силуэт героя: 48 px, 4 направления, минимальный `idle` | **`PASS`** (техника) / `FIX_REQUIRED` → закрыто задачей 3.1a | Лист `game/prototype/art/sprites/hero_idle_48.png` — 256×48, 8 кадров 32×48 (4 направления × 2 кадра `idle`); исходник `tools/stage3_hero/source/hero_idle_48.pxo` (Pixelorama 1.2.3, 8 кадров, теги `idle_down/up/left/right`) собран пайплайном и **экспортирован самим Pixelorama CLI**; герой интегрирован в `location.tscn` с выбором направления по доминирующей оси. Отчёт: [stage3_task31_report.md](../../reports/stage3_task31_report.md), лист сравнения: [stage3_hero_compare.png](../../reports/stage3_hero_compare.png) |
 | 3.1a | Художественная доработка силуэта (пропорции, волосы, повязка, одежда, профили) | **`PASS`** (техника) / `NEEDS_REVIEW` (художественная приёмка) | Голова уменьшена с 13 до 10 рядов, плечи расширены до 18 px, талия сужена до 8 px (V-образный силуэт), руки и ноги толще, штаны свободнее с рваным краем, кушак в три ряда, волосы с неровным контуром и локонами, у повязки — узел на виске и два сужающихся конца, на затылке узел с двумя лентами; профили перерисованы. Ассет пересобран тем же пайплайном и переэкспортирован Pixelorama CLI. Лист «было → стало»: [stage3a_hero_compare.png](../../reports/stage3a_hero_compare.png), отчёт: [stage3_task31a_report.md](../../reports/stage3_task31a_report.md) |
+| REFS-1 | Постоянная база игровых референсов и решение D18 (документация, вне арт-объёма этапа) | **`PASS`** (документация) / `PARTIALLY_APPROVED` | Создан [GAME_REFERENCES.md](../GAME_REFERENCES.md): утверждённый состав из четырёх игр (Children of Morta, Hyper Light Drifter, Hades II, Path of Exile 2), проверенные `git grep` цитаты канона по Hades II и PoE 2, перечень из 8 открытых вопросов методики, шесть зафиксированных расхождений (`DISCREPANCY-1…6`). Записано решение **D18**, ссылки добавлены в `AGENTS.md` §1/§5 и `AI_STUDIO_PLAYBOOK.md` §1. Геймдизайн, канон внешности, константы D16 и задача 3.2 не менялись |
 
 Статус `PASS` здесь означает только технические проверки (§7). Художественное качество силуэта этими проверками **не доказано** и выносится на рассмотрение владельцем.
 
@@ -57,6 +58,7 @@
 - **Артефакты задачи 3.1a:** `reports/stage3a_frame_down|up|left|right.png` (новый силуэт в игре, 960×540), `reports/stage3a_hero_compare.png` (лист «референс → 3.1 было → 3.1a стало → в игре»), `reports/stage3a_prev_hero_idle_48.png` (предыдущий лист, извлечён из коммита `966cfc7`), `reports/stage3a_preview_a1|a2|final.png`, `reports/stage3a_zoom10.png`, `reports/stage3a_hero_build.json`, `reports/stage3a_frames_check.json` / `.txt`, `reports/stage3_task31a_report.md`.
 - **Логи запусков** `reports/stage3_run_*.log`, `reports/stage3a_run_*.log` — локальные, в репозиторий не попадают (`reports/*.log` в `.gitignore`); все цифры из них перенесены в §7.
 - **Документы:** `docs/progress/STAGE_03.md` (этот файл), `docs/progress/PROJECT_STATE.md`, `docs/DEVELOPMENT_PLAN.md` §5, `docs/CONCEPT_ART_INDEX.md` (статусы героя), `AGENTS.md` §2 (актуальная рабочая ветка этапа).
+- **Документы задачи REFS-1 (D18):** новый `docs/GAME_REFERENCES.md`; ссылки в `AGENTS.md` §1/§5 (и ред. D18 в шапке) и `docs/AI_STUDIO_PLAYBOOK.md` §1; запись `D18` в `docs/DECISIONS.md`. Канон (`ART_DIRECTION.md`, `SKILLS_AND_BOONS.md`, `PIXEL_ART_STYLE_GUIDE.md`, `BESTIARY.md`) **не изменялся**.
 
 ## 6. Локальные Git-коммиты
 
@@ -114,6 +116,7 @@
 ## 9. Незавершённая работа
 
 - Задача **3.2** — базовая анимация движения по четырём направлениям (`move`), затем `dodge`, `attack`, `hurt`, `death` (объём Этапа 3 по плану).
+- **Методика использования четырёх игр-референсов не утверждена** (D18, [GAME_REFERENCES.md §6](../GAME_REFERENCES.md) `DISCREPANCY-1`): исходный документ владельца `ROGALIK_GAME_REFERENCES.md` не передан. До его получения «что берём» по референсам не утверждается; открытые вопросы — [GAME_REFERENCES.md §4](../GAME_REFERENCES.md).
 - Ждёт решения владельца по итогам 3.1a: **принять доработанный силуэт** как основу для анимации движения или **вернуть на доработку** с указанием правок (пропорции, волосы, повязка, штаны, профили).
 - Атлас + JSON и контроллер состояний (часть объёма этапа) не начаты.
 
