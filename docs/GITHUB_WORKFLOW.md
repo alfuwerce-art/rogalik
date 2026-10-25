@@ -8,7 +8,7 @@
 | Поле | Значение | Чем проверено |
 |---|---|---|
 | Репозиторий | `https://github.com/alfuwerce-art/rogalik` (публичный) | `git remote -v` |
-| Рабочая ветка | Этап 2 — `stage2-location-prototype`, upstream `origin/stage2-location-prototype`; ветка Этапа 1 `stage1-playable-combat` закрыта приёмкой | `git branch -vv` |
+| Рабочая ветка | Этап 2 — `stage2-location-prototype`, upstream `origin/stage2-location-prototype`; **этап принят (D17), ветка сохраняется**; ветка Этапа 1 `stage1-playable-combat` закрыта приёмкой | `git branch -vv` |
 | HEAD рабочей ветки (D14) | `0978b5c` — он же удалённый SHA | `git rev-parse HEAD` |
 | Коммитов сверх `origin/main` | 14 на момент записи (актуальное — `git rev-list --count origin/main..HEAD`) | `git rev-list --count origin/main..HEAD` |
 | `origin/main` | `e9f9128` | `git ls-remote --heads origin` |
@@ -46,7 +46,8 @@
 main                — стабильная защищённая ветка, только через PR владельца
 rogalik-dev         — прежняя ветка прототипа и инструментов (историческая, не удаляется)
 stage1-playable-combat — рабочая ветка Этапа 1 (закрыта приёмкой D15, сохраняется)
-stage2-location-prototype — рабочая ветка Этапа 2 (текущая)
+stage2-location-prototype — рабочая ветка Этапа 2 (принята приёмкой D17, сохраняется; работа в ней закончена)
+stage3-hero — рабочая ветка Этапа 3 (создаётся при начале этапа от stage2-location-prototype)
 agent/<задача>      — мелкие отдельные задачи, если решено вынести их из рабочей ветки
 ```
 

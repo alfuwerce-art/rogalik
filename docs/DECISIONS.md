@@ -143,6 +143,27 @@
 
 **Затронуто:** [DECISIONS.md](DECISIONS.md) (D9, D16), [PIXEL_ART_STYLE_GUIDE.md §2, §8, §11](PIXEL_ART_STYLE_GUIDE.md), [DEVELOPMENT_PLAN.md §1, §5](DEVELOPMENT_PLAN.md), [PROJECT_STATE.md](progress/PROJECT_STATE.md), [STAGE_02.md](progress/STAGE_02.md), [reports/stage2_task21_report.md](../reports/stage2_task21_report.md), [reports/stage2_task22_report.md](../reports/stage2_task22_report.md).
 
+### D17 — Приёмка Этапа 2 · 2026-10-25 · `APPROVED`
+**Решение:** владелец официально принял **Этап 2 «Базовая структура и визуальный прототип локации»** статусом **`ACCEPTED`** (2026-10-25) по [пакету приёмки](../reports/stage2_acceptance_package.md).
+
+**Дополнительно утверждено:**
+
+1. Проверка **«камера не прячет бой»** переносится на **Этап 5** (боевая система). Её текущий статус — `NOT_VERIFIED`, а не `PASS`: боя на Этапе 2 не было.
+2. Разработка **полноценного боевого HUD** переносится на **Этап 5**. Технический HUD, закрывающий нижние 13 % кадра, остаётся до этого момента.
+3. **`ffmpeg` не устанавливать.** Записанные `reports/stage2_clip.avi` и `reports/stage2_clip.webp` приняты для технической приёмки.
+4. Ворота сохраняют **`ASSET_DRAFT`**; первая локация остаётся **кандидатом** (D10 в силе). Художественная приёмка не проводилась.
+5. Константы **D16 неизменны**: тайл 24 px, герой 48 px, камера zoom 1.0, 4 направления, 480×270 (окно 960×540).
+
+**Следствия:**
+
+- [STAGE_02.md](progress/STAGE_02.md) переведён в `ACCEPTED`; обновлены [DEVELOPMENT_PLAN.md §1, §5](DEVELOPMENT_PLAN.md) и [PROJECT_STATE.md](progress/PROJECT_STATE.md);
+- Этап 2 **не переделывается и не перепроверяется**: задачи 2.1–2.4, отчёты, клип и результаты проверок сохраняются как доказательства приёмки;
+- перенесённые проверки зафиксированы в §1 «Этап 5» плана;
+- следующий этап — **Этап 3 (главный герой)**; он начинается **в отдельном новом чате** (D12) и в отдельной ветке от `stage2-location-prototype`;
+- рабочая ветка `stage2-location-prototype` сохраняется как есть и не пересоздаётся; `main` по-прежнему обновляется только через согласованный PR.
+
+**Затронуто:** [DECISIONS.md](DECISIONS.md), [DEVELOPMENT_PLAN.md §1, §5](DEVELOPMENT_PLAN.md), [PROJECT_STATE.md](progress/PROJECT_STATE.md), [STAGE_02.md](progress/STAGE_02.md), [reports/stage2_acceptance_package.md](../reports/stage2_acceptance_package.md).
+
 ## Отменённые и устаревшие положения
 
 | Положение | Где встречалось | Статус |
