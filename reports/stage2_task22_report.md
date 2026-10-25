@@ -37,7 +37,7 @@
 | Южный подход 4.5 тайла | **вне кадра** (y=310 из 270) | **в кадре, запас 3 px** (y=267) | **вне кадра** (y=311) |
 | FPS (кадр пробы) | 176–180 | 180 | 178–180 |
 
-Кадры: [A](../../reports/stage2_2_2_probe_a.png) · [B](../../reports/stage2_2_2_probe_b.png) · [C](../../reports/stage2_2_2_probe_c.png).
+Кадры: [A](stage2_2_2_probe_a.png) · [B](stage2_2_2_probe_b.png) · [C](stage2_2_2_probe_c.png).
 
 ## 4. Выводы
 
