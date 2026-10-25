@@ -10,6 +10,7 @@ Roguelike game prototype
 - [Система умений, благословений и деревьев развития](docs/SKILLS_AND_BOONS.md)
 - [Визуальные референсы оружия и список файлов](docs/WEAPON_REFERENCES.md)
 - [Художественное направление: древнерусская кошмарная готика](docs/ART_DIRECTION.md)
+- [**Актуальный стандарт графики: 2D Pixel Art, вид сверху с лёгким углом**](docs/PIXEL_ART_STYLE_GUIDE.md)
 - [Ранние референсы игровых арен](docs/VISUAL_REFERENCES.md)
 - [Кандидат первой локации — «Проклятая слобода»](docs/FIRST_LOCATION_CONCEPT.md)
 - [Правила дизайна и проверки первой локации](docs/FIRST_LOCATION_ART_RULES.md)
