@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/calibration.gd" id="1_calibration"]
+[ext_resource type="Script" path="res://scripts/world/camera_rig.gd" id="2_camera"]
+
+[node name="Calibration" type="Node2D"]
+script = ExtResource("1_calibration")
+
+[node name="Layers" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="Layers"]
+
+[node name="Details" type="Node2D" parent="Layers"]
+
+[node name="Structures" type="Node2D" parent="Layers"]
+
+[node name="Collision" type="Node2D" parent="Layers"]
+
+[node name="Entities" type="Node2D" parent="Layers"]
+
+[node name="CameraRig" type="Camera2D" parent="Layers/Entities"]
+script = ExtResource("2_camera")
+
+[node name="Atmosphere" type="Node2D" parent="Layers"]
+
+[node name="NightTint" type="CanvasModulate" parent="Layers/Atmosphere"]
+
+[node name="Lights" type="Node2D" parent="Layers/Atmosphere"]
+
+[node name="Fog" type="Node2D" parent="Layers/Atmosphere"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Info" type="Label" parent="HUD"]
+offset_left = 10.0
+offset_top = 246.0
+offset_right = 470.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.86, 0.84, 0.79, 1)
+theme_override_font_sizes/font_size = 10
+text = "Rogalik — калибровочный кадр 3.1b (ASSET_DRAFT)"

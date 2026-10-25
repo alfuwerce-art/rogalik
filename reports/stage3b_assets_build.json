@@ -1,0 +1,142 @@
+{
+  "art_revision": "3.1b",
+  "status": "ASSET_DRAFT",
+  "tile_px": 24,
+  "assets": {
+    "ground_calib_24.png": {
+      "size": [
+        96,
+        48
+      ],
+      "path": "tools\\stage3_calibration\\source\\ground_calib_24.png"
+    },
+    "palisade_24.png": {
+      "size": [
+        48,
+        72
+      ],
+      "path": "tools\\stage3_calibration\\source\\palisade_24.png"
+    },
+    "gate_calib_24.png": {
+      "size": [
+        96,
+        96
+      ],
+      "path": "tools\\stage3_calibration\\source\\gate_calib_24.png"
+    },
+    "izba_24.png": {
+      "size": [
+        192,
+        120
+      ],
+      "path": "tools\\stage3_calibration\\source\\izba_24.png"
+    },
+    "chapel_24.png": {
+      "size": [
+        168,
+        120
+      ],
+      "path": "tools\\stage3_calibration\\source\\chapel_24.png"
+    },
+    "dead_tree_24.png": {
+      "size": [
+        120,
+        144
+      ],
+      "path": "tools\\stage3_calibration\\source\\dead_tree_24.png"
+    },
+    "banner_24.png": {
+      "size": [
+        24,
+        48
+      ],
+      "path": "tools\\stage3_calibration\\source\\banner_24.png"
+    },
+    "forest_24.png": {
+      "size": [
+        200,
+        100
+      ],
+      "path": "tools\\stage3_calibration\\source\\forest_24.png"
+    },
+    "props_calib_24.png": {
+      "size": [
+        96,
+        24
+      ],
+      "path": "tools\\stage3_calibration\\source\\props_calib_24.png"
+    },
+    "torch_24.png": {
+      "size": [
+        48,
+        72
+      ],
+      "path": "tools\\stage3_calibration\\source\\torch_24.png",
+      "frames": 2
+    },
+    "puddle_a_24.png": {
+      "size": [
+        54,
+        18
+      ],
+      "path": "tools\\stage3_calibration\\source\\puddle_a_24.png"
+    },
+    "puddle_b_24.png": {
+      "size": [
+        36,
+        14
+      ],
+      "path": "tools\\stage3_calibration\\source\\puddle_b_24.png"
+    },
+    "puddle_c_24.png": {
+      "size": [
+        72,
+        24
+      ],
+      "path": "tools\\stage3_calibration\\source\\puddle_c_24.png"
+    },
+    "glow_warm_24.png": {
+      "size": [
+        128,
+        128
+      ],
+      "path": "tools\\stage3_calibration\\source\\glow_warm_24.png"
+    },
+    "glow_cold_24.png": {
+      "size": [
+        128,
+        128
+      ],
+      "path": "tools\\stage3_calibration\\source\\glow_cold_24.png"
+    },
+    "fog_a_24.png": {
+      "size": [
+        320,
+        160
+      ],
+      "path": "tools\\stage3_calibration\\source\\fog_a_24.png"
+    },
+    "fog_b_24.png": {
+      "size": [
+        320,
+        160
+      ],
+      "path": "tools\\stage3_calibration\\source\\fog_b_24.png"
+    },
+    "vignette_24.png": {
+      "size": [
+        480,
+        270
+      ],
+      "path": "tools\\stage3_calibration\\source\\vignette_24.png"
+    },
+    "shadow_24.png": {
+      "size": [
+        44,
+        16
+      ],
+      "path": "tools\\stage3_calibration\\source\\shadow_24.png"
+    }
+  },
+  "note": "калибровочный набор: не финальный арт и не утверждённая локация (D10)"
+}

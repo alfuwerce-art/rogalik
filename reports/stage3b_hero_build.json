@@ -1,0 +1,41 @@
+{
+  "art_revision": "3.1b",
+  "sheet": "tools\\stage3_hero\\source\\hero_idle_48_source.png",
+  "sheet_size": [
+    128,
+    96
+  ],
+  "project": "tools\\stage3_hero\\source\\hero_idle_48.pxo",
+  "frames": 8,
+  "frame_size": [
+    32,
+    48
+  ],
+  "directions": [
+    "down",
+    "up",
+    "left",
+    "right"
+  ],
+  "status": "ASSET_DRAFT",
+  "palette": {
+    "outline": "#0f0d0c",
+    "skin_rim": "#e2b184",
+    "skin_hi": "#cf9d6d",
+    "skin": "#ab7647",
+    "skin_mid": "#8a5b33",
+    "skin_dark": "#5d3c1f",
+    "hair_hi": "#7a6244",
+    "hair": "#4c3b2a",
+    "hair_dark": "#2a2017",
+    "red_hi": "#cf5147",
+    "red": "#a02f2c",
+    "red_dark": "#5d2130",
+    "pants_hi": "#403b33",
+    "pants": "#2f2b26",
+    "pants_dark": "#1d1a17",
+    "wrap_hi": "#7a6a50",
+    "wrap": "#5d5140",
+    "wrap_dark": "#3a3226"
+  }
+}

@@ -85,14 +85,23 @@
 
 Подробно: [HERO_REFERENCE.md](HERO_REFERENCE.md). Утверждённого пиксельного спрайта героя **нет**; в `game/prototype/art/` и `tools/stage1_art/` есть только `PROXY_TECHNICAL` (D8), утверждён исключительно референс внешности.
 
-### Первый игровой силуэт героя (задачи 3.1 → 3.1a, Этап 3)
+### Игровой силуэт героя (задачи 3.1 → 3.1a → 3.1b, Этап 3)
 
 | Файл | Статус | Примечание |
 |---|---|---|
-| `game/prototype/art/sprites/hero_idle_48.png` | `ASSET_DRAFT` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; арт-версия **3.1a** (доработанные пропорции, волосы, повязка, одежда); экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
+| `game/prototype/art/sprites/hero_idle_48.png` | `ASSET_DRAFT` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; арт-версия **3.1b** (светотень в 4 тона кожи, плечи 20 px, талия 8 px, повязка в 3 ряда, обмотки темнее кожи, рваные штаны); экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
 | `tools/stage3_hero/source/hero_idle_48.pxo` | `ASSET_DRAFT` | редактируемый исходник Pixelorama 1.2.3, 8 кадров, теги `idle_down|up|left|right` |
 
-Статусы по осям D3: художественное решение — референс `VISUAL_APPROVED` (D7), сам спрайт **не** утверждён; готовность ассета — `ASSET_DRAFT` (художественная приёмка за владельцем). Боковые виды на референсе отсутствуют и являются рабочей интерпретацией. Версия 3.1 сохранена в Git (`966cfc7`). См. [STAGE_03.md](progress/STAGE_03.md), отчёты [3.1](../reports/stage3_task31_report.md) и [3.1a](../reports/stage3_task31a_report.md), лист сравнения [3.1a](../reports/stage3a_hero_compare.png).
+Статусы по осям D3: художественное решение — референс `VISUAL_APPROVED` (D7), сам спрайт **не** утверждён; готовность ассета — `ASSET_DRAFT` (художественная приёмка за владельцем). Боковые виды на референсе отсутствуют и являются рабочей интерпретацией. Версии сохранены в Git: 3.1 — `966cfc7`, 3.1a — `c24d629`. См. [STAGE_03.md](progress/STAGE_03.md), отчёты [3.1](../reports/stage3_task31_report.md), [3.1a](../reports/stage3_task31a_report.md) и [3.1b](../reports/stage3_task31b_report.md), листы сравнения [3.1a](../reports/stage3a_hero_compare.png) и [3.1b](../reports/stage3b_calibration_compare.png).
+
+### Калибровочный набор сцены (задача 3.1b, Этап 3)
+
+| Файл | Статус | Примечание |
+|---|---|---|
+| `game/prototype/art/calibration/` (19 PNG) | `ASSET_DRAFT` | тайлсет земли 24 px, изба, часовня, врата, частокол, мёртвое дерево, факел, знамя, силуэт леса, мелкие пропсы, лужи, маски тёплого/холодного света, туман, виньетка, контактная тень; экспорт CLI Pixelorama из `tools/stage3_calibration/pxo/` |
+| `game/prototype/scenes/calibration.tscn` | `ASSET_DRAFT` | калибровочный кадр (вертикальный художественный срез), **не** утверждённая локация (D10); главная сцена игры — по-прежнему `location.tscn` |
+
+Художественное решение локации — `VISUAL_CANDIDATE` (кандидат, D10); набор не является финальной графикой и не заменяет принятую локацию Этапа 2 (D17).
 
 ## Игровой look-референс — ориентир, не финальный канон
 
