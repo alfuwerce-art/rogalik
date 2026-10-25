@@ -1,11 +1,15 @@
 class_name PixelProfiles
 extends RefCounted
-## Кандидатные пиксельные константы для решения D9 (Этап 2, задача 2.1).
+## Пиксельные константы локации (Этап 2).
 ##
-## ВАЖНО: ни один набор НЕ утверждён владельцем. Значения остаются TEMPORARY,
-## пока владелец не выберет вариант (D9). Наборы отличаются размером тайла,
-## высотой спрайта героя и масштабом камеры; сетка кадров и игровое разрешение
-## остаются общими, поэтому кадры сравнения снимаются с одной и той же сцены.
+## Решением владельца **D16 (2026-10-25)** утверждён производственный стандарт —
+## профиль **B**: тайл 24 px, герой 48 px, камера zoom 1.0, 4 направления,
+## логическое разрешение 480×270 (тестовое окно 960×540, масштаб арта 2×).
+## Он используется при обычном запуске и является основным.
+##
+## Профили A (16 px / zoom 2) и C (32 px / zoom 1) сохранены только как
+## **диагностические**: они нужны для проверки поведения сетки и масштаба,
+## но для производства арта не используются (D16).
 ##
 ## Производные величины при окне 960x540 (масштаб окна x2, viewport 480x270):
 ##   пикселей экрана на пиксель арта = camera_zoom * WINDOW_SCALE (всегда целое);
@@ -14,13 +18,17 @@ extends RefCounted
 const VIEWPORT := Vector2i(480, 270)
 const WINDOW_SCALE := 2
 const HERO_FRAMES := 4
-const DEFAULT_ID := "b"
+## Утверждённый решением D16 профиль — основной игровой стандарт.
+const APPROVED_ID := "b"
+## Профиль обычного запуска: совпадает с утверждённым.
+const DEFAULT_ID := APPROVED_ID
 
 const PROFILES := [
 	{
 		"id": "a",
-		"label": "A · близкая камера, крупный пиксель (16 px)",
-		"short_label": "A · крупный пиксель",
+		"label": "A · диагностика: крупный пиксель (16 px)",
+		"short_label": "A · диагностика 16 px",
+		"approved": false,
 		"tile_px": 16,
 		"hero_height_px": 32,
 		"camera_zoom": 2.0,
@@ -32,8 +40,9 @@ const PROFILES := [
 	},
 	{
 		"id": "b",
-		"label": "B · широкий обзор, средний пиксель (24 px)",
-		"short_label": "B · широкий обзор",
+		"label": "B · УТВЕРЖДЁННЫЙ СТАНДАРТ (D16): тайл 24 px",
+		"short_label": "B · стандарт D16, 24 px",
+		"approved": true,
 		"tile_px": 24,
 		"hero_height_px": 48,
 		"camera_zoom": 1.0,
@@ -45,8 +54,9 @@ const PROFILES := [
 	},
 	{
 		"id": "c",
-		"label": "C · детальная графика, тайл 32 px",
-		"short_label": "C · детальная графика",
+		"label": "C · диагностика: детальная графика (32 px)",
+		"short_label": "C · диагностика 32 px",
+		"approved": false,
 		"tile_px": 32,
 		"hero_height_px": 64,
 		"camera_zoom": 1.0,
@@ -57,6 +67,10 @@ const PROFILES := [
 		"gate": "res://art/props/gate_32.png",
 	},
 ]
+
+
+static func is_approved(profile: Dictionary) -> bool:
+	return bool(profile.get("approved", false))
 
 
 static func ids() -> PackedStringArray:
@@ -87,15 +101,37 @@ static func screen_px_per_art_px(profile: Dictionary) -> float:
 static func describe(profile: Dictionary) -> String:
 	var tiles := visible_tiles(profile)
 	return (
-		"PROFILE_READY id=%s tile_px=%d hero_height_px=%d zoom=%.1f directions=%d visible_tiles=%.2fx%.2f screen_px_per_art_px=%d"
+		"PROFILE_READY id=%s approved=%s tile_px=%d hero_height_px=%d zoom=%.1f directions=%d visible_tiles=%.2fx%.2f screen_px_per_art_px=%d"
 		% [
 			profile["id"],
+			"YES" if is_approved(profile) else "NO (diagnostic)",
 			profile["tile_px"],
 			profile["hero_height_px"],
 			profile["camera_zoom"],
 			profile["directions"],
 			tiles.x,
 			tiles.y,
+			int(screen_px_per_art_px(profile)),
+		]
+	)
+
+
+## Строка подтверждения стандарта: печатается при запуске, чтобы проверка
+## не зависела от чтения кода.
+static func constants_summary(profile: Dictionary) -> String:
+	return (
+		"CONSTANTS profile=%s status=%s tile_px=%d hero_height_px=%d camera_zoom=%.1f directions=%d viewport=%dx%d window=%dx%d scale=%dx source=D16"
+		% [
+			profile["id"],
+			"APPROVED" if is_approved(profile) else "DIAGNOSTIC",
+			profile["tile_px"],
+			profile["hero_height_px"],
+			profile["camera_zoom"],
+			profile["directions"],
+			VIEWPORT.x,
+			VIEWPORT.y,
+			VIEWPORT.x * WINDOW_SCALE,
+			VIEWPORT.y * WINDOW_SCALE,
 			int(screen_px_per_art_px(profile)),
 		]
 	)
@@ -115,12 +151,15 @@ static func hud_text(profile: Dictionary, fps: int, probe: bool = false) -> Stri
 			fps,
 		]
 	)
+	var scale_line := (
+		"экран/арт %d× · D16 · константы утверждены"
+		% int(screen_px_per_art_px(profile))
+		if is_approved(profile)
+		else "экран/арт %d× · ДИАГНОСТИЧЕСКИЙ профиль, не для арта (D16)" % int(screen_px_per_art_px(profile))
+	)
 	if probe:
 		return (
-			"%s\nПРОБА БОЕВОГО ПРОСТРАНСТВА · маркеры — PROXY_TECHNICAL, не враги и не механика\nромб 1.8т · круг 4.5т · крест 7т · экран/арт %d× · константы кандидатные (D9)"
-			% [first, int(screen_px_per_art_px(profile))]
+			"%s\nПРОБА БОЕВОГО ПРОСТРАНСТВА · маркеры — PROXY_TECHNICAL, не враги и не механика\n%s · ромб 1.8т · круг 4.5т · крест 7т"
+			% [first, scale_line]
 		)
-	return (
-		"%s\nэкран/арт %d× · PROXY_TECHNICAL · константы кандидатные (D9), не утверждены"
-		% [first, int(screen_px_per_art_px(profile))]
-	)
+	return "%s\n%s" % [first, scale_line]

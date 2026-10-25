@@ -69,10 +69,15 @@ func _physics_process(delta: float) -> void:
 	if _auto != Vector2.ZERO and not _blocked_reported and get_slide_collision_count() > 0:
 		if absf(global_position.x - _start.x) + absf(global_position.y - _start.y) > 4.0:
 			_blocked_reported = true
-			var normal := get_slide_collision(0).get_normal()
+			var collision := get_slide_collision(0)
+			var normal := collision.get_normal()
+			var collider := collision.get_collider()
+			var collider_name := "none"
+			if collider != null and collider is Node:
+				collider_name = (collider as Node).name
 			print(
-				"PLAYER_BLOCKED x=%.1f y=%.1f normal=(%.2f,%.2f)"
-				% [global_position.x, global_position.y, normal.x, normal.y]
+				"PLAYER_BLOCKED x=%.1f y=%.1f normal=(%.2f,%.2f) collider=%s"
+				% [global_position.x, global_position.y, normal.x, normal.y, collider_name]
 			)
 
 	_report_time += delta

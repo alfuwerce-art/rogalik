@@ -78,6 +78,12 @@ func _ready() -> void:
 	_profile = PixelProfiles.get_profile(requested)
 	_tile_px = int(_profile["tile_px"])
 	print(PixelProfiles.describe(_profile))
+	print(PixelProfiles.constants_summary(_profile))
+	if not PixelProfiles.is_approved(_profile):
+		print(
+			"DIAGNOSTIC_PROFILE id=%s: профиль не является стандартом D16 и не используется для производства арта"
+			% _profile["id"]
+		)
 
 	_build_layers()
 	_spawn_player()
@@ -227,8 +233,13 @@ func _spawn_props() -> void:
 	var post_w := tile * 0.75
 	var gate_h := tile * float(LocationLayout.GATE_SIZE_CELLS.y)
 	var gate_left := Vector2(LocationLayout.GATE_CELL) * tile
-	_add_static_rect(Vector2(gate_left.x + post_w * 0.5, gate_left.y + gate_h * 0.5), Vector2(post_w, gate_h))
 	_add_static_rect(
+		"GatePostLeft",
+		Vector2(gate_left.x + post_w * 0.5, gate_left.y + gate_h * 0.5),
+		Vector2(post_w, gate_h)
+	)
+	_add_static_rect(
+		"GatePostRight",
 		Vector2(gate_left.x + tile * float(LocationLayout.GATE_SIZE_CELLS.x) - post_w * 0.5, gate_left.y + gate_h * 0.5),
 		Vector2(post_w, gate_h)
 	)
@@ -245,6 +256,7 @@ func _spawn_props() -> void:
 		overhead.add_child(tree)
 		# Ствол перекрывает перемещение, крона — нет.
 		_add_static_rect(
+			"TreeTrunk_%d_%d" % [cell.x, cell.y],
 			Vector2(cell.x + 1.0, cell.y + 0.62) * tile,
 			Vector2(tile * 0.7, tile * 0.6)
 		)
@@ -275,8 +287,9 @@ func _on_gate_zone_body_entered(body: Node2D) -> void:
 	print("GATE_ENTERED body=%s x=%.1f y=%.1f" % [body.name, body.global_position.x, body.global_position.y])
 
 
-func _add_static_rect(center: Vector2, size: Vector2) -> void:
+func _add_static_rect(node_name: String, center: Vector2, size: Vector2) -> void:
 	var body := StaticBody2D.new()
+	body.name = node_name
 	body.collision_layer = 1
 	body.collision_mask = 0
 	var shape := CollisionShape2D.new()

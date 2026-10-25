@@ -397,43 +397,117 @@ def build_tree(tile: int, out: Path) -> None:
 
 
 def build_gate(tile: int, out: Path) -> None:
-    """Техническая зона-«ворота»: два столба, верхняя перекладина, притолока и знамя."""
-    w, h = tile * 3, tile * 2
+    """Ворота: первый пиксельный проход на утверждённой сетке (D16, тайл 24 px).
+
+    Силуэт: два столба с капителями, железными оковами и каменной опорой; верхняя
+    балка с резным поясом; притолока; полотнище-знамя с вырезом; каменный порог.
+    Проход между столбами остаётся прозрачным, ширина столба совпадает с коллизией
+    в location.gd (0.75 тайла).
+
+    Важно: ворота — `ASSET_DRAFT`, не утверждённая архитектура локации (D10).
+    """
+    t = tile
+    w, h = t * 3, t * 2
     img = Image.new("RGBA", (w, h), CLEAR)
-    rng = random.Random(3000 + tile)
-    post_w = max(4, int(tile * 0.75))
-    beam_h = max(3, int(tile * 0.42))
-    # Столбы.
+    rng = random.Random(3000 + t)
+    post_w = max(4, int(round(t * 0.75)))
+    beam_h = max(4, int(round(t * 0.42)))
+    cap_h = max(2, int(round(t * 0.14)))
+    band_h = max(1, int(round(t * 0.09)))
+    iron = (52, 54, 60, 255)
+    iron_l = (92, 94, 100, 255)
+
+    # --- Балка: тело, лунный блик сверху, тень снизу, резной пояс ---
+    rect(img, 0, 0, w, beam_h, PAL["wood"])
+    rect(img, 0, 0, w, max(1, beam_h // 4), PAL["wood_l"])
+    rect(img, 0, beam_h - max(2, beam_h // 4), w, beam_h, PAL["night"])
+    notch_y = max(2, beam_h // 2)
+    for x in range(max(3, t // 8), w - max(3, t // 8), max(6, t // 4)):
+        rect(img, x, notch_y, min(w, x + max(2, t // 12)), notch_y + 1, PAL["wood_d"])
+    # железные накладки на концах балки
+    for x0 in (0, w - max(2, t // 10)):
+        rect(img, x0, 0, x0 + max(2, t // 10), beam_h, iron)
+
+    # --- Столбы: тело, лунный блик слева, тень к проёму, капитель, опора ---
     for x0 in (0, w - post_w):
-        rect(img, x0, 0, x0 + post_w, h, PAL["wood_d"])
-        rect(img, x0 + 1, 1, x0 + post_w - 1, h - 1, PAL["wood"])
-        rect(img, x0 + 1, 1, x0 + 1 + max(1, post_w // 4), h - 1, PAL["wood_l"])
-        rect(img, x0 + post_w - max(2, post_w // 5), 0, x0 + post_w, h, PAL["night"])
-        for _ in range(max(2, tile // 6)):
-            gy = rng.randrange(2, max(3, h - 2))
-            rect(img, x0 + 2, gy, x0 + post_w - 2, gy + 1, PAL["wood_d"])
-    # Верхняя перекладина поверх столбов.
-    rect(img, 0, 0, w, beam_h, PAL["wood_d"])
-    rect(img, 0, 0, w, max(1, beam_h // 3), PAL["wood_l"])
-    rect(img, 0, beam_h - max(1, beam_h // 4), w, beam_h, PAL["night"])
-    for x in range(0, w, max(3, tile // 2)):
-        rect(img, x, 0, min(w, x + max(1, tile // 10)), beam_h, PAL["wood_d"])
-    # Притолока (нижняя перекладина) и знамя.
-    lintel_y = int(h * 0.62)
-    rect(img, post_w, lintel_y, w - post_w, lintel_y + max(2, tile // 6), PAL["wood"])
+        rect(img, x0, beam_h, x0 + post_w, h, PAL["wood_d"])
+        rect(img, x0 + 1, beam_h, x0 + post_w - 1, h - max(2, t // 8), PAL["wood"])
+        lit_w = max(2, post_w // 5)
+        rect(img, x0 + 1, beam_h, x0 + 1 + lit_w, h - max(2, t // 8), PAL["wood_l"])
+        shadow_x = x0 + post_w - max(2, post_w // 6) if x0 == 0 else x0
+        rect(img, shadow_x, beam_h, shadow_x + max(2, post_w // 6), h - max(2, t // 8), PAL["night"])
+        # продольные волокна: разбивают плоскую доску
+        for _ in range(2):
+            grain_x = rng.randrange(x0 + lit_w + 2, max(x0 + lit_w + 3, x0 + post_w - 3))
+            grain_y = rng.randrange(beam_h + cap_h + 2, max(beam_h + cap_h + 3, h - max(4, t // 4)))
+            rect(img, grain_x, grain_y, grain_x + 1, grain_y + max(2, t // 6), PAL["wood_d"])
+        # капитель шире столба, с полкой и тенью под ней
+        cap_x0 = max(0, x0 - (1 if x0 > 0 else 0))
+        cap_x1 = min(w, x0 + post_w + (1 if x0 == 0 else 0))
+        rect(img, cap_x0, beam_h, cap_x1, beam_h + cap_h, PAL["wood_l"])
+        rect(img, cap_x0, beam_h, cap_x1, beam_h + 1, PAL["wood"])
+        rect(img, cap_x0, beam_h + cap_h, cap_x1, beam_h + cap_h + 1, PAL["night"])
+        # железные оковы с заклёпками
+        for band_y in (beam_h + cap_h + max(2, t // 6), h - max(4, t // 4)):
+            rect(img, x0 + 1, band_y, x0 + post_w - 1, band_y + band_h + 1, iron)
+            rect(img, x0 + 1, band_y, x0 + post_w - 1, band_y + band_h, iron_l)
+            px(img, x0 + 2, band_y + band_h // 2, PAL["ivory"])
+            px(img, x0 + post_w - 3, band_y + band_h // 2, PAL["ivory"])
+        # каменная опора столба
+        base_h = max(2, t // 8)
+        rect(img, x0, h - base_h, x0 + post_w, h, PAL["stone_d"])
+        rect(img, x0, h - base_h, x0 + post_w, h - base_h + 1, PAL["stone"])
+
+    # --- Притолока между столбами ---
+    lintel_y = h - max(6, int(round(t * 0.30)))
+    lintel_h = max(2, int(round(t * 0.14)))
+    rect(img, post_w, lintel_y, w - post_w, lintel_y + lintel_h, PAL["wood"])
     rect(img, post_w, lintel_y, w - post_w, lintel_y + 1, PAL["wood_l"])
-    banner_w = max(4, int(tile * 0.8))
+    rect(img, post_w, lintel_y + lintel_h - 1, w - post_w, lintel_y + lintel_h, PAL["night"])
+    for x in range(post_w + max(2, t // 6), w - post_w, max(3, t // 4)):
+        px(img, x, lintel_y + max(1, lintel_h // 2), PAL["wood_d"])
+
+    # --- Знамя: полотнище с вырезом, подвес и знак ---
+    banner_w = max(6, int(round(t * 0.58)))
     banner_x = w // 2 - banner_w // 2
-    rect(img, banner_x, beam_h, banner_x + banner_w, beam_h + int(h * 0.32), PAL["crimson"])
-    rect(img, banner_x, beam_h, banner_x + 1, beam_h + int(h * 0.32), PAL["crimson_d"])
-    rect(img, banner_x + banner_w - 1, beam_h, banner_x + banner_w, beam_h + int(h * 0.32), PAL["crimson_d"])
-    rect(img, banner_x, beam_h + int(h * 0.32) - 1, banner_x + banner_w, beam_h + int(h * 0.32), PAL["crimson_d"])
-    # Мох на столбах.
-    for _ in range(tile):
+    banner_h = max(6, int(round(t * 0.48)))
+    banner_y = beam_h
+    rect(img, banner_x, banner_y, banner_x + banner_w, banner_y + banner_h, PAL["crimson"])
+    rect(img, banner_x, banner_y, banner_x + 1, banner_y + banner_h, PAL["crimson_d"])
+    rect(img, banner_x + banner_w - 1, banner_y, banner_x + banner_w, banner_y + banner_h, PAL["crimson_d"])
+    # вырез снизу «галочкой»
+    notch = max(2, banner_w // 4)
+    for i in range(notch):
+        rect(
+            img,
+            banner_x + i,
+            banner_y + banner_h - notch + i,
+            banner_x + banner_w - i,
+            banner_y + banner_h - notch + i + 1,
+            CLEAR,
+        )
+    # подвес к балке
+    for hx in (banner_x + 1, banner_x + banner_w - 2):
+        rect(img, hx, beam_h - 1, hx + 1, beam_h + 1, iron)
+    # знак-оберег: тонкая вертикаль и короткая перекладина, золото вместо слоновой кости
+    mark_x = w // 2
+    mark_y = banner_y + max(2, banner_h // 4)
+    rect(img, mark_x - 1, mark_y, mark_x, mark_y + max(3, banner_h // 2), PAL["gold"])
+    rect(img, mark_x - max(2, banner_w // 5), mark_y, mark_x + max(2, banner_w // 5), mark_y + 1, PAL["gold"])
+
+    # --- Каменный порог: сажает ворота на землю и отделяет героя от притолоки ---
+    sill_h = max(2, t // 8)
+    rect(img, post_w - 1, h - sill_h, w - post_w + 1, h, PAL["stone_d"])
+    rect(img, post_w - 1, h - sill_h, w - post_w + 1, h - sill_h + 1, PAL["stone"])
+    rect(img, post_w - 1, h - 1, w - post_w + 1, h, PAL["night"])
+
+    # --- Мох у основания и на балке ---
+    for _ in range(max(3, t)):
         x = rng.randrange(w)
         y = rng.randrange(1, max(2, h - 1))
-        if img.getpixel((x, y))[3] and img.getpixel((x, y)) in (PAL["wood"], PAL["wood_l"]):
-            if rng.random() < 0.25:
+        sample = img.getpixel((x, y))
+        if sample[3] and sample in (PAL["wood"], PAL["wood_l"], PAL["wood_d"]):
+            if rng.random() < 0.22:
                 px(img, x, y, PAL["moss"])
     add_outline(img, PAL["void"])
     out.parent.mkdir(parents=True, exist_ok=True)
