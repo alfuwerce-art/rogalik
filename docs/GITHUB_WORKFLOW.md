@@ -8,7 +8,7 @@
 | Поле | Значение | Чем проверено |
 |---|---|---|
 | Репозиторий | `https://github.com/alfuwerce-art/rogalik` (публичный) | `git remote -v` |
-| Рабочая ветка | `stage1-playable-combat`, upstream `origin/stage1-playable-combat` (настроен 2026-10-25) | `git branch -vv` |
+| Рабочая ветка | Этап 2 — `stage2-location-prototype`, upstream `origin/stage2-location-prototype`; ветка Этапа 1 `stage1-playable-combat` закрыта приёмкой | `git branch -vv` |
 | HEAD рабочей ветки (D14) | `0978b5c` — он же удалённый SHA | `git rev-parse HEAD` |
 | Коммитов сверх `origin/main` | 14 на момент записи (актуальное — `git rev-list --count origin/main..HEAD`) | `git rev-list --count origin/main..HEAD` |
 | `origin/main` | `e9f9128` | `git ls-remote --heads origin` |
@@ -45,7 +45,8 @@
 ```text
 main                — стабильная защищённая ветка, только через PR владельца
 rogalik-dev         — прежняя ветка прототипа и инструментов (историческая, не удаляется)
-stage1-playable-combat — рабочая ветка Этапа 1 (текущая)
+stage1-playable-combat — рабочая ветка Этапа 1 (закрыта приёмкой D15, сохраняется)
+stage2-location-prototype — рабочая ветка Этапа 2 (текущая)
 agent/<задача>      — мелкие отдельные задачи, если решено вынести их из рабочей ветки
 ```
 
@@ -85,9 +86,9 @@ agent/<задача>      — мелкие отдельные задачи, ес
 ```powershell
 git status --short                                   # должно быть пусто
 powershell -NoProfile -ExecutionPolicy Bypass -File tools/git/check-memory-sync.ps1 -Staged
-git push -u origin stage1-playable-combat            # первый push задаёт upstream
-git rev-parse HEAD origin/stage1-playable-combat      # SHA должны совпасть
-git ls-tree -r origin/stage1-playable-combat -- assets/archives/ assets/references/bosses/
+git push -u origin stage2-location-prototype       # текущая рабочая ветка; первый push задаёт upstream
+git rev-parse HEAD origin/stage2-location-prototype # SHA должны совпасть
+git ls-tree -r origin/stage2-location-prototype -- game/prototype/scenes/ reports/
 ```
 
 Только после успешной проверки в origin наличие файлов переводится в `PUSHED` (D3), а SHA фиксируется в `PROJECT_STATE.md`. Неудачный push не даёт права на `force`: сначала выясняется причина (авторизация, защита ветки, размер файла). Если причина — отсутствие авторизации, используется Git Credential Manager (§1, §8); отдельного разрешения на публикацию не требуется (D14).

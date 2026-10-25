@@ -101,10 +101,10 @@ static func describe(profile: Dictionary) -> String:
 	)
 
 
-static func hud_text(profile: Dictionary, fps: int) -> String:
+static func hud_text(profile: Dictionary, fps: int, probe: bool = false) -> String:
 	var tiles := visible_tiles(profile)
-	return (
-		"%s · тайл %d · герой %d · zoom %.1f · %.1f×%.1f тайлов · FPS %d\nэкран/арт %d× · PROXY_TECHNICAL · константы кандидатные (D9), не утверждены"
+	var first := (
+		"%s · тайл %d · герой %d · zoom %.1f · %.1f×%.1f тайлов · FPS %d"
 		% [
 			profile["short_label"],
 			profile["tile_px"],
@@ -113,6 +113,14 @@ static func hud_text(profile: Dictionary, fps: int) -> String:
 			tiles.x,
 			tiles.y,
 			fps,
-			int(screen_px_per_art_px(profile)),
 		]
+	)
+	if probe:
+		return (
+			"%s\nПРОБА БОЕВОГО ПРОСТРАНСТВА · маркеры — PROXY_TECHNICAL, не враги и не механика\nромб 1.8т · круг 4.5т · крест 7т · экран/арт %d× · константы кандидатные (D9)"
+			% [first, int(screen_px_per_art_px(profile))]
+		)
+	return (
+		"%s\nэкран/арт %d× · PROXY_TECHNICAL · константы кандидатные (D9), не утверждены"
+		% [first, int(screen_px_per_art_px(profile))]
 	)

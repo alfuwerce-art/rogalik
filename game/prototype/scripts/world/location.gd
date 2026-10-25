@@ -16,10 +16,16 @@ extends Node2D
 ##   godot --path game/prototype -- --profile=a|b|c
 ##   godot --path game/prototype -- --profile=b --auto=0,-1 --quit-after 300
 ##   godot --path game/prototype -- --profile=b --bench
+##   godot --path game/prototype -- --profile=b --probe     (сравнение боевого пространства, задача 2.2)
 
 const PLAYER_SCRIPT := "res://scripts/world/player_world.gd"
 const OVERHEAD_SCRIPT := "res://scripts/world/overhead_prop.gd"
+const PROBE_SCRIPT := "res://scripts/world/combat_probe.gd"
 const LIGHT_TEXTURE := "res://art/lights/light_soft.png"
+
+## Точка героя в режиме пробы: середина двора, вокруг есть препятствия (забор, деревья,
+## ворота) на расстоянии 3–7 тайлов — так масштабы сравниваются на одном и том же месте.
+const PROBE_CELL := Vector2i(19, 9)
 
 ## Холодная ночная тонировка: множитель CanvasModulate (ориентиры палитры #1B2230/#39424C).
 const NIGHT_TINT := Color(0.80, 0.84, 0.94, 1.0)
@@ -44,6 +50,10 @@ var _player: CharacterBody2D
 var _bench := false
 var _stats := false
 var _no_lights := false
+var _probe := false
+var _probe_node: Node2D
+var _probe_reported := false
+var _frames := 0
 var _fps_timer := 0.0
 var _bench_timer := 0.0
 var _stats_frames := 0
@@ -63,6 +73,8 @@ func _ready() -> void:
 			_stats = true
 		elif arg == "--no-lights":
 			_no_lights = true
+		elif arg == "--probe" or arg.begins_with("--probe="):
+			_probe = true
 	_profile = PixelProfiles.get_profile(requested)
 	_tile_px = int(_profile["tile_px"])
 	print(PixelProfiles.describe(_profile))
@@ -71,6 +83,8 @@ func _ready() -> void:
 	_spawn_player()
 	_spawn_props()
 	_spawn_gate_zone()
+	if _probe:
+		_place_probe()
 	_setup_camera()
 	_setup_atmosphere()
 	_setup_hud()
@@ -349,11 +363,92 @@ func _setup_atmosphere() -> void:
 	print("ATMOSPHERE_READY tint=%s lights=2 light_scale=%.1f" % [str(NIGHT_TINT), light_scale])
 
 
+## Режим пробы боевого пространства (задача 2.2): герой ставится в середину двора,
+## вокруг рисуются маркеры предполагаемых боевых объектов. Маркеры — `PROXY_TECHNICAL`,
+## это не враги и не механика, они не влияют на коллизии и бой.
+func _place_probe() -> void:
+	var tile := float(_tile_px)
+	_player.global_position = Vector2(PROBE_CELL) * tile + Vector2(tile, tile) * 0.5
+	_probe_node = Node2D.new()
+	_probe_node.name = "CombatProbe"
+	_probe_node.z_index = 3
+	_probe_node.set_script(load(PROBE_SCRIPT))
+	entities.add_child(_probe_node)
+	_probe_node.call("setup", tile, _player.global_position)
+	print(
+		"PROBE_READY cell=%s hero=%.1f,%.1f markers=%d rings=3 status=PROXY_TECHNICAL"
+		% [str(PROBE_CELL), _player.global_position.x, _player.global_position.y, 7]
+	)
+
+
+## Считает, какие маркеры и кольца реально попали в кадр — это объективная мера
+## «сколько боевого пространства видно» для сравнения A/B/C.
+func _report_probe_visibility() -> void:
+	if _probe_node == null:
+		return
+	var view_size := get_viewport().get_visible_rect().size
+	var view_rect := Rect2(Vector2.ZERO, view_size)
+	# Игровое поле без HUD: маркер под панелью формально в кадре, но глазу недоступен.
+	var play_rect := view_rect
+	if hud_backdrop != null:
+		play_rect.size.y = maxf(0.0, hud_backdrop.position.y)
+	var xform := get_viewport().get_canvas_transform()
+	var positions: Array[Vector2] = _probe_node.call("marker_world_positions")
+	var visible_markers := 0
+	var unobstructed := 0
+	var farthest_visible := 0.0
+	var details: Array[String] = []
+	for index in positions.size():
+		var screen: Vector2 = xform * positions[index]
+		var inside := view_rect.has_point(screen)
+		if inside:
+			visible_markers += 1
+			farthest_visible = maxf(farthest_visible, positions[index].distance_to(_player.global_position))
+		if inside and play_rect.has_point(screen):
+			unobstructed += 1
+		details.append(
+			"%d:%s(%.0f,%.0f)"
+			% [index, "in" if inside else "out", screen.x, screen.y]
+		)
+	var world_visible := view_size / float(_profile["camera_zoom"])
+	var visible_tiles := world_visible / float(_tile_px)
+	print(
+		"PROBE_VISIBLE profile=%s markers_in_view=%d/%d markers_unobstructed=%d/%d play_h=%.0f farthest_visible_px=%.0f world_visible=%.0fx%.0f tiles_visible=%.2fx%.2f hero_screen_px=%d probe_cell=%s %s"
+		% [
+			_profile["id"],
+			visible_markers,
+			positions.size(),
+			unobstructed,
+			positions.size(),
+			play_rect.size.y,
+			farthest_visible,
+			world_visible.x,
+			world_visible.y,
+			visible_tiles.x,
+			visible_tiles.y,
+			int(_profile["hero_height_px"] * PixelProfiles.screen_px_per_art_px(_profile)),
+			str(PROBE_CELL),
+			" ".join(details),
+		]
+	)
+
+
 func _setup_hud() -> void:
-	hud_info.text = PixelProfiles.hud_text(_profile, 0)
+	if _probe:
+		# В режиме пробы HUD выше: нужна легенда маркеров (текст в мировых координатах
+		# не рисуется, чтобы не ломать пиксельную проверку кадра).
+		hud_backdrop.position = Vector2(6.0, 198.0)
+		hud_backdrop.size = Vector2(468.0, 68.0)
+		hud_info.position = Vector2(10.0, 200.0)
+		hud_info.size = Vector2(460.0, 64.0)
+	hud_info.text = PixelProfiles.hud_text(_profile, 0, _probe)
 
 
 func _process(delta: float) -> void:
+	_frames += 1
+	if _probe and not _probe_reported and _frames >= 4:
+		_probe_reported = true
+		_report_probe_visibility()
 	# FPS считается по фактическим дельтам кадра: Engine.get_frames_per_second()
 	# сразу после запуска показывает значение, усреднённое вместе со стартовым
 	# хичкем, из-за чего первый кадр сравнения мог показывать «2 FPS».
@@ -363,7 +458,7 @@ func _process(delta: float) -> void:
 		_hud_fps = int(round(float(_hud_frames) / _hud_time))
 		_hud_frames = 0
 		_hud_time = 0.0
-		hud_info.text = PixelProfiles.hud_text(_profile, _hud_fps)
+		hud_info.text = PixelProfiles.hud_text(_profile, _hud_fps, _probe)
 	if _stats:
 		if _stats_wall_start == 0:
 			_stats_wall_start = Time.get_ticks_msec()
