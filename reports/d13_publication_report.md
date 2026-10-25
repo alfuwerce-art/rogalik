@@ -129,5 +129,6 @@ git ls-tree -r origin/stage1-playable-combat -- assets/archives/ assets/referenc
 | Ответ GitHub | вывод push | `* [new branch] stage1-playable-combat -> stage1-playable-combat`; предупреждения GH001 о ZIP 65,38 MB (> 50 MB) — ожидаемы |
 | Авторизация | `git-credential-manager github list` | штатный GCM 2.8.0, аккаунт `alfuwerce-art` |
 | Второй push (память) | `git push`, `git rev-parse HEAD origin/stage1-playable-combat` | `b0db47e..a7744ad`, оба SHA `a7744ad` |
+| Третий push (синхронизация памяти) | `git push`, `git rev-parse HEAD origin/stage1-playable-combat` | `a7744ad..0978b5c`, оба SHA `0978b5c`; 146 файлов, ZIP 68 551 781 байт |
 
 Ограничение среды (снято): при ограниченной файловой политике песочницы `git push` прошёл только после разового расширения прав — MSYS-shell, которым git запускает credential-helper, не мог создать pipe внутри песочницы (`couldn't create signal pipe, Win32 error 5`). С 2026-10-25 политика среды — `danger-full-access`, push выполняется штатно. В обычном терминале владельца ограничение не проявлялось.

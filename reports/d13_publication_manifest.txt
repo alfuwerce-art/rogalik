@@ -43,13 +43,13 @@
        19791  docs/DEVELOPMENT_PLAN.md
        14289  docs/FIRST_LOCATION_ART_RULES.md
        11602  docs/FIRST_LOCATION_CONCEPT.md
-       16406  docs/GITHUB_WORKFLOW.md
+       16477  docs/GITHUB_WORKFLOW.md
        14824  docs/GLOBAL_ASSET_PASSES.md
         6369  docs/HERO_REFERENCE.md
        16836  docs/PIXEL_ART_STYLE_GUIDE.md
-        9844  docs/progress/PROJECT_STATE.md
+        9906  docs/progress/PROJECT_STATE.md
         8438  docs/progress/STAGE_00.md
-       10456  docs/progress/STAGE_01.md
+       10415  docs/progress/STAGE_01.md
         2950  docs/REFERENCE_FILE_MANIFEST.sha256
        11275  docs/REPOSITORY_STRUCTURE.md
        29054  docs/ROGALIK_DEV_ENVIRONMENT.md
@@ -98,7 +98,7 @@
          251  plugins/rogalik-pixel-pipeline/locale/ru.json
          508  plugins/rogalik-pixel-pipeline/package.json
         3707  README.md
-       13158  reports/d13_publication_report.md
+       13373  reports/d13_publication_report.md
        14140  reports/godot-mcp-runtime.png
        14138  reports/godot-prototype.png
        14139  reports/godot-runtime-shot.png

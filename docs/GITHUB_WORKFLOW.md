@@ -9,12 +9,12 @@
 |---|---|---|
 | Репозиторий | `https://github.com/alfuwerce-art/rogalik` (публичный) | `git remote -v` |
 | Рабочая ветка | `stage1-playable-combat`, upstream `origin/stage1-playable-combat` (настроен 2026-10-25) | `git branch -vv` |
-| HEAD рабочей ветки (D14) | `a7744ad` — он же удалённый SHA | `git rev-parse HEAD` |
-| Коммитов сверх `origin/main` | 13 (10 + D13 + D14 + коммит памяти) | `git rev-list --count origin/main..HEAD` |
+| HEAD рабочей ветки (D14) | `0978b5c` — он же удалённый SHA | `git rev-parse HEAD` |
+| Коммитов сверх `origin/main` | 14 на момент записи (актуальное — `git rev-list --count origin/main..HEAD`) | `git rev-list --count origin/main..HEAD` |
 | `origin/main` | `e9f9128` | `git ls-remote --heads origin` |
 | `origin/rogalik-dev` | `c9e5626` | `git ls-remote --heads origin` |
 | `origin/main` в истории рабочей ветки | да (merge `be0d099`) | `git merge-base --is-ancestor origin/main HEAD` |
-| Публикация | **выполнена 2026-10-25** в два автоматических push (D14): `b0db47e` → `a7744ad`; удалённый SHA = локальный, 146 файлов в ветке, ZIP 68 551 781 байт | `git ls-remote --heads origin`, `git ls-tree -r origin/stage1-playable-combat` |
+| Публикация | **выполнена 2026-10-25** тремя автоматическими push (D14): `b0db47e` → `a7744ad` → `0978b5c`; удалённый SHA = локальный, 146 файлов в ветке, ZIP 68 551 781 байт | `git ls-remote --heads origin`, `git ls-tree -r origin/stage1-playable-combat` |
 | Авторизация | Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` в Windows Credential Manager | `git-credential-manager github list` |
 | Рабочее дерево | чистое на момент редакции | `git status` |
 | Наличие файлов | 25 PNG референсов + ZIP + игровые/инструментальные файлы — `PUSHED` | `git ls-tree -r origin/stage1-playable-combat` |
