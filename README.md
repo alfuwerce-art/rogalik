@@ -20,6 +20,7 @@ Roguelike game prototype
 - [AGENTS.md — обязательные правила для DeepSeek и других ИИ-разработчиков](AGENTS.md)
 - [**Единый план разработки: этапы 0–6, зависимости и условия приёмки**](docs/DEVELOPMENT_PLAN.md)
 - [**Журнал утверждённых решений владельца**](docs/DECISIONS.md)
+- [**Текущее состояние проекта — память между чатами**](docs/progress/PROJECT_STATE.md)
 - [Подключение GitHub, защита main, рабочие ветки и импорт референсов](docs/GITHUB_WORKFLOW.md)
 
 ## Структура проекта
