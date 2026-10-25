@@ -24,10 +24,10 @@
 |---|---|
 | Рабочая директория | `C:\Users\bow\Desktop\Rogalik` |
 | Ветка | `stage1-playable-combat`, upstream __`origin/stage1-playable-combat`__ настроен первым `push -u` (D14) |
-| Последний заявленный HEAD | `b0db47e` (D14, он же удалённый SHA до коммита с этой заметкой; актуальный — `git log -1`) |
+| Последний заявленный HEAD | `a7744ad` (коммит памяти о публикации; актуальный — `git log -1`) |
 | Незакоммиченные файлы | нет; рабочее дерево чистое на момент записи |
-| Удалённые ветки | `origin/stage1-playable-combat` = `b0db47e`, `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки |
-| Публикация | **выполнена 2026-10-25**: ветка опубликована, SHA совпал, 146 файлов в удалённой ветке, 12 коммитов сверх `origin/main`; авторизация — штатный Git Credential Manager (аккаунт `alfuwerce-art`) |
+| Удалённые ветки | `origin/stage1-playable-combat` = `a7744ad` (первая публикация `b0db47e`), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки |
+| Публикация | **выполнена 2026-10-25** в два автоматических push (D14): `b0db47e` → `a7744ad`; 146 файлов в удалённой ветке, 13 коммитов сверх `origin/main`; авторизация — штатный Git Credential Manager (аккаунт `alfuwerce-art`) |
 | Оригиналы | 25 PNG в `assets/references/` + ZIP 65,38 MB в `assets/archives/` — `PUSHED` (blob `9b4977a3…` совпал с локальным) |
 
 ## 4. Готовые игровые системы
@@ -67,7 +67,7 @@
 | Спрайт-лист корректен | `rogalik_pixel_pipeline check` → PASS (128×32, 4 кадра, 8 цветов) |
 | Целостность оригиналов | `Get-FileHash` по `REFERENCE_FILE_MANIFEST.sha256` → 23/23 совпадают; blob ZIP в `HEAD` = blob рабочего файла (`9b4977a3…`) |
 | Состав Git | 146 отслеживаемых файлов, 145,16 MB: 48 бинарников (144,32 MB) + 98 текстов (0,84 MB); секретов и кэшей в индексе нет |
-| **Публикация ветки** | `git ls-remote --heads origin` → `stage1-playable-combat` = `b0db47e` = локальный `HEAD`; `git ls-tree -r origin/stage1-playable-combat` → 146 файлов (`docs/` 27, `game/` 20, `plugins/` 19, `tools/` 28, `assets/` 26, `reports/` 21); ZIP в удалённой ветке 68 551 781 байт, blob `9b4977a3…` совпал с локальным |
+| **Публикация ветки** | `git ls-remote --heads origin` → `stage1-playable-combat` = `a7744ad` (= локальный `HEAD` на момент проверки); `git ls-tree -r origin/stage1-playable-combat` → 146 файлов (`docs/` 27, `game/` 20, `plugins/` 19, `tools/` 28, `assets/` 26, `reports/` 21); ZIP в удалённой ветке 68 551 781 байт, blob `9b4977a3…` совпал с локальным |
 | Документация согласована | 32 `.md` в ветке, 0 битых относительных ссылок (239 проверенных ссылок) |
 
 Не проверялось и **не должно считаться проверенным**: `run_project` + `game_screenshot` в последней сессии; GUI-режим Pixelorama; художественное качество любого спрайта; отображение ZIP и README в веб-интерфейсе GitHub (проверено только через git-протокол).

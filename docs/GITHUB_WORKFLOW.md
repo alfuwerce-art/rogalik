@@ -9,19 +9,19 @@
 |---|---|---|
 | Репозиторий | `https://github.com/alfuwerce-art/rogalik` (публичный) | `git remote -v` |
 | Рабочая ветка | `stage1-playable-combat`, upstream `origin/stage1-playable-combat` (настроен 2026-10-25) | `git branch -vv` |
-| HEAD рабочей ветки (D14) | `b0db47e` — он же удалённый SHA | `git rev-parse HEAD` |
-| Коммитов сверх `origin/main` | 12 (10 + D13 + D14) | `git rev-list --count origin/main..HEAD` |
+| HEAD рабочей ветки (D14) | `a7744ad` — он же удалённый SHA | `git rev-parse HEAD` |
+| Коммитов сверх `origin/main` | 13 (10 + D13 + D14 + коммит памяти) | `git rev-list --count origin/main..HEAD` |
 | `origin/main` | `e9f9128` | `git ls-remote --heads origin` |
 | `origin/rogalik-dev` | `c9e5626` | `git ls-remote --heads origin` |
 | `origin/main` в истории рабочей ветки | да (merge `be0d099`) | `git merge-base --is-ancestor origin/main HEAD` |
-| Публикация | **выполнена 2026-10-25**: удалённый SHA = локальный, 146 файлов в ветке, ZIP 68 551 781 байт | `git ls-remote --heads origin`, `git ls-tree -r origin/stage1-playable-combat` |
+| Публикация | **выполнена 2026-10-25** в два автоматических push (D14): `b0db47e` → `a7744ad`; удалённый SHA = локальный, 146 файлов в ветке, ZIP 68 551 781 байт | `git ls-remote --heads origin`, `git ls-tree -r origin/stage1-playable-combat` |
 | Авторизация | Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` в Windows Credential Manager | `git-credential-manager github list` |
 | Рабочее дерево | чистое на момент редакции | `git status` |
 | Наличие файлов | 25 PNG референсов + ZIP + игровые/инструментальные файлы — `PUSHED` | `git ls-tree -r origin/stage1-playable-combat` |
 
 **Историю не переписывать:** ветка `stage1-playable-combat` сохраняется как есть, проект не пересоздаётся, `rogalik-dev` и `main` остаются на месте.
 
-**Авторизация (D14).** Штатный Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` хранится в Windows Credential Manager; интерактивный вход через GCM выполняется по стандартной схеме, токены не выводятся в чат и не пишутся в файлы. В среде инструмента DSH `git push` требует **разового расширения прав песочницы**: git запускает credential-helper через MSYS-shell, а `sh.exe` в песочнице не может создать signal pipe (`couldn't create signal pipe, Win32 error 5`). Это ограничение среды, а не репозитория; в обычном терминале владельца push работает без него. Если вход технически невозможен — фиксируется конкретный `BLOCKER`, публикация не подменяется «локальным успехом».
+**Авторизация (D14).** Штатный Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` хранится в Windows Credential Manager; интерактивный вход через GCM выполняется по стандартной схеме, токены не выводятся в чат и не пишутся в файлы. Историческая особенность среды: при ограниченной файловой политике песочницы DSH `git push` падал, потому что git запускает credential-helper через MSYS-shell, а `sh.exe` не мог создать signal pipe (`couldn't create signal pipe, Win32 error 5`); с 2026-10-25 политика среды — `danger-full-access`, и push выполняется штатно, без расширений. Если вход технически невозможен — фиксируется конкретный `BLOCKER`, публикация не подменяется «локальным успехом».
 
 ## 2. Полномочия (D13, D14)
 

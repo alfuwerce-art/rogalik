@@ -128,5 +128,6 @@ git ls-tree -r origin/stage1-playable-combat -- assets/archives/ assets/referenc
 | `main` не изменён | `git ls-remote --heads origin` | `e9f9128` (без изменений), `rogalik-dev` = `c9e5626` |
 | Ответ GitHub | вывод push | `* [new branch] stage1-playable-combat -> stage1-playable-combat`; предупреждения GH001 о ZIP 65,38 MB (> 50 MB) — ожидаемы |
 | Авторизация | `git-credential-manager github list` | штатный GCM 2.8.0, аккаунт `alfuwerce-art` |
+| Второй push (память) | `git push`, `git rev-parse HEAD origin/stage1-playable-combat` | `b0db47e..a7744ad`, оба SHA `a7744ad` |
 
-Ограничение среды: в песочнице инструмента DSH `git push` прошёл только после разового расширения прав — MSYS-shell, которым git запускает credential-helper, не может создать pipe внутри песочницы (`couldn't create signal pipe, Win32 error 5`). В обычном терминале владельца push работает без этого. Сила влияния на репозиторий: нет.
+Ограничение среды (снято): при ограниченной файловой политике песочницы `git push` прошёл только после разового расширения прав — MSYS-shell, которым git запускает credential-helper, не мог создать pipe внутри песочницы (`couldn't create signal pipe, Win32 error 5`). С 2026-10-25 политика среды — `danger-full-access`, push выполняется штатно. В обычном терминале владельца ограничение не проявлялось.
