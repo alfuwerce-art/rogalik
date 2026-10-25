@@ -1,0 +1,63 @@
+{
+  "status": "PROXY_TECHNICAL",
+  "grids": [
+    {
+      "tile_px": 16,
+      "hero_height_px": 32,
+      "tileset": "game/prototype/art/tilesets/tileset_16.png",
+      "tileset_size": "64x48",
+      "tiles": 12,
+      "solid_tiles": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "hero_sheet": "game/prototype/art/sprites/hero_proxy_32.png",
+      "hero_frames": 4,
+      "tree": "game/prototype/art/props/tree_16.png",
+      "gate": "game/prototype/art/props/gate_16.png"
+    },
+    {
+      "tile_px": 24,
+      "hero_height_px": 48,
+      "tileset": "game/prototype/art/tilesets/tileset_24.png",
+      "tileset_size": "96x72",
+      "tiles": 12,
+      "solid_tiles": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "hero_sheet": "game/prototype/art/sprites/hero_proxy_48.png",
+      "hero_frames": 4,
+      "tree": "game/prototype/art/props/tree_24.png",
+      "gate": "game/prototype/art/props/gate_24.png"
+    },
+    {
+      "tile_px": 32,
+      "hero_height_px": 64,
+      "tileset": "game/prototype/art/tilesets/tileset_32.png",
+      "tileset_size": "128x96",
+      "tiles": 12,
+      "solid_tiles": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "hero_sheet": "game/prototype/art/sprites/hero_proxy_64.png",
+      "hero_frames": 4,
+      "tree": "game/prototype/art/props/tree_32.png",
+      "gate": "game/prototype/art/props/gate_32.png"
+    }
+  ],
+  "light": "game/prototype/art/lights/light_soft.png"
+}
