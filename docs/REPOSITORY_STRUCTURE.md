@@ -1,6 +1,6 @@
 # Структура репозитория Rogalik (план и порядок импорта)
 
-> Обновление 2026-10-25: **визуальный канон изменён на 2D Pixel Art** (см. [PIXEL_ART_STYLE_GUIDE.md](PIXEL_ART_STYLE_GUIDE.md)). Перечисленные ниже пути `sources/3D models`, `FBX/GLB` и схема `game/[unity-or-unreal]` — **унаследованный предварительный план, не обязательная структура для нового 2D-проекта**. После выбора движка уточнить 2D-каталоги `sprites/tilesets/atlases/animations` и `game/`. Фактическое наличие файлов и директорий не заявлено; репозиторий сейчас в основном документальный.
+> Обновление 2026-10-25: **визуальный канон — 2D Pixel Art** ([PIXEL_ART_STYLE_GUIDE.md](PIXEL_ART_STYLE_GUIDE.md)), **движок утверждён — Godot 4.7.2** (D1). Дерево ниже описывает **фактическое** состояние рабочей ветки. Устаревшие пути `sources/3D models`, `exports/` FBX/GLB и схема `game/[unity-or-unreal]` — `ARCHIVED`, в проекте не используются.
 
 ## 1. Корневая структура
 
@@ -10,22 +10,31 @@ rogalik/
 ├── .gitignore
 ├── .gitattributes                # добавить при реальном подключении Git LFS
 ├── LICENSE
+├── AGENTS.md                     # правила для ИИ-разработчиков (основной вход)
 ├── docs/
-│   ├── ART_DIRECTION.md          # художественный канон
-│   ├── BESTIARY.md               # состав и роли врагов
-│   ├── BOSS_REFERENCES.md        # утверждённые образы боссов
-│   ├── CONCEPT_ART_INDEX.md      # индекс оригинальных изображений и статусов
-│   ├── WEAPON_REFERENCES.md      # семейства оружия
-│   ├── SKILLS_AND_BOONS.md       # системы прогрессии
-│   ├── FIRST_LOCATION_CONCEPT.md # кандидат концепции первой локации
-│   ├── FIRST_LOCATION_ART_RULES.md # обязательные правила первого окружения
-│   ├── REPOSITORY_STRUCTURE.md   # этот файл
+│   ├── DEVELOPMENT_PLAN.md       # утверждённый порядок этапов 0–6
+│   ├── DECISIONS.md              # журнал решений владельца
 │   ├── DEEPSEEK_GAME_DEV_RULES.md
 │   ├── AI_STUDIO_PLAYBOOK.md
 │   ├── AI_HINT_LIBRARY.md
-│   ├── CHARACTER_PRODUCTION_PIPELINE.md
-│   ├── GLOBAL_ASSET_PASSES.md
-│   └── tasks/                   # задания и рубежи по мере запуска разработки
+│   ├── GITHUB_WORKFLOW.md
+│   ├── ROGALIK_DEV_ENVIRONMENT.md   # проверенная среда: Godot 4.7.2, Pixelorama 1.2.3, MCP
+│   ├── DEV_ENVIRONMENT_SETUP.md
+│   ├── PIXEL_ART_STYLE_GUIDE.md     # стандарт графики
+│   ├── ART_DIRECTION.md             # художественное направление
+│   ├── HERO_REFERENCE.md            # утверждённый референс героя
+│   ├── BESTIARY.md                  # состав и роли врагов + §0 реестр доступности
+│   ├── BOSS_REFERENCES.md
+│   ├── WEAPON_REFERENCES.md
+│   ├── SKILLS_AND_BOONS.md
+│   ├── CONCEPT_ART_INDEX.md         # статусы файлов и артефактов
+│   ├── REFERENCE_FILE_MANIFEST.sha256
+│   ├── FIRST_LOCATION_CONCEPT.md    # кандидат
+│   ├── FIRST_LOCATION_ART_RULES.md
+│   ├── GLOBAL_ASSET_PASSES.md       # пакетные проходы (внутри Этапа 6)
+│   ├── CHARACTER_PRODUCTION_PIPELINE.md  # ARCHIVED
+│   ├── VISUAL_REFERENCES.md              # ARCHIVED
+│   └── tasks/                   # задания и рубежи
 ├── assets/
 │   ├── references/              # ИСХОДНЫЕ концепт-арты, не игровые ассеты
 │   │   ├── bosses/
@@ -39,21 +48,23 @@ rogalik/
 │   │   ├── weapons/
 │   │   ├── hero/
 │   │   └── gameplay/
-│   ├── sources/                 # исходники моделей/анимаций при наличии прав
-│   │   ├── characters/
-│   │   ├── environments/
-│   │   └── animations/
-│   └── exports/                 # переносимые FBX/GLB, текстуры; не билд
-│       ├── characters/
-│       ├── environments/
-│       └── animation_clips/
-├── tools/                       # скрипты сборки, импорта, QA; после выбора движка
-├── reports/                     # проверяемые отчёты, без огромных логов в Git
-└── game/                        # будущий ОДИН движковый проект
-    └── [unity-or-unreal]        # ПЛАН, не буквальное имя папки и не два движка сразу
+│   └── archives/                # исходный ZIP владельца (не изменять, не удалять)
+├── tools/                       # пайплайн, импорт референсов, локальные скрипты
+│   ├── pixel_pipeline/          # .pxo → Pixelorama CLI → PNG/атлас, валидация
+│   ├── reference_import/        # импорт и проверка оригиналов
+│   ├── stage1_art/              # PROXY_TECHNICAL: процедурный автор спрайтов героя
+│   └── setup-godot-mcp.ps1
+├── plugins/                     # локальные бандлы DSH (env-check, pixel-pipeline, dev-preset)
+├── reports/                     # проверяемые отчёты и снимки
+└── game/
+    └── prototype/                # технический Godot-проект (Этап 1), не утверждённая игра
+        ├── project.godot
+        ├── scenes/main.tscn
+        ├── scripts/             # player.gd, capture.gd, mcp_interaction_server.gd
+        └── art/                 # sprites/, demo-tool/ — PROXY_TECHNICAL
 ```
 
-В Git папки без файлов не сохраняются. В локальном пакете могут быть `.gitkeep` для их фиксации. **Не помещать Unity и Unreal проекты одновременно:** после решения владельца выбирается один движок, под него адаптируется `game/` и соответствующие `.gitignore`/`.gitattributes`.
+В Git папки без файлов не сохраняются. **Движок один — Godot** (D1); Unity/Unreal в проекте не используются. 2D-ассеты (спрайты, тайлсеты, атласы, анимации) живут в `assets/references/` (оригиналы) и `game/prototype/art/` (игровые заготовки); оригиналы никогда не смешиваются с игровыми файлами.
 
 ## 2. Уже подготовленные оригинальные концепты для импорта
 
@@ -91,15 +102,15 @@ rogalik/
 ## 3. Правила именования и контроля
 
 - В файловых путях ASCII `snake_case`; стабильные имена, без «финал2_последний» и без перезаписи утверждённых референсов без явного разрешения.
-- Каждая строка `CONCEPT_ART_INDEX.md`: путь, название, утверждение, назначение, источник, SHA-256 и `PNG_IN_REPO` после проверки.
+- Каждая строка `CONCEPT_ART_INDEX.md`: путь, название, утверждение, назначение, источник, SHA-256 и наличие файла (`COMMITTED_LOCAL` / `PUSHED`).
 - `APPROVED` / `CANDIDATE` / `TODO` не путать со статусом импорта и готовностью к игре.
-- Оригиналы референсов храним отдельно от рабочих моделей; файлы `.blend`, `.fbx`, анимационные клипы, игровые префабы — другие классы артефактов.
+- Оригиналы референсов храним отдельно от игровых файлов; игровые спрайты/листы/атласы — другой класс артефактов, чем концепт-арт.
 - Репозиторий публичный: не публиковать исходники платных/сторонних моделей, анимаций и ассетов без подтверждённых прав на распространение; лицензии фиксировать отдельно.
 - Для крупных бинарных игровых файлов настроить Git LFS перед массовой загрузкой; LFS не заменяет лицензирование и резервные копии.
 
 ## 4. Передача DeepSeek
 
-В начале задачи агент читает `docs/DEEPSEEK_GAME_DEV_RULES.md`, затем релевантные канонические документы и `docs/GLOBAL_ASSET_PASSES.md`. По работе с первой локацией **обязателен** `docs/FIRST_LOCATION_ART_RULES.md`.
+В начале задачи агент читает [AGENTS.md](../AGENTS.md) и [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md), затем релевантные канонические документы и `docs/GLOBAL_ASSET_PASSES.md`. По работе с первой локацией **обязателен** `docs/FIRST_LOCATION_ART_RULES.md`.
 
 Все модели/элементы окружения проходят глобальные стадии **для всего утверждённого объёма**, а не одну модель до финала. Любой новый арт — `CANDIDATE` до утверждения владельцем. Подсказки и блокеры оформляются по `docs/AI_HINT_LIBRARY.md` и `docs/AI_STUDIO_PLAYBOOK.md`.
 

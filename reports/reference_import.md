@@ -6,6 +6,8 @@
 
 > Отчёт сгенерирован скриптом `tools/reference_import/make_report.py` из машинных результатов `reports/reference_import.json` и `reports/reference_import_verify.json`.
 
+> **Исторический артефакт, дата импорта 2026-10-25.** Отчёт описывает состояние на момент проверки. Вопросы канона, упомянутые внутри (устаревшие 3D-формулировки, статусы файлов), **закрыты** решениями D2 и D3 2026-10-25: действующий формат — 2D Pixel Art, статусы ведутся по трём осям [AGENTS.md §7](../AGENTS.md). Текст отчёта не переписывается задним числом.
+
 ## 1. Архив
 
 | Параметр | Значение |
@@ -110,7 +112,7 @@ assets/references/
 1. `docs/FIRST_LOCATION_CONCEPT.md` указывал устаревший целевой путь `assets/references/locations/location_01_cursed_sloboda_concept.png`; фактический файл — `assets/references/locations/first_location/first_location_master_candidate.png` (SHA-256 совпадает с указанным в документе). Строка исправлена, статус кандидата не изменён.
 2. В таблице оружия `docs/CONCEPT_ART_INDEX.md` у строки `04_bows.png` было пустое имя семейства; подставлено `bows` по WEAPON_REFERENCES.md.
 3. Имена `village_interior_01..03.png` фактически содержат внешние виды деревни (ворота, улица, святилище), а не интерьеры. Файлы не переименовывались: имена зафиксированы в манифесте. Расхождение только номинальное.
-4. `docs/BESTIARY.md` (п. 3) всё ещё описывает стиль как «стилизованное 3D/2.5D», тогда как действующий канон — 2D Pixel Art top-down (DEEPSEEK_GAME_DEV_RULES.md, PIXEL_ART_STYLE_GUIDE.md). Документ не менялся — это вопрос канона для владельца.
+4. `docs/BESTIARY.md` (п. 3) всё ещё описывает стиль как «стилизованное 3D/2.5D», тогда как действующий канон — 2D Pixel Art top-down (DEEPSEEK_GAME_DEV_RULES.md, PIXEL_ART_STYLE_GUIDE.md). **Закрыто решением D2 2026-10-25**: документ исправлен, требования 3D/2.5D отменены.
 
 ## 6. Что намеренно не делалось
 

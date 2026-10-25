@@ -1,7 +1,7 @@
 # Rogalik — рабочая среда разработки (отчёт и инструкция)
 
 > Статус: **инструменты установлены, проверены и использованы**. Дата: 2026-10-25.
-> Ветка: `rogalik-dev`. Базовый документ-задание: [tasks/DSH_PLUGIN_BOOTSTRAP.md](tasks/DSH_PLUGIN_BOOTSTRAP.md).
+> Ветки: проверка выполнялась в `rogalik-dev`; текущая работа идёт в `stage1-playable-combat`. Базовый документ-задание: [tasks/DSH_PLUGIN_BOOTSTRAP.md](tasks/DSH_PLUGIN_BOOTSTRAP.md).
 > Этот документ описывает фактическое состояние, а не план. Всё, что не проверено запуском, помечено `NOT_VERIFIED`.
 
 ## 1. Итог одной таблицей
@@ -18,7 +18,7 @@
 | `rogalik-env-check` | собственный Cordis-плагин, инструмент `rogalik_env_check` | PASS (реальный вызов) |
 | `rogalik-pixel-pipeline` | собственный Cordis-плагин, инструмент `rogalik_pixel_pipeline` | PASS (реальный вызов) |
 | Тестовая сцена Godot | `game/prototype`, герой + пол + препятствие | PASS (запуск, коллизия, скриншот) |
-| `mcp__godot__*` в живой сессии | только в пресете `rogalik-dev` | NOT_VERIFIED в текущей сессии, см. §5 |
+| `mcp__godot__*` в живой сессии | только в пресете `rogalik-dev` | PASS 2026-10-25: `get_godot_version` → 4.7.2, `read_scene` читает `main.tscn`. `run_project`/`game_screenshot` в этой проверке не запускались |
 
 Скриншот реально запущенной игры: [reports/godot-prototype.png](../reports/godot-prototype.png).
 
@@ -125,7 +125,10 @@ PASS read_scene: { ... узлы и свойства res://scenes/main.tscn ... }
 2. В сессии должны появиться инструменты `mcp__godot__*` (157 штук) рядом с
    `rogalik_env_check` и `rogalik_pixel_pipeline`.
 3. Проверка в один шаг: попросить агента вызвать `mcp__godot__get_godot_version`,
-   затем `mcp__godot__read_scene` для `game/prototype/scenes/main.tscn`,
+   затем `mcp__godot__read_scene` для `game/prototype/scenes/main.tscn`
+   (**`scenePath` — путь относительно проекта, без префикса `res://`**: рабочая форма
+   `scenePath: "scenes/main.tscn"`; вариант `res://scenes/main.tscn` возвращает
+   `Scene file does not exist` — проверено 2026-10-25),
    затем `mcp__godot__run_project` и `mcp__godot__game_screenshot`.
 
 Регистрация проверена 2026-10-25 после переноса папки: строка
@@ -146,12 +149,13 @@ PASS read_scene: { ... узлы и свойства res://scenes/main.tscn ... }
   4.7.2, `read_scene` читает `game/prototype/scenes/main.tscn`,
   `run_project` + `game_screenshot` дают реальный кадр 960×540 (см. §11.5).
 
-Не подтверждён только последний шаг: вызов `mcp__godot__*` из чата сессии с
-пресетом `rogalik-dev`. Текущая сессия идёт под `ai-freelancer-v1`, поэтому MCP
-в ней намеренно не зарегистрирован: `Tool.listTools` показывает
-`rogalik_env_check` и `rogalik_pixel_pipeline`, но ни одного `mcp__godot__*`.
-Это разделение по дизайну — 157 MCP-инструментов не попадают в контекст других
-проектов профиля.
+Шаг вызова `mcp__godot__*` из чата **проверен 2026-10-25** в рабочей сессии:
+`get_godot_version` вернул 4.7.2, `read_scene` прочитал
+`game/prototype/scenes/main.tscn` (путь без `res://`). Инструменты доступны
+только в сессиях пресета `rogalik-dev`; в других сессиях профиля их нет — 157
+MCP-инструментов намеренно не попадают в контекст других проектов. Запуск
+GUI-игры (`run_project` + `game_screenshot`) в этой проверке не выполнялся,
+чтобы не смешивать проверку правил с разработкой.
 
 ## 6. Пиксельный пайплайн
 
