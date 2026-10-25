@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "sheet": "game\\prototype\\art\\sprites\\hero_idle_48.png",
+  "project": "tools\\stage3_hero\\source\\hero_idle_48.pxo",
+  "frame_size": [
+    32,
+    48
+  ],
+  "frames": 8,
+  "checks": [
+    {
+      "name": "pxo_frame_count",
+      "status": "PASS",
+      "detail": "8 кадров в .pxo, ожидалось 8"
+    },
+    {
+      "name": "sheet_frame_count",
+      "status": "PASS",
+      "detail": "8 кадров в листе, ожидалось 8"
+    },
+    {
+      "name": "export_matches_source",
+      "status": "PASS",
+      "detail": "кадры Pixelorama-экспорта совпадают с кадрами .pxo попиксельно"
+    },
+    {
+      "name": "feet_anchor_bottom",
+      "status": "PASS",
+      "detail": "нижняя граница кадров: [48, 48, 48, 48, 48, 48, 48, 48]"
+    },
+    {
+      "name": "idle_body_lock",
+      "status": "PASS",
+      "detail": "центр стоп не меняется между кадрами idle: [{'direction': 'down', 'feet_center': [15.5, 15.5], 'bottoms': [48, 48]}, {'direction': 'up', 'feet_center': [15.5, 15.5], 'bottoms': [48, 48]}, {'direction': 'left', 'feet_center': [14.0, 14.0], 'bottoms': [48, 48]}, {'direction': 'right', 'feet_center': [17.0, 17.0], 'bottoms': [48, 48]}]"
+    },
+    {
+      "name": "no_partial_alpha",
+      "status": "PASS",
+      "detail": "полупрозрачных пикселей: 0 (0 — нет сглаживания)"
+    },
+    {
+      "name": "no_empty_frames",
+      "status": "PASS",
+      "detail": "пустые кадры: нет"
+    },
+    {
+      "name": "palette_consistency",
+      "status": "PASS",
+      "detail": "уникальных цветов по кадрам: [18]"
+    },
+    {
+      "name": "hero_height_48",
+      "status": "PASS",
+      "detail": "высота силуэта: базовые кадры [48, 48, 48, 48], кадры вдоха [47, 47, 47, 47] (D16: 48 px; в кадре вдоха голова опущена на 1 px, поэтому верхняя строка пуста, а геометрия кадра 32x48 неизменна — стопы не смещаются)"
+    },
+    {
+      "name": "idle_head_shift_1px",
+      "status": "PASS",
+      "detail": "верхняя граница по кадрам: [0, 1, 0, 1, 0, 1, 0, 1] (вдох ровно на 1 px ниже базы)"
+    }
+  ],
+  "metrics": [
+    {
+      "bbox": [
+        6,
+        0,
+        28,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 15.5,
+      "opaque": 771,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        6,
+        1,
+        28,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 15.5,
+      "opaque": 761,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        6,
+        0,
+        26,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 15.5,
+      "opaque": 747,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        6,
+        1,
+        26,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 15.5,
+      "opaque": 735,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        6,
+        0,
+        27,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 14.0,
+      "opaque": 651,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        6,
+        1,
+        27,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 14.0,
+      "opaque": 642,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        5,
+        0,
+        26,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 17.0,
+      "opaque": 651,
+      "partial_alpha": 0,
+      "colors": 18
+    },
+    {
+      "bbox": [
+        5,
+        1,
+        26,
+        48
+      ],
+      "bottom": 48,
+      "feet_center": 17.0,
+      "opaque": 642,
+      "partial_alpha": 0,
+      "colors": 18
+    }
+  ],
+  "note": "технические проверки не являются художественной приёмкой (ASSET_DRAFT)"
+}

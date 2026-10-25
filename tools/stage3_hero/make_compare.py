@@ -88,7 +88,9 @@ def hero_box(
     center_x = width // 2
     feet_y = height // 2 + int(tile_px * lookahead_tiles * window_scale)
     top = feet_y - hero_art_height * window_scale
-    margin_x, margin_top, margin_bottom = 26, 8, 8
+    # Запас по краям: камера ограничена границами карты, поэтому герой может
+    # оказаться не точно на расчётном смещении — кадрируем с запасом, а не впритык.
+    margin_x, margin_top, margin_bottom = 40, 46, 26
     return (
         max(0, center_x - 32 * window_scale // 2 - margin_x),
         max(0, top - margin_top),
@@ -103,6 +105,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--sheet", required=True)
     parser.add_argument("--frames", nargs="+", required=True, help="игровые кадры 960x540 по направлениям")
     parser.add_argument("--out", required=True)
+    parser.add_argument("--previous", default=None, help="лист предыдущей итерации для сравнения «было → стало»")
+    parser.add_argument("--revision", default="3.1", help="обозначение версии арта в заголовке")
     parser.add_argument("--scale", type=int, default=5, help="увеличение пиксельных кадров")
     parser.add_argument("--frames-per-direction", type=int, default=2)
     args = parser.parse_args(argv)
@@ -150,8 +154,13 @@ def main(argv: list[str] | None = None) -> int:
     content_w = max(refs_w, sprites_w, games_w)
     width = content_w + pad * 2
 
+    previous = Image.open(args.previous).convert("RGBA") if args.previous else None
+
     game_h = max(crop.height for crop in game_crops)
-    height = header_h + ref_height + label_h + pad + sprite_h + label_h + pad + game_h + label_h + pad + 30
+    height = header_h + ref_height + label_h + pad
+    if previous is not None:
+        height += sprite_h + label_h + pad
+    height += sprite_h + label_h + pad + game_h + label_h + pad + 30
 
     canvas = Image.new("RGB", (width, height), "#1a1d24")
     draw = ImageDraw.Draw(canvas)
@@ -160,7 +169,7 @@ def main(argv: list[str] | None = None) -> int:
 
     draw.text(
         (pad, 9),
-        "Rogalik · Этап 3 · задача 3.1 — силуэт героя 48 px · ASSET_DRAFT (приёмка за владельцем)",
+        f"Rogalik · Этап 3 · задача {args.revision} — силуэт героя 48 px · ASSET_DRAFT (приёмка за владельцем)",
         fill="#c6c1b5",
         font=font_title,
     )
@@ -173,17 +182,26 @@ def main(argv: list[str] | None = None) -> int:
         x += crop.width + pad
     y += ref_height + label_h + pad
 
-    x = pad
-    for column, name in enumerate(DIRECTIONS):
-        frame = sheet.crop((column * args.frames_per_direction * FRAME_W, 0, (column * args.frames_per_direction + 1) * FRAME_W, FRAME_H))
-        frame = frame.resize((sprite_w, sprite_h), Image.NEAREST)
-        for cy in range(0, sprite_h, 16):
-            for cx in range(0, sprite_w, 16):
-                if ((cx // 16) + (cy // 16)) % 2 == 0:
-                    canvas.paste("#262a33", (x + cx, y + cy, x + min(cx + 16, sprite_w), y + min(cy + 16, sprite_h)))
-        canvas.paste(frame, (x, y), frame)
-        draw.text((x + 2, y + sprite_h + 4), f"спрайт · {CAPTIONS[name]}", fill="#c6c1b5", font=font)
-        x += sprite_w + pad
+    def paste_row(source: Image.Image, top: int, prefix: str, label_color: str) -> None:
+        """Ряд базовых кадров четырёх направлений одного листа."""
+        left = pad
+        for column, name in enumerate(DIRECTIONS):
+            start = column * args.frames_per_direction * FRAME_W
+            frame = source.crop((start, 0, start + FRAME_W, FRAME_H))
+            frame = frame.resize((sprite_w, sprite_h), Image.NEAREST)
+            for cy in range(0, sprite_h, 16):
+                for cx in range(0, sprite_w, 16):
+                    if ((cx // 16) + (cy // 16)) % 2 == 0:
+                        canvas.paste("#262a33", (left + cx, top + cy, left + min(cx + 16, sprite_w), top + min(cy + 16, sprite_h)))
+            canvas.paste(frame, (left, top), frame)
+            draw.text((left + 2, top + sprite_h + 4), f"{prefix} · {CAPTIONS[name]}", fill=label_color, font=font)
+            left += sprite_w + pad
+
+    if previous is not None:
+        paste_row(previous, y, "3.1 (было)", "#8f959e")
+        y += sprite_h + label_h + pad
+
+    paste_row(sheet, y, f"{args.revision} (стало)", "#c6c1b5")
     y += sprite_h + label_h + pad
 
     x = pad

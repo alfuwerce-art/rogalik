@@ -85,14 +85,14 @@
 
 Подробно: [HERO_REFERENCE.md](HERO_REFERENCE.md). Утверждённого пиксельного спрайта героя **нет**; в `game/prototype/art/` и `tools/stage1_art/` есть только `PROXY_TECHNICAL` (D8), утверждён исключительно референс внешности.
 
-### Первый игровой силуэт героя (задача 3.1, Этап 3)
+### Первый игровой силуэт героя (задачи 3.1 → 3.1a, Этап 3)
 
 | Файл | Статус | Примечание |
 |---|---|---|
-| `game/prototype/art/sprites/hero_idle_48.png` | `ASSET_DRAFT` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
+| `game/prototype/art/sprites/hero_idle_48.png` | `ASSET_DRAFT` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; арт-версия **3.1a** (доработанные пропорции, волосы, повязка, одежда); экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
 | `tools/stage3_hero/source/hero_idle_48.pxo` | `ASSET_DRAFT` | редактируемый исходник Pixelorama 1.2.3, 8 кадров, теги `idle_down|up|left|right` |
 
-Статусы по осям D3: художественное решение — референс `VISUAL_APPROVED` (D7), сам спрайт **не** утверждён; готовность ассета — `ASSET_DRAFT` (художественная приёмка за владельцем). Боковые виды на референсе отсутствуют и являются рабочей интерпретацией. См. [STAGE_03.md](progress/STAGE_03.md) и [отчёт задачи 3.1](../reports/stage3_task31_report.md).
+Статусы по осям D3: художественное решение — референс `VISUAL_APPROVED` (D7), сам спрайт **не** утверждён; готовность ассета — `ASSET_DRAFT` (художественная приёмка за владельцем). Боковые виды на референсе отсутствуют и являются рабочей интерпретацией. Версия 3.1 сохранена в Git (`966cfc7`). См. [STAGE_03.md](progress/STAGE_03.md), отчёты [3.1](../reports/stage3_task31_report.md) и [3.1a](../reports/stage3_task31a_report.md), лист сравнения [3.1a](../reports/stage3a_hero_compare.png).
 
 ## Игровой look-референс — ориентир, не финальный канон
 

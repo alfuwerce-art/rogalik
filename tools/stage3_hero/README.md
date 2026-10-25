@@ -26,10 +26,16 @@ $env:PYTHONIOENCODING = "utf-8"
 & $py tools\stage3_hero\make_compare.py `
     --reference assets\references\hero\hero_reference_front_back.png `
     --sheet game\prototype\art\sprites\hero_idle_48.png `
-    --frames reports\stage3_hero_frame_down.png reports\stage3_hero_frame_up.png `
-             reports\stage3_hero_frame_left.png reports\stage3_hero_frame_right.png `
-    --out reports\stage3_hero_compare.png --scale 6
+    --previous reports\stage3a_prev_hero_idle_48.png `
+    --revision "3.1a" `
+    --frames reports\stage3a_frame_down.png reports\stage3a_frame_up.png `
+             reports\stage3a_frame_left.png reports\stage3a_frame_right.png `
+    --out reports\stage3a_hero_compare.png --scale 6
 ```
+
+`--previous` добавляет ряд «было» для предыдущей итерации арта. Предыдущий лист
+берётся из Git (не перезаписывается): `cmd /c "git show <rev>:game/prototype/art/sprites/hero_idle_48.png > reports/stage3a_prev_hero_idle_48.png"`
+— обычное перенаправление PowerShell портит бинарный файл.
 
 ## Файлы
 
