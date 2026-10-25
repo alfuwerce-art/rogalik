@@ -1,9 +1,9 @@
-# Rogalik D13 — состав первой публикации (ветка stage1-playable-combat)
+# Rogalik D13/D14 — состав публикации (ветка stage1-playable-combat)
 # формат: размер_в_байтах  путь  (в самом манифесте не перечисляется)
 
          818  .gitattributes
         1431  .gitignore
-       21765  AGENTS.md
+       22341  AGENTS.md
     68551781  assets/archives/rogalik_all_concept_art_with_weapons.zip
      2695734  assets/references/bosses/koschei_bessmertny.png
      2928980  assets/references/bosses/likho_odnoglazoe.png
@@ -31,25 +31,25 @@
      3195264  assets/references/weapons/04_bows.png
      3185219  assets/references/weapons/05_combat_staves.png
        16305  docs/AI_HINT_LIBRARY.md
-       18964  docs/AI_STUDIO_PLAYBOOK.md
+       19035  docs/AI_STUDIO_PLAYBOOK.md
        10974  docs/ART_DIRECTION.md
        16970  docs/BESTIARY.md
         6749  docs/BOSS_REFERENCES.md
        24524  docs/CHARACTER_PRODUCTION_PIPELINE.md
        10261  docs/CONCEPT_ART_INDEX.md
-       15728  docs/DECISIONS.md
+       19512  docs/DECISIONS.md
        11640  docs/DEEPSEEK_GAME_DEV_RULES.md
        10967  docs/DEV_ENVIRONMENT_SETUP.md
-       19602  docs/DEVELOPMENT_PLAN.md
+       19791  docs/DEVELOPMENT_PLAN.md
        14289  docs/FIRST_LOCATION_ART_RULES.md
        11552  docs/FIRST_LOCATION_CONCEPT.md
-       14689  docs/GITHUB_WORKFLOW.md
+       15771  docs/GITHUB_WORKFLOW.md
        14824  docs/GLOBAL_ASSET_PASSES.md
         6417  docs/HERO_REFERENCE.md
        16836  docs/PIXEL_ART_STYLE_GUIDE.md
-        8793  docs/progress/PROJECT_STATE.md
+        8979  docs/progress/PROJECT_STATE.md
         8438  docs/progress/STAGE_00.md
-       10093  docs/progress/STAGE_01.md
+       10286  docs/progress/STAGE_01.md
         2950  docs/REFERENCE_FILE_MANIFEST.sha256
        11275  docs/REPOSITORY_STRUCTURE.md
        29054  docs/ROGALIK_DEV_ENVIRONMENT.md
@@ -98,7 +98,7 @@
          251  plugins/rogalik-pixel-pipeline/locale/ru.json
          508  plugins/rogalik-pixel-pipeline/package.json
         3707  README.md
-       10956  reports/d13_publication_report.md
+       11169  reports/d13_publication_report.md
        14140  reports/godot-mcp-runtime.png
        14138  reports/godot-prototype.png
        14139  reports/godot-runtime-shot.png
