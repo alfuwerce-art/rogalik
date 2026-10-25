@@ -26,9 +26,9 @@
 |---|---|
 | Рабочая директория | `C:\Users\bow\Desktop\Rogalik` |
 | Ветка | Этап 2 — `stage2-location-prototype` (создана от `stage1-playable-combat`, upstream настроен первым `push -u`); ветка Этапа 1 закрыта приёмкой на `77039f4` |
-| Последний содержательный коммит | `a5983d6` (задача 2.2) — опубликован; актуальный HEAD ветки — `git log -1` и `git rev-parse origin/stage2-location-prototype` |
+| Последний содержательный коммит | `4f7b320` (задача 2.3: D16, профиль B, пиксельный проход ворот) — опубликован; актуальный HEAD ветки — `git log -1` и `git rev-parse origin/stage2-location-prototype` |
 | Незакоммиченные файлы | нет; рабочее дерево чистое на момент записи |
-| Удалённые ветки | `origin/stage2-location-prototype` — активная ветка Этапа 2 (публикации `766da1c` → `c194845` → `a5983d6` → память 2.2), `origin/stage1-playable-combat` = `77039f4` (приёмка Этапа 1, D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки, `main` не изменялся |
+| Удалённые ветки | `origin/stage2-location-prototype` — активная ветка Этапа 2 (публикации `766da1c` → `c194845` → `a5983d6` → `c36b9ce` → `4f7b320` → память 2.3), `origin/stage1-playable-combat` = `77039f4` (приёмка Этапа 1, D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки, `main` не изменялся |
 | Публикация | **выполнена 2026-10-25** автоматически (D14): `77039f4` в ветку Этапа 1 и `766da1c` в ветку Этапа 2; удалённый SHA совпал с локальным в обоих случаях; авторизация — штатный Git Credential Manager (аккаунт `alfuwerce-art`) |
 | Артефакты 2.1 | 9 PNG в `reports/` и отчёт `reports/stage2_task21_report.md` — `PUSHED` в `origin/stage2-location-prototype` |
 | Оригиналы | 25 PNG в `assets/references/` + ZIP 65,38 MB в `assets/archives/` — `PUSHED` (blob `9b4977a3…` совпал с локальным) |
