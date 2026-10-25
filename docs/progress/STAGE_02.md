@@ -57,7 +57,8 @@
 | `a5983d6` | задача 2.2: режим пробы боевого пространства, сравнительные кадры A/B/C, исправление расхождений памяти (13 файлов) — `PUSHED` в `origin/stage2-location-prototype` |
 | `4f7b320` | задача 2.3: D16 (утверждение констант), профиль B как стандарт, первый пиксельный проход ворот, кадры до/после (21 файл) — `PUSHED` в `origin/stage2-location-prototype` |
 | `8a18da9` | задача 2.4: клип реального геймплея (AVI + WebP), маршрут `--demo`, пакет приёмки (15 файлов, включая 31.6 МБ видео) — `PUSHED` в `origin/stage2-location-prototype` |
-| см. `git log --oneline stage2-location-prototype` | память этапа после публикации (SHA в `PROJECT_STATE.md` §3) |
+| `26e7d65` | приёмка Этапа 2 решением D17: DECISIONS (D17), DEVELOPMENT_PLAN, PROJECT_STATE, эта заметка, ветки в AGENTS.md/GITHUB_WORKFLOW.md (6 файлов) — `PUSHED` в `origin/stage2-location-prototype` |
+| см. `git log --oneline stage2-location-prototype` | память после приёмки (SHA в `PROJECT_STATE.md` §3) |
 
 ## 7. Результаты технических проверок
 
