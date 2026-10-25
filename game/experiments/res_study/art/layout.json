@@ -124,5 +124,59 @@
     "occluder": true,
     "light_energy": 1.9,
     "source_variant": "c"
+  },
+  "hero_master_96": {
+    "variant": "hero_master_96",
+    "tile": 48,
+    "viewport": [
+      960,
+      540
+    ],
+    "content_scale": 2,
+    "hero_png": "res://art/hero_master/hero_master_96.png",
+    "hero_pos": [
+      501.59999999999997,
+      461.76
+    ],
+    "hero_height": 96,
+    "hero_scale": 1,
+    "hero_screen_height": 192,
+    "light_png": "light_torch_48.png",
+    "light_pos": [
+      427.20000000000005,
+      267.35999999999996
+    ],
+    "light_scale": 1.0,
+    "world_png": "world_48_ns.png",
+    "occluder": true,
+    "light_energy": 1.9,
+    "source_variant": "c"
+  },
+  "hero_master_48": {
+    "variant": "hero_master_48",
+    "tile": 24,
+    "viewport": [
+      480,
+      270
+    ],
+    "content_scale": 4,
+    "hero_png": "res://art/hero_master/hero_master_48.png",
+    "hero_pos": [
+      250.79999999999998,
+      230.88
+    ],
+    "hero_height": 48,
+    "hero_scale": 1,
+    "hero_screen_height": 192,
+    "light_png": "light_torch_24.png",
+    "light_pos": [
+      213.60000000000002,
+      133.67999999999998
+    ],
+    "light_scale": 1.0,
+    "world_png": "world_24_ns.png",
+    "occluder": true,
+    "light_energy": 1.9,
+    "source_variant": "a"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "96": {
+    "canvas": [
+      96,
+      96
+    ],
+    "scale_h": 96.0,
+    "strokes": 260,
+    "colors": 23,
+    "opaque_px": 2391,
+    "semi_transparent_px": 0,
+    "bbox": [
+      30,
+      0,
+      66,
+      95
+    ],
+    "figure_height_px": 96,
+    "feet_row": 95,
+    "path": "C:\\Users\\bow\\Desktop\\Rogalik\\game\\experiments\\res_study\\art\\hero_master\\hero_master_96.png"
+  },
+  "48": {
+    "canvas": [
+      48,
+      48
+    ],
+    "scale_h": 48.0,
+    "strokes": 168,
+    "colors": 22,
+    "opaque_px": 658,
+    "semi_transparent_px": 0,
+    "bbox": [
+      15,
+      0,
+      33,
+      47
+    ],
+    "figure_height_px": 48,
+    "feet_row": 47,
+    "path": "C:\\Users\\bow\\Desktop\\Rogalik\\game\\experiments\\res_study\\art\\hero_master\\hero_master_48.png"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "task": "3.1e",
+  "what_is_checked": "прозрачность, палитра, привязка, высота, профиль, попиксельное совпадение с экспортом Pixelorama",
+  "what_is_NOT_checked": "художественное качество (D20: отвечает REFERENCE_FIDELITY_GATE, а не скрипт)",
+  "sprites": {
+    "96": {
+      "height": 96,
+      "source": "game/experiments/res_study/art/hero_master/hero_master_96.png",
+      "size": [
+        96,
+        96
+      ],
+      "pxo": "tools/hero_master/pxo/hero_master_96.pxo",
+      "semi_transparent_px": 0,
+      "colors_opaque": 23,
+      "palette_hex": [
+        "#120C10",
+        "#141319",
+        "#171310",
+        "#1B1209",
+        "#21202A",
+        "#2A1719",
+        "#2B0A0D",
+        "#2F2E3A",
+        "#342310",
+        "#403F4D",
+        "#43352A",
+        "#513417",
+        "#521316",
+        "#5A332C",
+        "#5C4838",
+        "#714A27",
+        "#7F1F1C",
+        "#8D5A46",
+        "#9A6C3E",
+        "#AA3325",
+        "#B98163",
+        "#D2542F",
+        "#D9A884"
+      ],
+      "figure_rows": [
+        0,
+        95
+      ],
+      "figure_height_px": 96,
+      "feet_row": 95,
+      "bbox_cols": [
+        30,
+        66
+      ],
+      "widest_row_head_0_0_0_22": [
+        0.219,
+        28
+      ],
+      "widest_row_shoulders_0_22_0_40": [
+        0.25,
+        35
+      ],
+      "widest_row_hips_0_46_0_60": [
+        0.469,
+        37
+      ],
+      "widest_row_legs_0_60_1_00": [
+        0.594,
+        23
+      ],
+      "min_width_row_0_40_0_50": 35,
+      "pxo_roundtrip": {
+        "path": "reports/hero_master_96_rt.png",
+        "same_shape": true,
+        "pixel_identical": true,
+        "max_channel_diff": 0,
+        "max_channel_diff_opaque_only": 0
+      }
+    },
+    "48": {
+      "height": 48,
+      "source": "game/experiments/res_study/art/hero_master/hero_master_48.png",
+      "size": [
+        48,
+        48
+      ],
+      "pxo": "tools/hero_master/pxo/hero_master_48.pxo",
+      "semi_transparent_px": 0,
+      "colors_opaque": 22,
+      "palette_hex": [
+        "#120C10",
+        "#141319",
+        "#1B1209",
+        "#21202A",
+        "#2A1719",
+        "#2B0A0D",
+        "#2F2E3A",
+        "#342310",
+        "#403F4D",
+        "#43352A",
+        "#513417",
+        "#521316",
+        "#5A332C",
+        "#5C4838",
+        "#714A27",
+        "#7F1F1C",
+        "#8D5A46",
+        "#9A6C3E",
+        "#AA3325",
+        "#B98163",
+        "#D2542F",
+        "#D9A884"
+      ],
+      "figure_rows": [
+        0,
+        47
+      ],
+      "figure_height_px": 48,
+      "feet_row": 47,
+      "bbox_cols": [
+        15,
+        33
+      ],
+      "widest_row_head_0_0_0_22": [
+        0.208,
+        15
+      ],
+      "widest_row_shoulders_0_22_0_40": [
+        0.25,
+        19
+      ],
+      "widest_row_hips_0_46_0_60": [
+        0.458,
+        19
+      ],
+      "widest_row_legs_0_60_1_00": [
+        0.583,
+        15
+      ],
+      "min_width_row_0_40_0_50": 19,
+      "pxo_roundtrip": {
+        "path": "reports/hero_master_48_rt.png",
+        "same_shape": true,
+        "pixel_identical": true,
+        "max_channel_diff": 0,
+        "max_channel_diff_opaque_only": 0
+      }
+    }
+  },
+  "status": "PASS"
+}
