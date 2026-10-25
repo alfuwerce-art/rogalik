@@ -19,6 +19,10 @@ Roguelike game prototype
 
 - [Структура папок и правила импорта концепт-артов](docs/REPOSITORY_STRUCTURE.md)
 
+## Инструменты разработки
+
+- [Первоначальная настройка Godot, Pixelorama и инструментов DeepSeek Harness](docs/DEV_ENVIRONMENT_SETUP.md)
+
 ## Автономная разработка с DeepSeek Harness
 
 - [Основные правила работы DeepSeek](docs/DEEPSEEK_GAME_DEV_RULES.md)
