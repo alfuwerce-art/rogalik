@@ -28,14 +28,14 @@
 |---|---|
 | Рабочая директория | `C:\Users\bow\Desktop\Rogalik` |
 | Ветка | Этап 3 — **`stage3-hero`**, создана от опубликованного HEAD принятого Этапа 2 `a74f668` (= `origin/stage2-location-prototype`); удалённая ветка создаётся первым push |
-| Последний содержательный коммит | `1609925` (база игровых референсов + решение D18, задача REFS-1) — **опубликован**: `git ls-remote --heads origin stage3-hero` = `1609925` |
+| Последний содержательный коммит | `8ea5cfe` (полный регламент референсов + решение D19, задача REFS-2) — **опубликован**: `git ls-remote --heads origin stage3-hero` = `8ea5cfe` |
 | Незакоммиченные файлы | нет; рабочее дерево чистое на момент записи |
-| Удалённые ветки | `origin/stage3-hero` = `1609925` (ветка Этапа 3: `966cfc7` → `e9d1a7a` → `c24d629` → `1609925`), `origin/stage2-location-prototype` = `a74f668` (Этап 2 принят, D17), `origin/stage1-playable-combat` = `77039f4` (приёмка D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `main` не изменялся |
-| Публикация | **выполнена 2026-10-25** автоматически (D14): задачи 3.1 (`966cfc7`), 3.1a (`c24d629`) и база референсов (`1609925`) — удалённый SHA совпал с локальным, файлы проверены `git ls-tree -r origin/stage3-hero`; авторизация — штатный Git Credential Manager |
+| Удалённые ветки | `origin/stage3-hero` = `8ea5cfe` (ветка Этапа 3: `966cfc7` → `e9d1a7a` → `c24d629` → `1609925` → `1ab4deb` → `8ea5cfe`), `origin/stage2-location-prototype` = `a74f668` (Этап 2 принят, D17), `origin/stage1-playable-combat` = `77039f4` (приёмка D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `main` не изменялся |
+| Публикация | **выполнена 2026-10-25** автоматически (D14): задачи 3.1 (`966cfc7`), 3.1a (`c24d629`), база референсов (`1609925`) и полный регламент (`8ea5cfe`) — удалённый SHA совпал с локальным, файлы проверены `git ls-tree -r origin/stage3-hero`; авторизация — штатный Git Credential Manager |
 | Артефакты 3.1a | доработанный `hero_idle_48.png` (`ASSET_DRAFT`), новый `.pxo`, лист «было → стало» `reports/stage3a_hero_compare.png`, 4 игровых кадра, отчёт `reports/stage3_task31a_report.md` — `PUSHED` в `origin/stage3-hero` |
 | Артефакты 3.1 | лист 3.1 (сохранён в Git на `966cfc7`), 10 PNG в `reports/`, отчёт `reports/stage3_task31_report.md` — `PUSHED` |
 | База референсов (REFS-1) | `docs/GAME_REFERENCES.md` (19 173 байта, blob `e7c1988…`), запись `D18` в `docs/DECISIONS.md`, ссылки в `AGENTS.md` §1/§5 и `docs/AI_STUDIO_PLAYBOOK.md` §1 — `PUSHED` в `origin/stage3-hero` на `1609925` (blob сверен с локальным) |
-| Регламент референсов (REFS-2) | `docs/GAME_REFERENCES.md` — **полная редакция** (40 099 байт, 233 строки, blob `677990e…`) вместо каркаса: методика §1–§10, принципы §4, статус установок §3.5, согласование §11, сверка с каноном §12, история и реестр расхождений §13; запись **D19**, обновлены `AGENTS.md` §1/§5, `AI_STUDIO_PLAYBOOK.md` §1, память |
+| Регламент референсов (REFS-2) | `docs/GAME_REFERENCES.md` — **полная редакция** (40 099 байт, 233 строки, blob `677990e…`) вместо каркаса: методика §1–§10, принципы §4, статус установок §3.5, согласование §11, сверка с каноном §12, история и реестр расхождений §13; запись **D19**, обновлены `AGENTS.md` §1/§5, `AI_STUDIO_PLAYBOOK.md` §1, память — `PUSHED` в `origin/stage3-hero` на `8ea5cfe` (blob сверен с локальным) |
 | Артефакты 2.1 | 9 PNG в `reports/` и отчёт `reports/stage2_task21_report.md` — `PUSHED` в `origin/stage2-location-prototype` |
 | Оригиналы | 25 PNG в `assets/references/` + ZIP 65,38 MB в `assets/archives/` — `PUSHED` (blob `9b4977a3…` совпал с локальным) |
 
@@ -119,6 +119,8 @@
 | **Совместимость регламента с каноном (REFS-2)** | §4 регламента сверен с [SKILLS_AND_BOONS.md §1](../SKILLS_AND_BOONS.md) п. 1–11 и D16: **10 из 10 пунктов совпадают**, противоречий нет; канон не изменялся |
 | **D18 не переписан (REFS-2)** | `git diff 1609925 -- docs/DECISIONS.md` содержит только добавленный блок D19; текст D18 не тронут |
 | **Массовое исследование игр не выполнялось (REFS-2)** | никаких операций чтения/запуска установленных игр не производилось; статус `OWNER_REPORTED / NOT_VERIFIED_LOCALLY` |
+| **Регламент опубликован (REFS-2)** | `git ls-remote --heads origin stage3-hero` → `8ea5cfe…`; `git ls-tree -r origin/stage3-hero -- docs/GAME_REFERENCES.md` → blob `677990e…`, 40 099 байт, **совпал** с локальным `git hash-object`; `D19` присутствует в удалённом `DECISIONS.md` |
+| **D18 не переписан — доказательство (REFS-2)** | `git diff --numstat 1ab4deb -- docs/DECISIONS.md` → `22 0` (только добавления); блок D18 извлечён из обеих версий и сравнён — **идентичен**, 2295 символов |
 
 Не проверялось и **не должно считаться проверенным**: художественное качество силуэта героя (нужна приёмка владельца, статус `ASSET_DRAFT`); анимации `move/dodge/attack/hurt/death` (ещё не созданы); «камера не прячет бой» (`NOT_VERIFIED`, перенесено на Этап 5 решением D17); полноценный боевой HUD (перенесён на Этап 5); `run_project` + `game_screenshot` в последней сессии; GUI-режим Pixelorama; отображение ZIP и README в веб-интерфейсе GitHub (проверено только через git-протокол).
 
