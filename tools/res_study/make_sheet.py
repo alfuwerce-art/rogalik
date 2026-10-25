@@ -159,6 +159,7 @@ def sheet_compare() -> Path:
 
 
 def sheet_hero_scale() -> Path:
+    """Герой A/B/C в одинаковом экранном масштабе + увеличение исходных пикселей."""
     tiles = []
     for variant in VARIANTS:
         info = LAYOUT[variant]
@@ -167,28 +168,40 @@ def sheet_hero_scale() -> Path:
         screen = img.resize((img.width * info["content_scale"],
                              img.height * info["content_scale"]), Image.NEAREST)
         raw = img.resize((img.width * 4, img.height * 4), Image.NEAREST)
-        tiles.append((variant, int(info["hero_height"]), screen, raw))
+        tiles.append({"variant": variant, "height": int(info["hero_height"]),
+                      "screen": screen, "raw": raw})
 
     f_head, f_body = font(18), font(14)
-    pad = 24
-    screen_w = max(t[2].width for t in tiles)
-    raw_w = max(t[3].width for t in tiles)
-    width = pad * 2 + screen_w * 3 + pad * 2 + raw_w * 3
-    height = max(t[2].height for t in tiles) + 120
+    pad, gap = 24, 22
+    top = 74
+    # два прохода: сначала считаем x, потом рисуем
+    groups = [("screen", "Одинаковый экранный масштаб (высота 192 px на экране)"),
+              ("raw", "Исходные пиксели, увеличение ×4")]
+    x_cursor = pad
+    positions: list[tuple[str, int, dict]] = []
+    for key, _title in groups:
+        x_cursor += gap
+        for tile in tiles:
+            positions.append((key, x_cursor, tile))
+            x_cursor += tile[key].width + gap
+    width = x_cursor + pad
+    body_h = max(t["screen"].height for t in tiles) if True else 0
+    height = top + max(body_h, max(t["raw"].height for t in tiles)) + 40
+    subtitle = ("Слева — как герой выглядит на экране 1920×1080 (192 px высоты). "
+                "Справа — те же файлы, увеличенные ×4 без сглаживания.")
+    probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    width = max(width, pad * 2 + int(probe.textlength(subtitle, font=f_body)))
     sheet = Image.new("RGB", (width, height), BG)
     draw = ImageDraw.Draw(sheet)
-    draw.text((pad, 14), "Герой: одинаковый экранный масштаб (слева) и исходные пиксели ×4 "
-                         "(справа)", fill=FG, font=f_head)
-    x = pad
-    for variant, height_px, screen, _raw in tiles:
-        draw.text((x, 46), f"{variant.upper()} — {height_px} px исходник", fill=FG, font=f_body)
-        sheet.paste(screen, (x, 70), screen)
-        x += screen_w + pad
-    x += pad
-    for variant, height_px, _screen, raw in tiles:
-        draw.text((x, 46), f"{variant.upper()} ×4", fill=DIM, font=f_body)
-        sheet.paste(raw, (x, 70), raw)
-        x += raw_w + pad
+    draw.text((pad, 14), "Герой: одинаковый экранный масштаб и исходные пиксели", fill=FG,
+              font=f_head)
+    draw.text((pad, 40), subtitle, fill=DIM, font=f_body)
+    for key, x, tile in positions:
+        image = tile[key]
+        sheet.paste(image, (x, top), image)
+        label = (f"{tile['variant'].upper()} — {tile['height']} px"
+                 if key == "screen" else f"{tile['variant'].upper()} ×4")
+        draw.text((x, top - 18), label, fill=FG if key == "screen" else DIM, font=f_body)
     path = REPORTS / "stage3c_hero_scale_sheet.png"
     sheet.save(path)
     return path
