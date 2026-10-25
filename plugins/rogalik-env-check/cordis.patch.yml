@@ -2,4 +2,4 @@
     - id: rogalik-env-check
       name: '@local/rogalik-env-check'
       config:
-        workspace: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik'
+        workspace: 'C:\Users\bow\Desktop\Rogalik'

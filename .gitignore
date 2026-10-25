@@ -155,6 +155,10 @@ tools/godot-mcp/
 # Godot import cache (regenerated on open/import)
 game/**/.godot/
 
+# godot-mcp copies its runtime bridge to the project root on every run_project,
+# even when the autoload already points at scripts/mcp_interaction_server.gd.
+game/**/mcp_interaction_server.gd
+
 # Local scratch: pipeline test output, Pixelorama headless profile, caches
 build/
 .cache/

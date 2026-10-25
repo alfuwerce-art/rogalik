@@ -4,6 +4,41 @@
 >
 > **Различать четыре состояния:** `ROSTER_APPROVED` — вид включён в игру; `VISUAL_APPROVED` — конкретный концепт подтверждён пользователем; `VISUAL_CANDIDATE` — предложен, но ещё не утверждён; `PNG_IN_REPO` — проверено наличие реального графического файла в GitHub. Не приравнивать записи Markdown к загруженным PNG.
 
+## 0. Доступность визуальных референсов — реестр
+
+> **Правило владельца:** нет утверждённого референса — не придумывать внешность, а прямо сообщить `BLOCKED_NEEDS_REFERENCE` и остановиться на этой единице. Полный текст — [DEEPSEEK_GAME_DEV_RULES.md](DEEPSEEK_GAME_DEV_RULES.md), раздел «Нет референса — стоп, а не фантазия».
+
+### Боссы
+
+| ID | Название | Референс | Файл / причина | Решение |
+|---|---|---|---|---|
+| B01 | Кощей Бессмертный | `VISUAL_APPROVED` | `assets/references/bosses/koschei_bessmertny.png` | можно разрабатывать |
+| B02 | Змей Горыныч | `VISUAL_APPROVED` | `assets/references/bosses/zmey_gorynych.png` | можно разрабатывать |
+| B03 | Лихо Одноглазое | `VISUAL_APPROVED` | `assets/references/bosses/likho_odnoglazoe.png` | можно разрабатывать |
+| B04 | Полудница | `VISUAL_APPROVED` | `assets/references/bosses/poludnitsa.png` | можно разрабатывать |
+| B05 | Утопленница | `VISUAL_APPROVED` | `assets/references/bosses/utoplennitsa.png` | можно разрабатывать |
+| B06 | Моровой волк | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| B07 | Леший-исполин | **NONE** | референса нет; случайные изображения леших не считать референсом | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| B08 | Могильный упырь | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| B09 | Болотная ведунья | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+
+### Обычные противники
+
+| ID | Семейство | Референс | Файл / причина | Решение |
+|---|---|---|---|---|
+| E01 | Павшие ратники | `VISUAL_APPROVED` | `enemies/fallen_warriors/fallen_warrior_base.png` + `enemies/fallen_warriors/fallen_warrior_variants_triptych.png` | можно разрабатывать |
+| E02 | Погребальные звонари | `VISUAL_APPROVED` | `enemies/bellringers/bellringer_base.png` + `enemies/bellringers/bellringer_variants_triptych.png` | можно разрабатывать |
+| E03 | Моровые волхвы | `VISUAL_APPROVED` | `enemies/morovoi_volkhv/morovoi_volkhv_base.png` + `enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png` | можно разрабатывать |
+| E04 | Мёртвые стрелки | база `VISUAL_APPROVED`; 3 варианта `VISUAL_CANDIDATE` | `enemies/dead_archer/dead_archer_base.png`; `enemies/dead_archer/dead_archer_variants_triptych_candidate.png` | базу можно разрабатывать; варианты — до утверждения нельзя |
+| E05 | Проклятый вепрь | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| E06 | Водяной | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| E07 | Волколак | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| E08 | Стрига | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| E09 | Шуликун | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+| E10 | Кикимора | **NONE** | референса нет | `BLOCKED_NEEDS_REFERENCE` — ждать референс |
+
+Пути указаны относительно `assets/references/`. Наличие строки в таблице не означает наличия файла в GitHub; локальная проверка — `reports/reference_import.md`, `reports/reference_import_verify.json`.
+
 ## 1. Боссы — 9 утверждённых типов
 
 | ID | Название | Статус состава | Визуальный статус | Краткая характеристика |
@@ -88,4 +123,4 @@
 
 Затем обычные враги: **Проклятый вепрь, Водяной, Волколак, Стрига, Шуликун, Кикимора**.
 
-Отдельно на подтверждение: **3 разновидности Мёртвого стрелка**. Очередь рекомендательная, а не автоматическое задание на генерацию.
+Отдельно на подтверждение: **3 разновидности Мёртвого стрелка**. Очередь рекомендательная, а не автоматическое задание на генерацию. Все виды без референса (B06–B09, E05–E10) остаются `BLOCKED_NEEDS_REFERENCE`: внешность не придумывать, ждать референс владельца.

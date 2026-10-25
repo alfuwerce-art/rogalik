@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "kind": "sprite_sheet",
-  "target": "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
+  "target": "C:\\Users\\bow\\Desktop\\Rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
   "checks": [
     {
       "name": "file_exists",
@@ -45,7 +45,7 @@
     }
   ],
   "metrics": {
-    "path": "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
+    "path": "C:\\Users\\bow\\Desktop\\Rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
     "exists": true,
     "width": 128,
     "height": 32,

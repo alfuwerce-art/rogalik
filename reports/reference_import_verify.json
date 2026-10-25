@@ -1,0 +1,295 @@
+{
+  "status": "PASS",
+  "repo": "C:\\Users\\bow\\Desktop\\Rogalik",
+  "archive": {
+    "path": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\archives\\rogalik_all_concept_art_with_weapons.zip",
+    "size": 68551781,
+    "sha256": "e900eaad8806b881eb91d51ea649d9f2ad1131974a3687bd67628a3515169b23"
+  },
+  "counts": {
+    "pngs_verified": 25,
+    "archive_manifest_files": 23,
+    "approved": 17,
+    "candidate": 6,
+    "supplemental": 2
+  },
+  "dimensions": {
+    "assets/references/bosses/koschei_bessmertny.png": [
+      1122,
+      1402
+    ],
+    "assets/references/bosses/likho_odnoglazoe.png": [
+      1024,
+      1536
+    ],
+    "assets/references/bosses/poludnitsa.png": [
+      1024,
+      1536
+    ],
+    "assets/references/bosses/utoplennitsa.png": [
+      1024,
+      1536
+    ],
+    "assets/references/bosses/zmey_gorynych.png": [
+      1122,
+      1402
+    ],
+    "assets/references/enemies/bellringers/bellringer_base.png": [
+      1024,
+      1536
+    ],
+    "assets/references/enemies/bellringers/bellringer_variants_triptych.png": [
+      1536,
+      1024
+    ],
+    "assets/references/enemies/dead_archer/dead_archer_base.png": [
+      1024,
+      1536
+    ],
+    "assets/references/enemies/dead_archer/dead_archer_variants_triptych_candidate.png": [
+      1536,
+      1024
+    ],
+    "assets/references/enemies/fallen_warriors/fallen_warrior_base.png": [
+      1024,
+      1536
+    ],
+    "assets/references/enemies/fallen_warriors/fallen_warrior_variants_triptych.png": [
+      1536,
+      1024
+    ],
+    "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_base.png": [
+      1024,
+      1536
+    ],
+    "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png": [
+      1448,
+      1086
+    ],
+    "assets/references/gameplay/gameplay_look_reference.png": [
+      1672,
+      941
+    ],
+    "assets/references/hero/hero_reference_front_back.png": [
+      1536,
+      1024
+    ],
+    "assets/references/locations/first_location/cursed_sloboda_master_concept.png": [
+      1672,
+      941
+    ],
+    "assets/references/locations/first_location/first_location_master_candidate.png": [
+      1672,
+      941
+    ],
+    "assets/references/locations/first_location/village_interior_01.png": [
+      1672,
+      941
+    ],
+    "assets/references/locations/first_location/village_interior_02.png": [
+      1672,
+      941
+    ],
+    "assets/references/locations/first_location/village_interior_03.png": [
+      1672,
+      941
+    ],
+    "assets/references/weapons/01_two_handed_weapons.png": [
+      1672,
+      941
+    ],
+    "assets/references/weapons/02_magic_staves.png": [
+      1672,
+      941
+    ],
+    "assets/references/weapons/03_dual_weapons.png": [
+      1672,
+      941
+    ],
+    "assets/references/weapons/04_bows.png": [
+      1672,
+      941
+    ],
+    "assets/references/weapons/05_combat_staves.png": [
+      1672,
+      941
+    ]
+  },
+  "checks": [
+    {
+      "check": "archive exists",
+      "ok": true,
+      "detail": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\archives\\rogalik_all_concept_art_with_weapons.zip"
+    },
+    {
+      "check": "archive sha256 unchanged",
+      "ok": true,
+      "detail": "e900eaad8806b881eb91d51ea649d9f2ad1131974a3687bd67628a3515169b23"
+    },
+    {
+      "check": "archive size unchanged",
+      "ok": true,
+      "detail": "68551781"
+    },
+    {
+      "check": "archive CRC scan (testzip)",
+      "ok": true,
+      "detail": "all members readable"
+    },
+    {
+      "check": "manifest entries",
+      "ok": true,
+      "detail": "23 entries"
+    },
+    {
+      "check": "no unexpected files in assets/references",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "all manifest files present",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "owner-supplied hero/gameplay refs present",
+      "ok": true,
+      "detail": "2/2 present"
+    },
+    {
+      "check": "every file matches manifest sha256",
+      "ok": true,
+      "detail": "23/23 match"
+    },
+    {
+      "check": "hero/gameplay refs match owner-supplied sha256",
+      "ok": true,
+      "detail": "2/2 match"
+    },
+    {
+      "check": "no duplicate image content",
+      "ok": true,
+      "detail": "25 unique images"
+    },
+    {
+      "check": "extracted bytes identical to archive",
+      "ok": true,
+      "detail": "byte-for-byte, no re-encoding"
+    },
+    {
+      "check": "docs manifest byte-identical to archive copy",
+      "ok": true,
+      "detail": "2950 bytes expected"
+    },
+    {
+      "check": "all PNGs open and decode",
+      "ok": true,
+      "detail": "25/25 decoded"
+    },
+    {
+      "check": "docs/BOSS_REFERENCES.md sha256 claim: assets/references/bosses/poludnitsa.png",
+      "ok": true,
+      "detail": "actual fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8"
+    },
+    {
+      "check": "docs/BOSS_REFERENCES.md sha256 claim: assets/references/bosses/utoplennitsa.png",
+      "ok": true,
+      "detail": "actual 2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1"
+    },
+    {
+      "check": "docs/WEAPON_REFERENCES.md sha256 claim: assets/references/weapons/01_two_handed_weapons.png",
+      "ok": true,
+      "detail": "actual a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0"
+    },
+    {
+      "check": "docs/WEAPON_REFERENCES.md sha256 claim: assets/references/weapons/02_magic_staves.png",
+      "ok": true,
+      "detail": "actual 861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452"
+    },
+    {
+      "check": "docs/WEAPON_REFERENCES.md sha256 claim: assets/references/weapons/03_dual_weapons.png",
+      "ok": true,
+      "detail": "actual f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1"
+    },
+    {
+      "check": "docs/WEAPON_REFERENCES.md sha256 claim: assets/references/weapons/04_bows.png",
+      "ok": true,
+      "detail": "actual d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c"
+    },
+    {
+      "check": "docs/WEAPON_REFERENCES.md sha256 claim: assets/references/weapons/05_combat_staves.png",
+      "ok": true,
+      "detail": "actual f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269"
+    },
+    {
+      "check": "documented size 1672x941: assets/references/weapons/01_two_handed_weapons.png",
+      "ok": true,
+      "detail": "(1672, 941)"
+    },
+    {
+      "check": "documented size 1672x941: assets/references/weapons/02_magic_staves.png",
+      "ok": true,
+      "detail": "(1672, 941)"
+    },
+    {
+      "check": "documented size 1672x941: assets/references/weapons/03_dual_weapons.png",
+      "ok": true,
+      "detail": "(1672, 941)"
+    },
+    {
+      "check": "documented size 1672x941: assets/references/weapons/04_bows.png",
+      "ok": true,
+      "detail": "(1672, 941)"
+    },
+    {
+      "check": "documented size 1672x941: assets/references/weapons/05_combat_staves.png",
+      "ok": true,
+      "detail": "(1672, 941)"
+    },
+    {
+      "check": "documented size 1024x1536: assets/references/bosses/poludnitsa.png",
+      "ok": true,
+      "detail": "(1024, 1536)"
+    },
+    {
+      "check": "documented size 1024x1536: assets/references/bosses/utoplennitsa.png",
+      "ok": true,
+      "detail": "(1024, 1536)"
+    },
+    {
+      "check": "documented byte size 2716015: assets/references/bosses/poludnitsa.png",
+      "ok": true,
+      "detail": "2716015"
+    },
+    {
+      "check": "documented byte size 2725848: assets/references/bosses/utoplennitsa.png",
+      "ok": true,
+      "detail": "2725848"
+    },
+    {
+      "check": "CONCEPT_ART_INDEX lists every reference path",
+      "ok": true,
+      "detail": "25 paths; missing in index: none; stale in index: none"
+    },
+    {
+      "check": "BESTIARY lists only existing reference files",
+      "ok": true,
+      "detail": "13 paths exist"
+    },
+    {
+      "check": "BESTIARY marks reference-less units",
+      "ok": true,
+      "detail": "10/10 units listed"
+    },
+    {
+      "check": "approved vs candidate split (archive)",
+      "ok": true,
+      "detail": "17 approved, 6 candidate"
+    },
+    {
+      "check": "supplemental refs counted separately",
+      "ok": true,
+      "detail": "hero design reference + gameplay look reference"
+    }
+  ]
+}

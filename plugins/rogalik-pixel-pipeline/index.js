@@ -22,7 +22,7 @@ const runFile = promisify(execFile);
 export const name = 'rogalik-pixel-pipeline';
 export const inject = ['tools'];
 
-const DEFAULT_WORKSPACE = 'C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik';
+const DEFAULT_WORKSPACE = 'C:\\Users\\bow\\Desktop\\Rogalik';
 const DEFAULT_PYTHON =
   'C:\\Users\\bow\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe';
 

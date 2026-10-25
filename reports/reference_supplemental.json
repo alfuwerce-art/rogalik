@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "source": "C:\\Users\\bow\\.dsh\\attachments\\v1\\objects\\53\\53c9ace7a25dd16916c2cd7dfbba7ef7410a8a701090b3a2fe042f788c99f985",
+      "destination": "assets/references/hero/hero_reference_front_back.png",
+      "sha256": "53c9ace7a25dd16916c2cd7dfbba7ef7410a8a701090b3a2fe042f788c99f985",
+      "size": 2110834,
+      "action": "copied",
+      "png": {
+        "width": 1536,
+        "height": 1024,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "idat_bytes": 2104609
+      },
+      "sha256_on_disk": "53c9ace7a25dd16916c2cd7dfbba7ef7410a8a701090b3a2fe042f788c99f985",
+      "pillow": {
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1536,
+          1024
+        ]
+      }
+    },
+    {
+      "source": "C:\\Users\\bow\\.dsh\\attachments\\v1\\objects\\c0\\c04d11f71ae2d2c98e8199ee654040b57dd3d451fa2d07943fb8556a744d9ae2",
+      "destination": "assets/references/gameplay/gameplay_look_reference.png",
+      "sha256": "c04d11f71ae2d2c98e8199ee654040b57dd3d451fa2d07943fb8556a744d9ae2",
+      "size": 3051027,
+      "action": "copied",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "idat_bytes": 3042054
+      },
+      "sha256_on_disk": "c04d11f71ae2d2c98e8199ee654040b57dd3d451fa2d07943fb8556a744d9ae2",
+      "pillow": {
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

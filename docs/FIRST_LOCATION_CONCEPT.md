@@ -77,6 +77,6 @@
 - Оригинал в исходной сессии ChatGPT: `a_cinematic_high_detail_dark_fantasy_medieval_vi.png`.
 - Размер: PNG 1672×941, RGB.
 - SHA-256: `e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa`.
-- Целевое место после утверждения и отдельной загрузки: `assets/references/locations/location_01_cursed_sloboda_concept.png`.
+- Фактический путь локального файла (импорт 2026-10-25): `assets/references/locations/first_location/first_location_master_candidate.png`. Статус `VISUAL_CANDIDATE` не меняется.
 - Содержит **три горизонтальные композиции на одном листе**: обзор ворот, центральная площадь и речной сектор. Можно использовать как moodboard; не считать три части готовыми 3D-сценами или финальной схемой уровня.
 - `PNG_IN_REPO = false`, пока не проверен сам файл в GitHub.

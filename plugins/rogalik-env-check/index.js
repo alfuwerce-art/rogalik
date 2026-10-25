@@ -22,7 +22,7 @@ const runFile = promisify(execFile);
 export const name = 'rogalik-env-check';
 export const inject = ['tools'];
 
-const DEFAULT_WORKSPACE = 'C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik';
+const DEFAULT_WORKSPACE = 'C:\\Users\\bow\\Desktop\\Rogalik';
 
 const WINGET_GODOT_DIR =
   'C:\\Users\\bow\\AppData\\Local\\Microsoft\\WinGet\\Packages\\' +

@@ -27,6 +27,7 @@ Roguelike game prototype
 ## Автономная разработка с DeepSeek Harness
 
 - [Основные правила работы DeepSeek](docs/DEEPSEEK_GAME_DEV_RULES.md)
+- [**Правило: нет утверждённого референса — не придумывать, остановиться и запросить референс**](docs/DEEPSEEK_GAME_DEV_RULES.md#L19-L29) · [реестр: у кого референс есть, а у кого нет](docs/BESTIARY.md#0-доступность-визуальных-референсов--реестр)
 
 - [Рабочий регламент агента и шаблон задач](docs/AI_STUDIO_PLAYBOOK.md)
 - [**Обязательные общие этапы разработки ВСЕХ моделей и анимаций**](docs/GLOBAL_ASSET_PASSES.md)

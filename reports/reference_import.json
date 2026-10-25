@@ -1,0 +1,686 @@
+{
+  "archive": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\archives\\rogalik_all_concept_art_with_weapons.zip",
+  "repo_root": "C:\\Users\\bow\\Desktop\\Rogalik",
+  "files": [
+    {
+      "member": "rogalik/assets/references/bosses/koschei_bessmertny.png",
+      "relative": "bosses/koschei_bessmertny.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\bosses\\koschei_bessmertny.png",
+      "size": 2695734,
+      "sha256": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+      "sha256_manifest": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1122,
+        "height": 1402,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2672011
+      },
+      "sha256_on_disk": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1122,
+          1402
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/bosses/likho_odnoglazoe.png",
+      "relative": "bosses/likho_odnoglazoe.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\bosses\\likho_odnoglazoe.png",
+      "size": 2928980,
+      "sha256": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+      "sha256_manifest": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2907030
+      },
+      "sha256_on_disk": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/bosses/poludnitsa.png",
+      "relative": "bosses/poludnitsa.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\bosses\\poludnitsa.png",
+      "size": 2716015,
+      "sha256": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+      "sha256_manifest": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2692292
+      },
+      "sha256_on_disk": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/bosses/utoplennitsa.png",
+      "relative": "bosses/utoplennitsa.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\bosses\\utoplennitsa.png",
+      "size": 2725848,
+      "sha256": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+      "sha256_manifest": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2702125
+      },
+      "sha256_on_disk": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/bosses/zmey_gorynych.png",
+      "relative": "bosses/zmey_gorynych.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\bosses\\zmey_gorynych.png",
+      "size": 3075120,
+      "sha256": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+      "sha256_manifest": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1122,
+        "height": 1402,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3053170
+      },
+      "sha256_on_disk": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1122,
+          1402
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/bellringers/bellringer_base.png",
+      "relative": "enemies/bellringers/bellringer_base.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\bellringers\\bellringer_base.png",
+      "size": 2756353,
+      "sha256": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+      "sha256_manifest": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2732630
+      },
+      "sha256_on_disk": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/bellringers/bellringer_variants_triptych.png",
+      "relative": "enemies/bellringers/bellringer_variants_triptych.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\bellringers\\bellringer_variants_triptych.png",
+      "size": 3166858,
+      "sha256": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+      "sha256_manifest": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1536,
+        "height": 1024,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3144908
+      },
+      "sha256_on_disk": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1536,
+          1024
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/dead_archer/dead_archer_base.png",
+      "relative": "enemies/dead_archer/dead_archer_base.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\dead_archer\\dead_archer_base.png",
+      "size": 2865919,
+      "sha256": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+      "sha256_manifest": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2842196
+      },
+      "sha256_on_disk": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/dead_archer/dead_archer_variants_triptych_candidate.png",
+      "relative": "enemies/dead_archer/dead_archer_variants_triptych_candidate.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\dead_archer\\dead_archer_variants_triptych_candidate.png",
+      "size": 3057234,
+      "sha256": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+      "sha256_manifest": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1536,
+        "height": 1024,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3035284
+      },
+      "sha256_on_disk": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1536,
+          1024
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/fallen_warriors/fallen_warrior_base.png",
+      "relative": "enemies/fallen_warriors/fallen_warrior_base.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\fallen_warriors\\fallen_warrior_base.png",
+      "size": 2615419,
+      "sha256": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+      "sha256_manifest": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2591696
+      },
+      "sha256_on_disk": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/fallen_warriors/fallen_warrior_variants_triptych.png",
+      "relative": "enemies/fallen_warriors/fallen_warrior_variants_triptych.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\fallen_warriors\\fallen_warrior_variants_triptych.png",
+      "size": 3153633,
+      "sha256": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+      "sha256_manifest": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1536,
+        "height": 1024,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3129910
+      },
+      "sha256_on_disk": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1536,
+          1024
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/morovoi_volkhv/morovoi_volkhv_base.png",
+      "relative": "enemies/morovoi_volkhv/morovoi_volkhv_base.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\morovoi_volkhv\\morovoi_volkhv_base.png",
+      "size": 2880261,
+      "sha256": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+      "sha256_manifest": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1024,
+        "height": 1536,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2856538
+      },
+      "sha256_on_disk": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1024,
+          1536
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png",
+      "relative": "enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\enemies\\morovoi_volkhv\\morovoi_volkhv_variants_triptych.png",
+      "size": 3159833,
+      "sha256": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+      "sha256_manifest": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1448,
+        "height": 1086,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3137883
+      },
+      "sha256_on_disk": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1448,
+          1086
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/locations/first_location/cursed_sloboda_master_concept.png",
+      "relative": "locations/first_location/cursed_sloboda_master_concept.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\locations\\first_location\\cursed_sloboda_master_concept.png",
+      "size": 3193111,
+      "sha256": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+      "sha256_manifest": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3169388
+      },
+      "sha256_on_disk": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/locations/first_location/first_location_master_candidate.png",
+      "relative": "locations/first_location/first_location_master_candidate.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\locations\\first_location\\first_location_master_candidate.png",
+      "size": 2903510,
+      "sha256": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+      "sha256_manifest": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2879787
+      },
+      "sha256_on_disk": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/locations/first_location/village_interior_01.png",
+      "relative": "locations/first_location/village_interior_01.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\locations\\first_location\\village_interior_01.png",
+      "size": 3082139,
+      "sha256": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+      "sha256_manifest": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3060189
+      },
+      "sha256_on_disk": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/locations/first_location/village_interior_02.png",
+      "relative": "locations/first_location/village_interior_02.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\locations\\first_location\\village_interior_02.png",
+      "size": 3151708,
+      "sha256": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+      "sha256_manifest": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 3129758
+      },
+      "sha256_on_disk": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/locations/first_location/village_interior_03.png",
+      "relative": "locations/first_location/village_interior_03.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\locations\\first_location\\village_interior_03.png",
+      "size": 2892984,
+      "sha256": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+      "sha256_manifest": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 2,
+        "chunks": 4,
+        "idat_bytes": 2869261
+      },
+      "sha256_on_disk": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/weapons/01_two_handed_weapons.png",
+      "relative": "weapons/01_two_handed_weapons.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\weapons\\01_two_handed_weapons.png",
+      "size": 3286880,
+      "sha256": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+      "sha256_manifest": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 6,
+        "chunks": 804,
+        "idat_bytes": 3277211
+      },
+      "sha256_on_disk": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/weapons/02_magic_staves.png",
+      "relative": "weapons/02_magic_staves.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\weapons\\02_magic_staves.png",
+      "size": 3284487,
+      "sha256": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+      "sha256_manifest": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 6,
+        "chunks": 803,
+        "idat_bytes": 3274830
+      },
+      "sha256_on_disk": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/weapons/03_dual_weapons.png",
+      "relative": "weapons/03_dual_weapons.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\weapons\\03_dual_weapons.png",
+      "size": 3418979,
+      "sha256": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+      "sha256_manifest": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 6,
+        "chunks": 836,
+        "idat_bytes": 3408926
+      },
+      "sha256_on_disk": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/weapons/04_bows.png",
+      "relative": "weapons/04_bows.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\weapons\\04_bows.png",
+      "size": 3195264,
+      "sha256": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+      "sha256_manifest": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 6,
+        "chunks": 781,
+        "idat_bytes": 3185871
+      },
+      "sha256_on_disk": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    },
+    {
+      "member": "rogalik/assets/references/weapons/05_combat_staves.png",
+      "relative": "weapons/05_combat_staves.png",
+      "destination": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\references\\weapons\\05_combat_staves.png",
+      "size": 3185219,
+      "sha256": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+      "sha256_manifest": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+      "sha256_match": true,
+      "action": "extracted",
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bit_depth": 8,
+        "color_type": 6,
+        "chunks": 779,
+        "idat_bytes": 3175850
+      },
+      "sha256_on_disk": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+      "pillow": {
+        "available": true,
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1672,
+          941
+        ],
+        "animated": false
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "summary": {
+    "manifest_entries": 23,
+    "archive_pngs": 23,
+    "verified_and_present": 23,
+    "extracted_now": 23,
+    "already_identical": 0,
+    "conflicts": 0,
+    "errors": 0,
+    "warnings": 0,
+    "status": "PASS"
+  }
+}

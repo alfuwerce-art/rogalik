@@ -16,9 +16,9 @@
       "step": "pixelorama_export",
       "status": "PASS",
       "artifact": [
-        "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png"
+        "C:\\Users\\bow\\Desktop\\Rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png"
       ],
-      "command": "--export --spritesheet C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\.export_staging\\hero_walk.pxo # project: C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\hero_walk.pxo",
+      "command": "--export --spritesheet C:\\Users\\bow\\Desktop\\Rogalik\\game\\prototype\\art\\demo-tool\\export\\.export_staging\\hero_walk.pxo # project: C:\\Users\\bow\\Desktop\\Rogalik\\game\\prototype\\art\\demo-tool\\hero_walk.pxo",
       "exit_code": 0,
       "problems": []
     },

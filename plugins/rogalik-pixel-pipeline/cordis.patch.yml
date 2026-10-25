@@ -2,5 +2,5 @@
     - id: rogalik-pixel-pipeline
       name: '@local/rogalik-pixel-pipeline'
       config:
-        workspace: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik'
+        workspace: 'C:\Users\bow\Desktop\Rogalik'
         pythonPath: 'C:\Users\bow\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe'

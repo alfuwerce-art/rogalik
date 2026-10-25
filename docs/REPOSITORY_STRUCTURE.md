@@ -37,7 +37,8 @@ rogalik/
 │   │   ├── locations/
 │   │   │   └── first_location/
 │   │   ├── weapons/
-│   │   └── hero/
+│   │   ├── hero/
+│   │   └── gameplay/
 │   ├── sources/                 # исходники моделей/анимаций при наличии прав
 │   │   ├── characters/
 │   │   ├── environments/
@@ -82,6 +83,10 @@ rogalik/
 - `locations/first_location/village_interior_03.png` — святилище.
 
 Все пути относительны к `assets/references/`. **Физическое наличие в GitHub подтверждается только после реального импорта файлов, а не появлением пути в этом документе.**
+
+**Главный герой и игровой look (переданы владельцем 2026-10-25, вне ZIP-архива):**
+- `hero/hero_reference_front_back.png` — утверждённый референс внешности героя (`VISUAL_APPROVED` для дизайна, спрайт не создан): [HERO_REFERENCE.md](HERO_REFERENCE.md).
+- `gameplay/gameplay_look_reference.png` — ориентир игрового вида (`LOOK_REFERENCE`, не утверждённая локация): [ART_DIRECTION.md](ART_DIRECTION.md).
 
 ## 3. Правила именования и контроля
 

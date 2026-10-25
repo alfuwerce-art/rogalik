@@ -1,0 +1,94 @@
+﻿{
+  "archive": {
+    "path": "C:\\Users\\bow\\Desktop\\Rogalik\\assets\\archives\\rogalik_all_concept_art_with_weapons.zip",
+    "size_bytes": 68551781,
+    "size_mib": 65.376,
+    "sha256": "e900eaad8806b881eb91d51ea649d9f2ad1131974a3687bd67628a3515169b23"
+  },
+  "zipfile": {
+    "entry_count": 36,
+    "png_count": 23,
+    "other_files": [
+      {
+        "name": "rogalik/IMPORT_README.md",
+        "size": 4041,
+        "crc32": "4eaea829"
+      },
+      {
+        "name": "rogalik/assets/exports/animation_clips/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/exports/characters/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/exports/environments/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/references/hero/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/sources/animations/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/sources/characters/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/assets/sources/environments/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/docs/REFERENCE_FILE_MANIFEST.sha256",
+        "size": 2950,
+        "crc32": "2d673a71"
+      },
+      {
+        "name": "rogalik/docs/tasks/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/game/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/reports/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      },
+      {
+        "name": "rogalik/tools/.gitkeep",
+        "size": 0,
+        "crc32": "00000000"
+      }
+    ],
+    "testzip_bad_member": null,
+    "duplicates_case_insensitive": {},
+    "risky_paths": {},
+    "symlink_entries": [],
+    "manifest_candidate": "rogalik/docs/REFERENCE_FILE_MANIFEST.sha256",
+    "manifest_content": "# SHA-256 of original PNGs in this archive; relative to rogalik root\nc58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d  assets/references/bosses/koschei_bessmertny.png\n11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4  assets/references/bosses/likho_odnoglazoe.png\nfb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8  assets/references/bosses/poludnitsa.png\n2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1  assets/references/bosses/utoplennitsa.png\n3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd  assets/references/bosses/zmey_gorynych.png\neea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34  assets/references/enemies/bellringers/bellringer_base.png\n999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf  assets/references/enemies/bellringers/bellringer_variants_triptych.png\nda07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008  assets/references/enemies/dead_archer/dead_archer_base.png\ne6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289  assets/references/enemies/dead_archer/dead_archer_variants_triptych_candidate.png\n7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2  assets/references/enemies/fallen_warriors/fallen_warrior_base.png\nac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509  assets/references/enemies/fallen_warriors/fallen_warrior_variants_triptych.png\n54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f  assets/references/enemies/morovoi_volkhv/morovoi_volkhv_base.png\ne1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff  assets/references/enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png\n8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3  assets/references/locations/first_location/cursed_sloboda_master_concept.png\ne701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa  assets/references/locations/first_location/first_location_master_candidate.png\n8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96  assets/references/locations/first_location/village_interior_01.png\n002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4  assets/references/locations/first_location/village_interior_02.png\n49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5  assets/references/locations/first_location/village_interior_03.png\na95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0  assets/references/weapons/01_two_handed_weapons.png\n861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452  assets/references/weapons/02_magic_staves.png\nf82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1  assets/references/weapons/03_dual_weapons.png\nd28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c  assets/references/weapons/04_bows.png\nf7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269  assets/references/weapons/05_combat_staves.png\n"
+  },
+  "checks": {
+    "png_count_expected": 23,
+    "png_count_actual": 23,
+    "png_count_ok": true,
+    "crc_ok": true,
+    "no_duplicates": true,
+    "no_risky_paths": true,
+    "no_symlinks": true
+  }
+}

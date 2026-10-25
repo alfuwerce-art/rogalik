@@ -118,7 +118,7 @@ PASS read_scene: { ... узлы и свойства res://scenes/main.tscn ... }
 > Запускать `probe-mcp.ps1` нужно вне ограниченной песочницы: сервер запускает
 > Godot дочерним процессом с pipe, а такой `spawn` в песочнице даёт `EPERM`.
 
-## 5. Как пользоваться пресетом `rogalik-dev`
+## 5. Пресет `rogalik-dev`
 
 1. В DeepSeek Harness создайте новую сессию и выберите пресет **Rogalik Dev**
    (список пресетов, порядок 200).
@@ -128,20 +128,30 @@ PASS read_scene: { ... узлы и свойства res://scenes/main.tscn ... }
    затем `mcp__godot__read_scene` для `game/prototype/scenes/main.tscn`,
    затем `mcp__godot__run_project` и `mcp__godot__game_screenshot`.
 
-Статус `NOT_VERIFIED` у пункта «`mcp__godot__*` в живой сессии» означает ровно
-одно: в текущей (фриланс) сессии пресет не выбран, а MCP намеренно не монтируется
-в профиль. Что подтверждено фактически:
+Регистрация проверена 2026-10-25 после переноса папки: строка
+`include:preset-rogalik-dev` присутствует в живой композиции Host ровно один раз
+(`cordis_inspect_query` → Host `Config.listConfigs`). Дубликата нет, другие
+пресеты не затронуты — в списке ровно 6 записей: `standard`, `ptc`, `minimal`,
+`cordis`, `ai-freelancer-v1`, `rogalik-dev`. Все 24 пакета плагинов пресета
+резолвятся в поставке DSH 0.2.1-rc.3 (сверено с каталогом
+`@deepseek-ai/dsh-agent-preset/skills/cordis-composition-reference/references/packages.md`).
 
-- пресет смонтирован: строка `include:preset-rogalik-dev` присутствует в
-  композиции и проходит валидацию схемы;
-- при установке бандла (2026-10-25 15:27:34) Host сам запустил MCP-сервер:
-  процесс `DeepSeek Harness.exe --expose-internals ...\tools\godot-mcp\build\index.js`
-  с родителем — процессом Host, живёт в ожидании stdio и не перезапускается;
+Что подтверждено фактически:
+
+- пресет смонтирован и проходит валидацию схемы;
+- Host запускает MCP-сервер из конфигурации пресета: процесс
+  `DeepSeek Harness.exe --expose-internals C:\Users\bow\Desktop\Rogalik\tools\godot-mcp\build\index.js`
+  — путь берётся из `cordis.patch.yml` пресета, а не из профиля;
 - протокол сервера проверен напрямую: 157 инструментов, `get_godot_version` →
-  4.7.2, `read_scene` читает `game/prototype/scenes/main.tscn`.
+  4.7.2, `read_scene` читает `game/prototype/scenes/main.tscn`,
+  `run_project` + `game_screenshot` дают реальный кадр 960×540 (см. §11.5).
 
 Не подтверждён только последний шаг: вызов `mcp__godot__*` из чата сессии с
-пресетом `rogalik-dev`.
+пресетом `rogalik-dev`. Текущая сессия идёт под `ai-freelancer-v1`, поэтому MCP
+в ней намеренно не зарегистрирован: `Tool.listTools` показывает
+`rogalik_env_check` и `rogalik_pixel_pipeline`, но ни одного `mcp__godot__*`.
+Это разделение по дизайну — 157 MCP-инструментов не попадают в контекст других
+проектов профиля.
 
 ## 6. Пиксельный пайплайн
 
@@ -310,3 +320,132 @@ python -m unittest discover -s tools/pixel_pipeline/tests -v
 godot --headless --path game/prototype --import
 godot --headless --path game/prototype --fixed-fps 60 --quit-after 400 -- --auto=1
 ```
+
+## 11. Повторная проверка после переноса папки (2026-10-25)
+
+Проект перенесён из `C:\Users\bow\Desktop\AI-Freelancer\rogalik` в
+`C:\Users\bow\Desktop\Rogalik`. Ниже — что реально проверено уже на новом месте.
+
+### 11.1 Устаревшие абсолютные пути
+
+В истории (`c9e5626` и раньше) конфигурации указывали на старый путь. В рабочем
+дереве они уже были заменены; при повторной проверке ни одного вхождения
+`AI-Freelancer` в файлах проекта не осталось.
+
+| Файл | Что ссылалось на старый путь |
+|---|---|
+| `plugins/rogalik-env-check/cordis.patch.yml` | `config.workspace` |
+| `plugins/rogalik-pixel-pipeline/cordis.patch.yml` | `config.workspace` |
+| `plugins/rogalik-env-check/index.js` | `DEFAULT_WORKSPACE` |
+| `plugins/rogalik-pixel-pipeline/index.js` | `DEFAULT_WORKSPACE` |
+| `plugins/rogalik-dev-preset/cordis.patch.yml` | `mcp-godot.args[1]`, `cwd`, `GODOT_MCP_ALLOWED_DIRS` |
+
+Отдельно исправлены артефакты прошлого прогона пайплайна
+(`game/prototype/art/demo-tool/demo.json` и `report.json`): они сохраняли
+абсолютные пути старой папки. Пересобраны вызовом `rogalik_pixel_pipeline` с
+`action: demo`; теперь там пути `C:\Users\bow\Desktop\Rogalik\...`.
+
+### 11.2 Переустановка бандлов
+
+После переноса в профиле `desktop` не осталось ни одного бандла Rogalik: в
+`package.json` были только `dsh-base`, `dsh-web-app` и browser-use, а строки
+`rogalik-*` в композиции отсутствовали. Все три бандла восстановлены штатным
+`plugin_manager` → `install_bundle` по локальному пути
+(`plugins\rogalik-env-check`, `plugins\rogalik-pixel-pipeline`,
+`plugins\rogalik-dev-preset`). Профиль вручную не редактировался, дубликатов строк
+нет: в `dsh.profile.bundles` каждый бандл встречается один раз.
+
+### 11.3 Проверка схем инструментов
+
+```powershell
+node plugins/_schema-check.mjs   # PASS rogalik_env_check: root object, 2 properties
+                                 # PASS rogalik_pixel_pipeline: root object, 15 properties
+node plugins/_selftest.mjs       # env-check PASS, pipeline PASS (4 кадра 32x32)
+```
+
+`node` здесь — встроенный в DSH 24.21.0
+(`.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe`).
+
+### 11.4 Реальные вызовы инструментов в живой сессии
+
+| Инструмент | Аргументы | Результат |
+|---|---|---|
+| `rogalik_env_check` | `deep: true` | PASS: Godot 4.7.2, Pixelorama v1.2.3-stable, Git 2.55.0, Python 3.12.14, все 6 проверок workspace `ok` |
+| `rogalik_pixel_pipeline` | `action: check`, `frame: 32`, `frames: 4` | PASS: 128×32 RGBA, 4 кадра 32×32, 8 цветов, прозрачность 78.6%, все 8 проверок PASS |
+| `rogalik_pixel_pipeline` | `action: demo` | PASS: пересобран `.pxo`, экспорт через Pixelorama CLI, атлас + JSON |
+
+### 11.5 Godot MCP: протокол и живая игра
+
+Добавлены два диагностических скрипта рядом с существующим `probe-mcp.ps1`:
+
+- `tools/godot-mcp/probe-schemas.ps1` — печатает схемы выбранных инструментов;
+- `tools/godot-mcp/probe-runtime.ps1` — полный игровой цикл по MCP
+  (`run_project` → `game_screenshot` → `get_debug_output` → `stop_project`).
+
+> Каталог `tools/godot-mcp/` целиком в `.gitignore`: это локальный клон
+> стороннего сервера, который пересоздаётся из `tools/setup-godot-mcp.ps1`.
+> Все три probe-скрипта лежат там же и, как и раньше, не попадают в коммит.
+
+Фактический прогон:
+
+```text
+PASS initialize: godot-mcp 0.1.0 protocol 2024-11-05
+PASS tools/list: 157 tools
+PASS get_godot_version: 4.7.2.stable.official.ed1daf0bf
+PASS read_scene: дерево game/prototype/scenes/main.tscn (Floor, Ground, Walls, Obstacle, Player, Camera2D, HUD)
+
+PASS run_project: Godot project started in debug mode
+PASS game_screenshot: Screenshot captured: 960x540 after 3 attempt(s)
+PASS screenshot file: reports/godot-mcp-runtime.png (14140 bytes)
+PASS get_debug_output: 5 stdout lines, 10 stderr lines
+PASS stop_project
+```
+
+Схемы четырёх инструментов (из `tools/list`):
+
+| Инструмент | Схема входа |
+|---|---|
+| `get_godot_version` | `{"type":"object","properties":{},"required":[]}` |
+| `read_scene` | `projectPath`, `scenePath` (оба required) |
+| `run_project` | `projectPath` (required), `scene` |
+| `game_screenshot` | `{"type":"object","properties":{},"required":[]}` |
+
+Лог игры: `Godot Engine v4.7.2 ... OpenGL API 3.3.0 NVIDIA 610.47`,
+`McpInteractionServer: Listening on 127.0.0.1:9090`, `PLAYER_READY`,
+`McpInteractionServer: Client connected`. Кадр:
+[reports/godot-mcp-runtime.png](../reports/godot-mcp-runtime.png).
+
+Ошибок нет, но в `stderr` есть 10 предупреждений компилятора GDScript из
+вендорного `scripts/mcp_interaction_server.gd` (затенение `name` в цикле на
+строках 2566/2573/2579 и integer вместо enum на 2945/3102). Файл сторонний
+(из godot-mcp v3.1.0), править его без пересборки не стоит; на работу моста они
+не влияют.
+
+### 11.6 Запуск тестовой сцены без MCP
+
+```powershell
+godot --headless --path game/prototype --import          # реимпорт после demoTool
+godot --headless --path game/prototype --fixed-fps 60 --quit-after 400 -- --auto=1
+# PLAYER_READY pos=96.0,160.0 / PLAYER_POS x=186.0 / PLAYER_BLOCKED x=269.0
+# далее кадры анимации 3 и остановка: коллизия с препятствием работает
+```
+
+### 11.7 Мелкие особенности, найденные при этой проверке
+
+1. **`pwsh` отсутствует в PATH** — оболочка инструмента работает на Windows
+   PowerShell 5.1. Скрипты запускать так:
+   `powershell -NoProfile -ExecutionPolicy Bypass -File <script>`.
+2. **`run_project` кладёт копию моста в корень проекта.** `injectInteractionServer`
+   видит автолоад в `project.godot` и больше ничего не меняет, но проверяет
+   наличие скрипта по пути `game/prototype/mcp_interaction_server.gd`, а не по
+   фактическому `res://scripts/...`. В результате при каждом запуске появляется
+   неиспользуемый дубликат 193 КБ. Он добавлен в `.gitignore`
+   (`game/**/mcp_interaction_server.gd`) и удаляется вручную; ссылка автолоада
+   по-прежнему указывает на `scripts/`.
+3. **После `rogalik_pixel_pipeline demo` нужен реимпорт** Godot
+   (`--headless --import`), иначе изменённые PNG подхватятся со старым кэшем.
+4. **Лишний процесс MCP-сервера.** Установка бандла пресета оставляет в дереве
+   процессов Host дочерний `DeepSeek Harness.exe --expose-internals
+   ...\tools\godot-mcp\build\index.js`, который ждёт stdio и портов не держит.
+   Он безвреден и не конфликтует с сессиями: каждая сессия с пресетом поднимает
+   свой экземпляр.

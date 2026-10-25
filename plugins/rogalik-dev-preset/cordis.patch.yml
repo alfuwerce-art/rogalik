@@ -140,12 +140,12 @@
               command: 'C:\Users\bow\AppData\Local\Programs\DeepSeek Harness\DeepSeek Harness.exe'
               args:
                 - '--expose-internals'
-                - 'C:\Users\bow\Desktop\AI-Freelancer\rogalik\tools\godot-mcp\build\index.js'
-              cwd: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik\tools\godot-mcp'
+                - 'C:\Users\bow\Desktop\Rogalik\tools\godot-mcp\build\index.js'
+              cwd: 'C:\Users\bow\Desktop\Rogalik\tools\godot-mcp'
               env:
                 ELECTRON_RUN_AS_NODE: '1'
                 GODOT_PATH: 'C:\Users\bow\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
-                GODOT_MCP_ALLOWED_DIRS: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik'
+                GODOT_MCP_ALLOWED_DIRS: 'C:\Users\bow\Desktop\Rogalik'
                 DEBUG: 'false'
               toolCallTimeoutMs: 120000
               failOnStartupError: false

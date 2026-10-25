@@ -2,6 +2,32 @@
 
 > Версия 2026-10-25. **Внимание: все приведённые пути — целевые при импорте.** Пока реальные PNG не проверены в GitHub, `PNG_IN_REPO = false`. Индекс фиксирует статус художественного решения, но не заменяет бинарное изображение.
 
+## Состояние локального импорта — 2026-10-25
+
+> `LOCAL_PNG_PRESENT = true` для рабочей копии на диске; `PNG_IN_REPO = false` для GitHub до коммита и проверки в удалённом репозитории.
+
+- Источник: `assets/archives/rogalik_all_concept_art_with_weapons.zip`, 68 551 781 байт, SHA-256 `e900eaad8806b881eb91d51ea649d9f2ad1131974a3687bd67628a3515169b23` (архив не изменялся).
+- Распаковано 23 из 23 PNG в `assets/references/` с сохранением структуры `bosses/`, `enemies/`, `weapons/`, `locations/`; вложенная папка `rogalik/` снята.
+- Все 23 SHA-256 совпадают с `REFERENCE_FILE_MANIFEST.sha256`; файлы побайтово равны содержимому архива (без пересжатия и конвертации).
+- Разделение статусов сохранено: **17 файлов утверждённых референсов** (5 боссов, 7 обычных врагов, 5 листов оружия) и **6 кандидатов** (5 концептов первой локации + триптих Мёртвого стрелка).
+- Проверка и отчёт: `tools/reference_import/`, `reports/reference_import.md`.
+- Дополнительно вне архива получены 2 референса от владельца (герой и игровой look) — см. разделы ниже; в 23 PNG из ZIP они не входят.
+
+## Реестр доступности референсов
+
+> Боссы и враги детально — [BESTIARY.md](BESTIARY.md), раздел 0. Нет статуса `VISUAL_APPROVED` — визуальная разработка единицы не начинается: сообщить `BLOCKED_NEEDS_REFERENCE` и ждать референс ([DEEPSEEK_GAME_DEV_RULES.md](DEEPSEEK_GAME_DEV_RULES.md)).
+
+| Категория | `VISUAL_APPROVED` | `VISUAL_CANDIDATE` | Нет референса |
+|---|---|---|---|
+| Главный герой | 1 (референс дизайна, `hero/hero_reference_front_back.png`) | — | — |
+| Оружие | 5 листов, 20 видов | — | — |
+| Боссы | 5 (B01–B05) | — | 4 (B06–B09) — `BLOCKED_NEEDS_REFERENCE` |
+| Обычные враги | 7 файлов (E01–E03, база E04) | 1 (3 варианта E04) | 6 семейств (E05–E10) — `BLOCKED_NEEDS_REFERENCE` |
+| Первая локация | 0 | 5 концептов | утверждённой локации нет; финальный арт заблокирован до утверждения кандидата |
+| Игровые спрайты/ассеты | 0 | — | ещё не создавались |
+
+Техническая тестовая сцена-серый бокс и работа с механиками не требуют утверждённого арта; финальные визуальные ассеты — требуют.
+
 ## Утверждённые боссы
 
 | Название | Целевой путь |
@@ -35,7 +61,7 @@
 | two handed | `assets/references/weapons/01_two_handed_weapons.png` | APPROVED |
 | magic | `assets/references/weapons/02_magic_staves.png` | APPROVED |
 | dual | `assets/references/weapons/03_dual_weapons.png` | APPROVED |
-|  | `assets/references/weapons/04_bows.png` | APPROVED |
+| bows | `assets/references/weapons/04_bows.png` | APPROVED |
 | combat | `assets/references/weapons/05_combat_staves.png` | APPROVED |
 
 Подробная расшифровка 20 видов и хеши: [WEAPON_REFERENCES.md](WEAPON_REFERENCES.md).
@@ -49,6 +75,22 @@
 - `assets/references/locations/first_location/village_interior_03.png`
 
 Названия и композиции описаны в [FIRST_LOCATION_CONCEPT.md](FIRST_LOCATION_CONCEPT.md). При разработке обязательно учитывать [FIRST_LOCATION_ART_RULES.md](FIRST_LOCATION_ART_RULES.md).
+
+## Главный герой — референс передан владельцем 2026-10-25
+
+| Файл | Статус | Источник | SHA-256 |
+|---|---|---|---|
+| `assets/references/hero/hero_reference_front_back.png` | `VISUAL_APPROVED` (дизайн) | чат владельца, 2026-10-25; PNG 1536×1024, 2 110 834 байта | `53c9ace7a25dd16916c2cd7dfbba7ef7410a8a701090b3a2fe042f788c99f985` |
+
+Подробно: [HERO_REFERENCE.md](HERO_REFERENCE.md). Пиксельный спрайт героя **не создан**; утверждён только референс внешности.
+
+## Игровой look-референс — ориентир, не финальный канон
+
+| Файл | Статус | Источник | SHA-256 |
+|---|---|---|---|
+| `assets/references/gameplay/gameplay_look_reference.png` | `LOOK_REFERENCE` (ориентир) | чат владельца, 2026-10-25; PNG 1672×941, 3 051 027 байт | `c04d11f71ae2d2c98e8199ee654040b57dd3d451fa2d07943fb8556a744d9ae2` |
+
+Владелец обозначил кадр как ориентир «как примерно должна выглядеть игра». Он показывает ночную слободу, героя и врагов, телеграф атаки и HUD, но не является утверждённой локацией, раскладкой уровня или финальным UI. Целевой рендер остаётся 2D Pixel Art — см. [ART_DIRECTION.md](ART_DIRECTION.md).
 
 ## Обращение с файлами
 
