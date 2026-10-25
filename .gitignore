@@ -162,5 +162,7 @@ build/
 __pycache__/
 *.pyc
 
+*.import*.tmp
+
 # Local run logs (transcripts stay out of Git; screenshots are committed)
 reports/*.log

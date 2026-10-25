@@ -253,6 +253,30 @@ $env:APPDATA = "$PWD\..\.cache\godot-appdata"
 Почему скриншот снимается только в оконном режиме: в `--headless` используется
 dummy-рендерер, изображения нет. Скриншот сделан из реально запущенной игры.
 
+### Runtime-мост MCP
+
+Для инструментов `mcp__godot__run_project` / `game_screenshot` / `game_*` в проект
+добавлен автолоад `McpInteractionServer`
+(`game/prototype/scripts/mcp_interaction_server.gd`, MIT, из поставки godot-mcp).
+Он слушает **только** `127.0.0.1:9090`, внешние порты не открываются.
+
+Проверено на запущенной игре (оконный режим):
+
+```text
+McpInteractionServer: Listening on 127.0.0.1:9090
+McpInteractionServer: Client connected
+get_scene_tree -> {"success":true,"tree":{"children":[Capture, McpInteractionServer,
+                  Floor, Ground, Walls, Obstacle, Player, Camera2D, HUD]...}}
+screenshot -> {"success":true,"width":960,"height":540,"data":"<base64 PNG>"}
+```
+
+Кадр, снятый по этому протоколу: [reports/godot-runtime-shot.png](../reports/godot-runtime-shot.png)
+(декодирован из ответа `screenshot`).
+
+После чистки `.godot/` (каталог импорта в Git не хранится) нужно один раз выполнить
+`godot --headless --path game/prototype --import`, иначе сцена не найдёт
+`res://art/sprites/hero_walk.png`.
+
 ## 9. Что не подтверждено
 
 - `mcp__godot__*` в живой сессии пресета `rogalik-dev` — см. §5 (нужна сессия с пресетом).
