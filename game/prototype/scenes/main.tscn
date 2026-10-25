@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://art/sprites/hero_walk.png" id="2_hero"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(14, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_h"]
+size = Vector2(480, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_v"]
+size = Vector2(16, 270)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obstacle"]
+size = Vector2(48, 48)
+
+[node name="Main" type="Node2D"]
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.106, 0.133, 0.188, 1)
+mouse_filter = 2
+
+[node name="Ground" type="ColorRect" parent="."]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 464.0
+offset_bottom = 254.0
+color = Color(0.149, 0.173, 0.208, 1)
+mouse_filter = 2
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="Top" type="CollisionShape2D" parent="Walls"]
+position = Vector2(240, 0)
+shape = SubResource("RectangleShape2D_wall_h")
+
+[node name="Bottom" type="CollisionShape2D" parent="Walls"]
+position = Vector2(240, 270)
+shape = SubResource("RectangleShape2D_wall_h")
+
+[node name="Left" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 135)
+shape = SubResource("RectangleShape2D_wall_v")
+
+[node name="Right" type="CollisionShape2D" parent="Walls"]
+position = Vector2(480, 135)
+shape = SubResource("RectangleShape2D_wall_v")
+
+[node name="Obstacle" type="StaticBody2D" parent="."]
+position = Vector2(300, 135)
+
+[node name="Visual" type="ColorRect" parent="Obstacle"]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0.419, 0.231, 0.32, 1)
+mouse_filter = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Obstacle"]
+shape = SubResource("RectangleShape2D_obstacle")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(96, 160)
+script = ExtResource("1_player")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_hero")
+hframes = 4
+frame = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(240, 135)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Hint" type="Label" parent="HUD"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 470.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.776, 0.757, 0.71, 1)
+theme_override_font_sizes/font_size = 12
+text = "Rogalik prototype - WASD/arrows to move, obstacle blocks the path"

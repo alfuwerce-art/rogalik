@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rogalik environment check">
+  <rect width="64" height="64" rx="14" fill="#1B2230"/>
+  <path d="M14 30 L30 16 L50 30 L50 52 L14 52 Z" fill="#39424C"/>
+  <path d="M14 30 L32 12 L50 30" fill="none" stroke="#6C2739" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="26" y="38" width="12" height="14" fill="#AA9068"/>
+  <path d="M34 24 L26 38 L33 38 L30 48 L40 32 L33 32 Z" fill="#C6C1B5"/>
+</svg>

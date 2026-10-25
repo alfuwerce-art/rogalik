@@ -21,6 +21,7 @@ Roguelike game prototype
 
 ## Инструменты разработки
 
+- [**Рабочая среда: Godot 4.7.2, Pixelorama 1.2.3, MCP и собственные плагины — проверено**](docs/ROGALIK_DEV_ENVIRONMENT.md)
 - [Первоначальная настройка Godot, Pixelorama и инструментов DeepSeek Harness](docs/DEV_ENVIRONMENT_SETUP.md)
 
 ## Автономная разработка с DeepSeek Harness

@@ -1,0 +1,153 @@
+# Rogalik development preset.
+#
+# Adds a separate agent preset (id `rogalik-dev`) and scopes the Godot MCP server
+# to it. No shipped preset and no other project preset is modified: this bundle
+# only inserts new rows.
+#
+# The MCP server is @tugcantopaloglu/godot-mcp v3.1.0 (MIT), built locally into
+# tools/godot-mcp/build/index.js. It runs on the Node runtime bundled with
+# DeepSeek Harness (Electron with ELECTRON_RUN_AS_NODE=1), so no system-wide
+# Node.js installation is required.
+
+- insert:
+    - id: preset-rogalik-dev
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: rogalik-dev
+        name: Rogalik Dev
+        description: >-
+          2D Pixel Art Rogalik studio: Godot 4.7 (scenes, scripts, run, diagnostics,
+          screenshots) through MCP, plus the Rogalik environment and pixel-art tools.
+        order: 200
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: |
+                Ты — технический разработчик игры Rogalik: 2D Pixel Art Action Roguelite, вид сверху,
+                древнерусская кошмарная готика. Ты работаешь в репозитории Rogalik и обязан соблюдать
+                docs/DEEPSEEK_GAME_DEV_RULES.md и docs/PIXEL_ART_STYLE_GUIDE.md.
+
+                Главный принцип: показывай проверенный результат, а не намерения. Не выдавай план,
+                запись конфигурации или «должно работать» за выполненный запуск. Утверждённый референс,
+                файл в репозитории и готовый игровой ассет — разные состояния готовности.
+
+                Инструменты:
+                - Godot MCP (mcp__godot__*): версия движка, сцены, скрипты, запуск игры, диагностика,
+                  скриншоты, свойства узлов. Сначала список сцен/версия, затем изменения и запуск.
+                - rogalik_env_check: реальные версии и пути Godot, Pixelorama, Git и состояние репозитория.
+                - rogalik_pixel_pipeline: сборка .pxo, экспорт через Pixelorama CLI, проверка PNG и
+                  спрайт-листов, атласы, отчёты PASS/FAIL.
+                - PowerShell и файловые инструменты: сборка, тесты, git.
+
+                Правила работы:
+                - Проверяй факты запуском: версии командой, сцены чтением, результат — скриншотом
+                  реально запущенной игры. Headless-запуск не даёт изображения.
+                - Не устанавливай дубликаты уже установленных программ и не меняй чужие проекты.
+                - Постоянные изменения профиля, установка пакетов и системные изменения — только после
+                  явного разрешения владельца.
+                - После двух содержательно разных неудачных попыток устранить один блокер — остановись
+                  и опиши причину и возможное решение.
+                - Арт: только через реальный инструментарий (Pixelorama, PNG-пайплайн). Не называй
+                  процедурный плейсхолдер финальной графикой и не заявляй художественное качество
+                  доказанным автотестом.
+                - Рабочие файлы и документацию сохраняй в репозиторий Rogalik в отдельной ветке.
+
+                Отчёт: TASK, STATUS (PASS/FAIL/BLOCKED/NOT_VERIFIED), реальные команды и пути
+                артефактов, что проверено и чем, что осталось неподтверждённым.
+          - id: agent-instructions
+            name: '@deepseek-ai/dsh-agent-instructions'
+            config:
+              maxBytes: 65536
+          - id: time-context
+            name: '@deepseek-ai/dsh-time-context'
+          - id: tool-pwsh
+            name: '@deepseek-ai/dsh-tool-pwsh'
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+            config:
+              sampleOverCapGlobResults: false
+          - id: tool-jobs
+            name: '@deepseek-ai/dsh-tool-jobs'
+          - id: tool-schedule
+            name: '@deepseek-ai/dsh-tool-schedule'
+          - id: skill-filesystem
+            name: '@deepseek-ai/dsh-skill-filesystem'
+          - id: tool-skill
+            name: '@deepseek-ai/dsh-tool-skill'
+          - id: command-goal
+            name: '@deepseek-ai/dsh-command-goal'
+          - id: tool-goal
+            name: '@deepseek-ai/dsh-tool-goal'
+          - id: compaction
+            name: cordis:group
+            group: true
+            isolate:
+              compaction: true
+              toolResultPruner: true
+            config:
+              - id: compaction-basic
+                name: '@deepseek-ai/dsh-compaction-basic'
+              - id: command-compact
+                name: '@deepseek-ai/dsh-command-compact'
+              - id: tool-result-pruner
+                name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+                config:
+                  thresholdChars: 8192
+                  headChars: 4096
+                  tailChars: 1024
+          - id: delegation
+            name: cordis:group
+            group: true
+            isolate:
+              workflowEngine: true
+            config:
+              - id: tool-subagent-control
+                name: '@deepseek-ai/dsh-tool-subagent-control'
+              - id: tool-subagent-list-agents
+                name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
+              - id: tool-subagent
+                name: '@deepseek-ai/dsh-tool-subagent'
+                config:
+                  provider: spawn
+                  toolName: subagent
+                  modelSelectionSettings: true
+              - id: tool-subagent-fork
+                name: '@deepseek-ai/dsh-tool-subagent'
+                config:
+                  provider: fork
+                  toolName: subagent_fork
+          - id: tool-ask-user
+            name: '@deepseek-ai/dsh-tool-ask-user'
+          - id: tool-todo
+            name: '@deepseek-ai/dsh-tool-todo'
+            config:
+              allowParallelInProgress: true
+          - id: tool-web
+            name: '@deepseek-ai/dsh-tool-web'
+            config:
+              fetch: true
+              searchTimeoutMs: 60000
+          - id: present
+            name: '@deepseek-ai/dsh-tool-present'
+          - id: mcp-godot
+            name: '@deepseek-ai/dsh-mcp-client'
+            config:
+              serverName: godot
+              transport: stdio
+              command: 'C:\Users\bow\AppData\Local\Programs\DeepSeek Harness\DeepSeek Harness.exe'
+              args:
+                - '--expose-internals'
+                - 'C:\Users\bow\Desktop\AI-Freelancer\rogalik\tools\godot-mcp\build\index.js'
+              cwd: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik\tools\godot-mcp'
+              env:
+                ELECTRON_RUN_AS_NODE: '1'
+                GODOT_PATH: 'C:\Users\bow\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.7.2-stable_win64_console.exe'
+                GODOT_MCP_ALLOWED_DIRS: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik'
+                DEBUG: 'false'
+              toolCallTimeoutMs: 120000
+              failOnStartupError: false
+              reconnect:
+                enabled: true

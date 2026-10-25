@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "kind": "sprite_sheet",
+  "target": "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
+  "checks": [
+    {
+      "name": "file_exists",
+      "status": "PASS",
+      "detail": "507 bytes"
+    },
+    {
+      "name": "decodes",
+      "status": "PASS",
+      "detail": "128x32 RGBA"
+    },
+    {
+      "name": "transparency",
+      "status": "PASS",
+      "detail": "78.6% of pixels fully transparent"
+    },
+    {
+      "name": "palette",
+      "status": "PASS",
+      "detail": "8 distinct colours"
+    },
+    {
+      "name": "frame_geometry",
+      "status": "PASS",
+      "detail": "4 frames of 32x32 (4x1)"
+    },
+    {
+      "name": "frame_count",
+      "status": "PASS",
+      "detail": "4 frames as expected"
+    },
+    {
+      "name": "empty_frames",
+      "status": "PASS",
+      "detail": "every frame contains visible pixels"
+    },
+    {
+      "name": "frame_anchor",
+      "status": "PASS",
+      "detail": "all frames end at y=31"
+    }
+  ],
+  "metrics": {
+    "path": "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png",
+    "exists": true,
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "bytes": 507,
+    "unique_colors": 8,
+    "has_alpha": true,
+    "transparent_pixels": 3220,
+    "opaque_pixels": 844,
+    "partial_pixels": 32,
+    "frame_width": 32,
+    "frame_height": 32,
+    "columns": 4,
+    "rows": 1,
+    "frames": 4,
+    "frame_bottoms": [
+      31,
+      31,
+      31,
+      31
+    ]
+  },
+  "artifacts": []
+}

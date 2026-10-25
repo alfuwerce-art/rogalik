@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "artifacts": "game\\prototype\\art\\demo-tool",
+  "steps": [
+    {
+      "step": "generate",
+      "status": "PASS",
+      "artifact": "game\\prototype\\art\\demo-tool\\hero_sheet_source.png"
+    },
+    {
+      "step": "build_pxo",
+      "status": "PASS",
+      "artifact": "game\\prototype\\art\\demo-tool\\hero_walk.pxo"
+    },
+    {
+      "step": "pixelorama_export",
+      "status": "PASS",
+      "artifact": [
+        "C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\hero_walk.png"
+      ],
+      "command": "--export --spritesheet C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\export\\.export_staging\\hero_walk.pxo # project: C:\\Users\\bow\\Desktop\\AI-Freelancer\\rogalik\\game\\prototype\\art\\demo-tool\\hero_walk.pxo",
+      "exit_code": 0,
+      "problems": []
+    },
+    {
+      "step": "validate",
+      "status": "PASS",
+      "artifact": "game\\prototype\\art\\demo-tool\\report.json",
+      "checks": [
+        {
+          "name": "file_exists",
+          "status": "PASS",
+          "detail": "507 bytes"
+        },
+        {
+          "name": "decodes",
+          "status": "PASS",
+          "detail": "128x32 RGBA"
+        },
+        {
+          "name": "transparency",
+          "status": "PASS",
+          "detail": "78.6% of pixels fully transparent"
+        },
+        {
+          "name": "palette",
+          "status": "PASS",
+          "detail": "8 distinct colours"
+        },
+        {
+          "name": "frame_geometry",
+          "status": "PASS",
+          "detail": "4 frames of 32x32 (4x1)"
+        },
+        {
+          "name": "frame_count",
+          "status": "PASS",
+          "detail": "4 frames as expected"
+        },
+        {
+          "name": "empty_frames",
+          "status": "PASS",
+          "detail": "every frame contains visible pixels"
+        },
+        {
+          "name": "frame_anchor",
+          "status": "PASS",
+          "detail": "all frames end at y=31"
+        }
+      ]
+    },
+    {
+      "step": "atlas",
+      "status": "PASS",
+      "artifact": {
+        "atlas": "game\\prototype\\art\\demo-tool\\atlas\\hero_walk_atlas.png",
+        "metadata": "game\\prototype\\art\\demo-tool\\atlas\\hero_walk_atlas.json",
+        "frames": 4,
+        "size": [
+          64,
+          64
+        ],
+        "validation": {
+          "status": "PASS",
+          "problems": [],
+          "metadata": "game\\prototype\\art\\demo-tool\\atlas\\hero_walk_atlas.json",
+          "texture": "game\\prototype\\art\\demo-tool\\atlas\\hero_walk_atlas.png",
+          "frames": 4
+        }
+      }
+    }
+  ]
+}

@@ -147,3 +147,20 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Rogalik: local toolchain
+# Third-party Godot MCP server clone (recreate with tools/setup-godot-mcp.ps1)
+tools/godot-mcp/
+
+# Godot import cache (regenerated on open/import)
+game/**/.godot/
+
+# Local scratch: pipeline test output, Pixelorama headless profile, caches
+build/
+.cache/
+.pixelorama-user/
+__pycache__/
+*.pyc
+
+# Local run logs (transcripts stay out of Git; screenshots are committed)
+reports/*.log

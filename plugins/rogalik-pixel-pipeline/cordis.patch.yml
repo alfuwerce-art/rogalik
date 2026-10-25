@@ -1,0 +1,6 @@
+- insert:
+    - id: rogalik-pixel-pipeline
+      name: '@local/rogalik-pixel-pipeline'
+      config:
+        workspace: 'C:\Users\bow\Desktop\AI-Freelancer\rogalik'
+        pythonPath: 'C:\Users\bow\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe'

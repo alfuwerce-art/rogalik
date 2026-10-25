@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Rogalik Environment Check",
+    "description": "Read-only check of Godot, Pixelorama, Git, Python and the Rogalik checkout."
+  }
+}

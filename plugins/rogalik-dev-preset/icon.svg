@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rogalik development preset">
+  <rect width="64" height="64" rx="14" fill="#1B2230"/>
+  <path d="M20 46 L20 24 L32 14 L44 24 L44 46 Z" fill="#39424C" stroke="#6C2739" stroke-width="3"/>
+  <rect x="28" y="32" width="8" height="14" fill="#AA9068"/>
+  <circle cx="32" cy="24" r="4" fill="#C6C1B5"/>
+</svg>
