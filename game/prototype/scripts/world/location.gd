@@ -196,12 +196,19 @@ func _spawn_player() -> void:
 	var sprite := Sprite2D.new()
 	sprite.name = "Sprite2D"
 	sprite.texture = load(_profile["hero_sheet"])
-	sprite.hframes = PixelProfiles.HERO_FRAMES
+	# Лист Этапа 3 — один ряд из 8 кадров (4 направления × 2 кадра idle).
+	sprite.hframes = int(_profile.get("hero_hframes", PixelProfiles.HERO_FRAMES))
 	sprite.vframes = 1
 	sprite.centered = true
 	# Ноги героя на точке появления: спрайт поднят на половину своей высоты.
 	sprite.offset = Vector2(0.0, -float(_profile["hero_height_px"]) * 0.5)
 	_player.add_child(sprite)
+	# Раскладка листа передаётся герою: односторонние прокси A/C и лист
+	# с четырьмя направлениями обрабатываются одним скриптом.
+	_player.set("hero_directional", bool(_profile.get("hero_directional", false)))
+	_player.set("hero_directions", int(_profile.get("directions", 4)))
+	_player.set("hero_frames_per_direction", int(_profile.get("hero_frames_per_direction", 1)))
+	_player.set("idle_fps", float(_profile.get("hero_idle_fps", 1.4)))
 
 	var body := CollisionShape2D.new()
 	body.name = "CollisionShape2D"
@@ -213,8 +220,17 @@ func _spawn_player() -> void:
 
 	entities.add_child(_player)
 	print(
-		"PLAYER_SPAWN cell=%s pos=%.1f,%.1f hero_px=%d"
-		% [str(spawn_cell), _player.position.x, _player.position.y, _profile["hero_height_px"]]
+		"PLAYER_SPAWN cell=%s pos=%.1f,%.1f hero_px=%d sheet=%s hframes=%d directional=%s frames_per_dir=%d"
+		% [
+			str(spawn_cell),
+			_player.position.x,
+			_player.position.y,
+			_profile["hero_height_px"],
+			_profile["hero_sheet"],
+			int(_profile.get("hero_hframes", PixelProfiles.HERO_FRAMES)),
+			"yes" if bool(_profile.get("hero_directional", false)) else "no",
+			int(_profile.get("hero_frames_per_direction", 1)),
+		]
 	)
 
 

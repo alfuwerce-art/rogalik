@@ -1,0 +1,12 @@
+PASS  лист героя: game\prototype\art\sprites\hero_idle_48.png
+  .pxo: tools\stage3_hero\source\hero_idle_48.pxo
+  [PASS] pxo_frame_count: 8 кадров в .pxo, ожидалось 8
+  [PASS] sheet_frame_count: 8 кадров в листе, ожидалось 8
+  [PASS] export_matches_source: кадры Pixelorama-экспорта совпадают с кадрами .pxo попиксельно
+  [PASS] feet_anchor_bottom: нижняя граница кадров: [48, 48, 48, 48, 48, 48, 48, 48]
+  [PASS] idle_body_lock: центр стоп не меняется между кадрами idle: [{'direction': 'down', 'feet_center': [15.5, 15.5], 'bottoms': [48, 48]}, {'direction': 'up', 'feet_center': [15.5, 15.5], 'bottoms': [48, 48]}, {'direction': 'left', 'feet_center': [14.5, 14.5], 'bottoms': [48, 48]}, {'direction': 'right', 'feet_center': [16.5, 16.5], 'bottoms': [48, 48]}]
+  [PASS] no_partial_alpha: полупрозрачных пикселей: 0 (0 — нет сглаживания)
+  [PASS] no_empty_frames: пустые кадры: нет
+  [PASS] palette_consistency: уникальных цветов по кадрам: [18]
+  [PASS] hero_height_48: высота силуэта: базовые кадры [48, 48, 48, 48], кадры вдоха [47, 47, 47, 47] (D16: 48 px; в кадре вдоха голова опущена на 1 px, поэтому верхняя строка пуста, а геометрия кадра 32x48 неизменна — стопы не смещаются)
+  [PASS] idle_head_shift_1px: верхняя граница по кадрам: [0, 1, 0, 1, 0, 1, 0, 1] (вдох ровно на 1 px ниже базы)

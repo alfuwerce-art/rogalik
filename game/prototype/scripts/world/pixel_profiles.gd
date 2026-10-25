@@ -17,7 +17,15 @@ extends RefCounted
 
 const VIEWPORT := Vector2i(480, 270)
 const WINDOW_SCALE := 2
+## Кадров в старом одностороннем прокси-листе (профили A и C, ПРОКСИ Этапа 2).
 const HERO_FRAMES := 4
+## Раскладка листа героя Этапа 3: 4 направления × 2 кадра idle, один ряд.
+## Pixelorama экспортирует лист в один ряд, поэтому hframes = 4 × 2 = 8.
+const HERO_DIRECTIONS := 4
+const HERO_IDLE_FRAMES := 2
+const HERO_SHEET_FRAMES := HERO_DIRECTIONS * HERO_IDLE_FRAMES
+## Частота дыхания idle: 1.4 кадра в секунду — спокойное дыхание, не «дрожь».
+const HERO_IDLE_FPS := 1.4
 ## Утверждённый решением D16 профиль — основной игровой стандарт.
 const APPROVED_ID := "b"
 ## Профиль обычного запуска: совпадает с утверждённым.
@@ -35,6 +43,10 @@ const PROFILES := [
 		"directions": 4,
 		"tileset": "res://art/tilesets/tileset_16.png",
 		"hero_sheet": "res://art/sprites/hero_proxy_32.png",
+		"hero_hframes": HERO_FRAMES,
+		"hero_directional": false,
+		"hero_frames_per_direction": 1,
+		"hero_idle_fps": 9.0,
 		"tree": "res://art/props/tree_16.png",
 		"gate": "res://art/props/gate_16.png",
 	},
@@ -48,7 +60,11 @@ const PROFILES := [
 		"camera_zoom": 1.0,
 		"directions": 4,
 		"tileset": "res://art/tilesets/tileset_24.png",
-		"hero_sheet": "res://art/sprites/hero_proxy_48.png",
+		"hero_sheet": "res://art/sprites/hero_idle_48.png",
+		"hero_hframes": HERO_SHEET_FRAMES,
+		"hero_directional": true,
+		"hero_frames_per_direction": HERO_IDLE_FRAMES,
+		"hero_idle_fps": HERO_IDLE_FPS,
 		"tree": "res://art/props/tree_24.png",
 		"gate": "res://art/props/gate_24.png",
 	},
@@ -63,6 +79,10 @@ const PROFILES := [
 		"directions": 4,
 		"tileset": "res://art/tilesets/tileset_32.png",
 		"hero_sheet": "res://art/sprites/hero_proxy_64.png",
+		"hero_hframes": HERO_FRAMES,
+		"hero_directional": false,
+		"hero_frames_per_direction": 1,
+		"hero_idle_fps": 9.0,
 		"tree": "res://art/props/tree_32.png",
 		"gate": "res://art/props/gate_32.png",
 	},
