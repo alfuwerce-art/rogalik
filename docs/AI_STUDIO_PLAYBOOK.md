@@ -20,7 +20,7 @@
 10. `docs/GLOBAL_ASSET_PASSES.md` — порядок общих проходов по ассетам **внутри Этапа 6**;
 11. `docs/FIRST_LOCATION_CONCEPT.md` (кандидат, не канон) и `docs/FIRST_LOCATION_ART_RULES.md` (ворота первой локации, внутри Этапа 2);
 12. `docs/REPOSITORY_STRUCTURE.md` и `docs/CONCEPT_ART_INDEX.md` — структура хранения, статусы файлов;
-13. [`docs/GAME_REFERENCES.md`](GAME_REFERENCES.md) — **постоянная база внешних игр-ориентиров**: D18 утверждает только состав из четырёх игр (Children of Morta, Hyper Light Drifter, Hades II, Path of Exile 2); методика использования не утверждена — читать при задачах, где нужен внешний ориентир, и не выдавать её за решение владельца;
+13. [`docs/GAME_REFERENCES.md`](GAME_REFERENCES.md) — **регламент исследования игровых референсов**: **D18** — состав четырёх игр (Children of Morta, Hyper Light Drifter, Hades II, Path of Exile 2), **D19** — локальное исследование их установок в режиме `READ_ONLY`. Роли игр, границы доступа, цикл исследования, формат отчёта, распределение по этапам. Читать при задачах, где нужен внешний ориентир; это **инструкция для исследования, а не источник канона**; наличие игр заявлено владельцем, но агентом не проверено (`OWNER_REPORTED / NOT_VERIFIED_LOCALLY`);
 14. `docs/AI_STUDIO_PLAYBOOK.md` — порядок выполнения и запреты.
 
 `docs/CHARACTER_PRODUCTION_PIPELINE.md` — `ARCHIVED`; читать только как историю.
