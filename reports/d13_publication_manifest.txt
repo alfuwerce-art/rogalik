@@ -33,30 +33,30 @@
        16305  docs/AI_HINT_LIBRARY.md
        19035  docs/AI_STUDIO_PLAYBOOK.md
        10974  docs/ART_DIRECTION.md
-       16970  docs/BESTIARY.md
+       16918  docs/BESTIARY.md
         6749  docs/BOSS_REFERENCES.md
        24524  docs/CHARACTER_PRODUCTION_PIPELINE.md
-       10261  docs/CONCEPT_ART_INDEX.md
+       10226  docs/CONCEPT_ART_INDEX.md
        19512  docs/DECISIONS.md
        11640  docs/DEEPSEEK_GAME_DEV_RULES.md
        10967  docs/DEV_ENVIRONMENT_SETUP.md
        19791  docs/DEVELOPMENT_PLAN.md
        14289  docs/FIRST_LOCATION_ART_RULES.md
-       11552  docs/FIRST_LOCATION_CONCEPT.md
-       15771  docs/GITHUB_WORKFLOW.md
+       11602  docs/FIRST_LOCATION_CONCEPT.md
+       16302  docs/GITHUB_WORKFLOW.md
        14824  docs/GLOBAL_ASSET_PASSES.md
-        6417  docs/HERO_REFERENCE.md
+        6369  docs/HERO_REFERENCE.md
        16836  docs/PIXEL_ART_STYLE_GUIDE.md
-        8979  docs/progress/PROJECT_STATE.md
+        9778  docs/progress/PROJECT_STATE.md
         8438  docs/progress/STAGE_00.md
-       10286  docs/progress/STAGE_01.md
+       10373  docs/progress/STAGE_01.md
         2950  docs/REFERENCE_FILE_MANIFEST.sha256
        11275  docs/REPOSITORY_STRUCTURE.md
        29054  docs/ROGALIK_DEV_ENVIRONMENT.md
        35310  docs/SKILLS_AND_BOONS.md
        15442  docs/tasks/DSH_PLUGIN_BOOTSTRAP.md
         4089  docs/VISUAL_REFERENCES.md
-        4480  docs/WEAPON_REFERENCES.md
+        4454  docs/WEAPON_REFERENCES.md
          628  game/prototype/art/demo-tool/atlas/hero_walk_atlas.json
          501  game/prototype/art/demo-tool/atlas/hero_walk_atlas.png
          968  game/prototype/art/demo-tool/atlas/hero_walk_atlas.png.import
@@ -98,7 +98,7 @@
          251  plugins/rogalik-pixel-pipeline/locale/ru.json
          508  plugins/rogalik-pixel-pipeline/package.json
         3707  README.md
-       11169  reports/d13_publication_report.md
+       12908  reports/d13_publication_report.md
        14140  reports/godot-mcp-runtime.png
        14138  reports/godot-prototype.png
        14139  reports/godot-runtime-shot.png

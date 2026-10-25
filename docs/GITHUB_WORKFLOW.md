@@ -8,19 +8,20 @@
 | Поле | Значение | Чем проверено |
 |---|---|---|
 | Репозиторий | `https://github.com/alfuwerce-art/rogalik` (публичный) | `git remote -v` |
-| Рабочая ветка | `stage1-playable-combat`; upstream настраивается первым `push -u` (D14) | `git branch -vv` |
-| HEAD рабочей ветки после D13 | `7538d5b` + коммит D14 | `git log --oneline -1` |
+| Рабочая ветка | `stage1-playable-combat`, upstream `origin/stage1-playable-combat` (настроен 2026-10-25) | `git branch -vv` |
+| HEAD рабочей ветки (D14) | `b0db47e` — он же удалённый SHA | `git rev-parse HEAD` |
 | Коммитов сверх `origin/main` | 12 (10 + D13 + D14) | `git rev-list --count origin/main..HEAD` |
 | `origin/main` | `e9f9128` | `git ls-remote --heads origin` |
 | `origin/rogalik-dev` | `c9e5626` | `git ls-remote --heads origin` |
 | `origin/main` в истории рабочей ветки | да (merge `be0d099`) | `git merge-base --is-ancestor origin/main HEAD` |
-| Публикация | автоматическая по D14; результат и SHA — §8 и [отчёт](../reports/d13_publication_report.md) | `git ls-remote --heads origin` после push |
+| Публикация | **выполнена 2026-10-25**: удалённый SHA = локальный, 146 файлов в ветке, ZIP 68 551 781 байт | `git ls-remote --heads origin`, `git ls-tree -r origin/stage1-playable-combat` |
+| Авторизация | Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` в Windows Credential Manager | `git-credential-manager github list` |
 | Рабочее дерево | чистое на момент редакции | `git status` |
-| Наличие файлов | 25 PNG референсов + ZIP + игровые/инструментальные файлы — `COMMITTED_LOCAL` до проверки push, затем `PUSHED` | `git ls-files assets` |
+| Наличие файлов | 25 PNG референсов + ZIP + игровые/инструментальные файлы — `PUSHED` | `git ls-tree -r origin/stage1-playable-combat` |
 
 **Историю не переписывать:** ветка `stage1-playable-combat` сохраняется как есть, проект не пересоздаётся, `rogalik-dev` и `main` остаются на месте.
 
-**Авторизация (D14).** Чтение `origin` работает, так как репозиторий публичный. Для записи используется штатный Git Credential Manager (`credential.helper = manager`): если сохранённого доступа нет, GCM выполняет интерактивный вход (окно/браузер). Токены и пароли не выводятся в чат и не пишутся в файлы. Если вход технически невозможен, фиксируется конкретный `BLOCKER` (см. §8) — публикация не подменяется «локальным успехом».
+**Авторизация (D14).** Штатный Git Credential Manager 2.8.0, аккаунт `alfuwerce-art` хранится в Windows Credential Manager; интерактивный вход через GCM выполняется по стандартной схеме, токены не выводятся в чат и не пишутся в файлы. В среде инструмента DSH `git push` требует **разового расширения прав песочницы**: git запускает credential-helper через MSYS-shell, а `sh.exe` в песочнице не может создать signal pipe (`couldn't create signal pipe, Win32 error 5`). Это ограничение среды, а не репозитория; в обычном терминале владельца push работает без него. Если вход технически невозможен — фиксируется конкретный `BLOCKER`, публикация не подменяется «локальным успехом».
 
 ## 2. Полномочия (D13, D14)
 

@@ -1,8 +1,8 @@
 # D13/D14 — отчёт о первой публикации ветки
 
-> **STATUS: `IN_PROGRESS`** — отчёт обновлён под решение D14: публикация выполняется автоматически, без предварительного подтверждения. Итоговый SHA и результат проверки удалённой ветки добавляются в §10 сразу после `push`.
+> **STATUS: `PASS`** — ветка `stage1-playable-combat` опубликована 2026-10-25, удалённый SHA `b0db47e` совпал с локальным; результат и команды проверки — §10. Публикация выполнена автоматически по решению D14, без предварительного подтверждения.
 > Решения: [DECISIONS.md D13/D14](../docs/DECISIONS.md) · Правила: [GITHUB_WORKFLOW.md](../docs/GITHUB_WORKFLOW.md) §5.
-> Ветка публикации: **`stage1-playable-combat`** (новая удалённая ветка, не `main`).
+> Ветка публикации: **`stage1-playable-combat`** (не `main`).
 
 ## 1. Что публикуется
 
@@ -115,4 +115,18 @@ git ls-tree -r origin/stage1-playable-combat -- assets/archives/ assets/referenc
 
 ## 10. Результат публикации
 
-Заполняется после `push`: удалённый SHA, совпадение с локальным `HEAD`, наличие ZIP и ключевых каталогов в удалённой ветке, способ авторизации.
+**PASS.** Публикация выполнена 2026-10-25 в 18:0x MSK.
+
+| Проверка | Команда | Результат |
+|---|---|---|
+| Ветка создана на GitHub | `git ls-remote --heads origin` | `b0db47e71fe69c64ca26738f38b78fccd95f1e61  refs/heads/stage1-playable-combat` |
+| SHA совпал с локальным | `git rev-parse HEAD origin/stage1-playable-combat` | оба `b0db47e…` |
+| Upstream настроен | `git branch -vv` | `stage1-playable-combat b0db47e [origin/stage1-playable-combat]` |
+| Коммитов передано | `git rev-list --count origin/main..origin/stage1-playable-combat` | 12 |
+| Файлов в удалённой ветке | `git ls-tree -r --name-only origin/stage1-playable-combat` | 146 (`docs/` 27, `game/` 20, `plugins/` 19, `tools/` 28, `assets/` 26, `reports/` 21) |
+| ZIP в удалённой ветке | `git cat-file -s origin/…:assets/archives/rogalik_all_concept_art_with_weapons.zip` | 68 551 781 байт, blob `9b4977a3…` = локальный |
+| `main` не изменён | `git ls-remote --heads origin` | `e9f9128` (без изменений), `rogalik-dev` = `c9e5626` |
+| Ответ GitHub | вывод push | `* [new branch] stage1-playable-combat -> stage1-playable-combat`; предупреждения GH001 о ZIP 65,38 MB (> 50 MB) — ожидаемы |
+| Авторизация | `git-credential-manager github list` | штатный GCM 2.8.0, аккаунт `alfuwerce-art` |
+
+Ограничение среды: в песочнице инструмента DSH `git push` прошёл только после разового расширения прав — MSYS-shell, которым git запускает credential-helper, не может создать pipe внутри песочницы (`couldn't create signal pipe, Win32 error 5`). В обычном терминале владельца push работает без этого. Сила влияния на репозиторий: нет.
