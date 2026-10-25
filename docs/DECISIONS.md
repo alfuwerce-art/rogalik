@@ -105,6 +105,19 @@
 
 **Затронуто:** [AGENTS.md §2, §4, §8](../AGENTS.md), [GITHUB_WORKFLOW.md §2, §5, §6](GITHUB_WORKFLOW.md), [DEVELOPMENT_PLAN.md §2, §6](DEVELOPMENT_PLAN.md), [PROJECT_STATE.md](progress/PROJECT_STATE.md), [STAGE_01.md](progress/STAGE_01.md), отчёт о публикации.
 
+### D15 — Приёмка Этапа 1 и начало Этапа 2 · 2026-10-25 · `APPROVED`
+**Решение:** владелец принял **Этап 1 «Технический фундамент Godot»** статусом **`ACCEPTED`** (2026-10-25) и дал команду начать **Этап 2** в новом чате (D12).
+**Следствия:**
+
+- статус [STAGE_01.md](progress/STAGE_01.md) переведён в `ACCEPTED`, [DEVELOPMENT_PLAN.md §5](DEVELOPMENT_PLAN.md) и [PROJECT_STATE.md](progress/PROJECT_STATE.md) обновлены;
+- рабочая ветка Этапа 2 — `stage2-location-prototype`, создаётся от `stage1-playable-combat`; ветка Этапа 1 не пересоздаётся, не удаляется и не перезаписывается;
+- **D9 остаётся в силе:** пиксельные константы (тайл, высота спрайта, направления, масштаб) не утверждены; задача 2.1 готовит 2–3 набора **кандидатов** с реальными кадрами, выбор и утверждение — только владелец;
+- **D10 остаётся в силе:** первая локация остаётся кандидатом; каркас Этапа 2 — техническая зона, не канон;
+- всё созданное на Этапе 2 до приёмки — `PROXY_TECHNICAL` (D8), за финальный арт не выдаётся;
+- порядок этапов и объём Этапа 2 не меняются ([DEVELOPMENT_PLAN.md §1](DEVELOPMENT_PLAN.md)), геймдизайн не затрагивается.
+
+**Затронуто:** [DECISIONS.md](DECISIONS.md), [DEVELOPMENT_PLAN.md §5](DEVELOPMENT_PLAN.md), [STAGE_01.md](progress/STAGE_01.md), [PROJECT_STATE.md](progress/PROJECT_STATE.md), [STAGE_02.md](progress/STAGE_02.md).
+
 ## Отменённые и устаревшие положения
 
 | Положение | Где встречалось | Статус |

@@ -120,8 +120,9 @@
 | Этап | Состояние | Заметка | Комментарий |
 |---|---|---|---|
 | 0 | **ACCEPTED** (2026-10-25) | [STAGE_00.md](progress/STAGE_00.md) | Регламент утверждён владельцем, документы исправлены |
-| 1 | **NEEDS_REVIEW** | [STAGE_01.md](progress/STAGE_01.md) | Фундамент собран и проверен, ждёт приёмки владельцем; в `game/prototype` только `PROXY_TECHNICAL` |
-| 2–6 | `TODO` | — | Не начаты; журналы будущих этапов заранее не создаются |
+| 1 | **ACCEPTED** (2026-10-25, D15) | [STAGE_01.md](progress/STAGE_01.md) | Фундамент принят владельцем; в `game/prototype` только `PROXY_TECHNICAL` |
+| 2 | **IN_PROGRESS** | [STAGE_02.md](progress/STAGE_02.md) | Начат 2026-10-25 (D15); ветка `stage2-location-prototype`; константы — кандидаты до решения владельца по D9 |
+| 3–6 | `TODO` | — | Не начаты; журналы будущих этапов заранее не создаются |
 
 Сводка для нового чата — [progress/PROJECT_STATE.md](progress/PROJECT_STATE.md). Этот раздел её не дублирует: при расхождении источником считаются `PROJECT_STATE.md` и Git.
 
