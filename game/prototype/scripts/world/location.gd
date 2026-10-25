@@ -21,6 +21,7 @@ extends Node2D
 const PLAYER_SCRIPT := "res://scripts/world/player_world.gd"
 const OVERHEAD_SCRIPT := "res://scripts/world/overhead_prop.gd"
 const PROBE_SCRIPT := "res://scripts/world/combat_probe.gd"
+const DEMO_SCRIPT := "res://scripts/world/demo_driver.gd"
 const LIGHT_TEXTURE := "res://art/lights/light_soft.png"
 
 ## Точка героя в режиме пробы: середина двора, вокруг есть препятствия (забор, деревья,
@@ -53,6 +54,8 @@ var _no_lights := false
 var _probe := false
 var _probe_node: Node2D
 var _probe_reported := false
+var _demo := false
+var _demo_driver: Node
 var _frames := 0
 var _fps_timer := 0.0
 var _bench_timer := 0.0
@@ -75,6 +78,8 @@ func _ready() -> void:
 			_no_lights = true
 		elif arg == "--probe" or arg.begins_with("--probe="):
 			_probe = true
+		elif arg == "--demo":
+			_demo = true
 	_profile = PixelProfiles.get_profile(requested)
 	_tile_px = int(_profile["tile_px"])
 	print(PixelProfiles.describe(_profile))
@@ -91,6 +96,8 @@ func _ready() -> void:
 	_spawn_gate_zone()
 	if _probe:
 		_place_probe()
+	if _demo:
+		_start_demo()
 	_setup_camera()
 	_setup_atmosphere()
 	_setup_hud()
@@ -391,6 +398,20 @@ func _place_probe() -> void:
 	print(
 		"PROBE_READY cell=%s hero=%.1f,%.1f markers=%d rings=3 status=PROXY_TECHNICAL"
 		% [str(PROBE_CELL), _player.global_position.x, _player.global_position.y, 7]
+	)
+
+
+## Демонстрационный маршрут для клипа приёмки (задача 2.4): только задаёт
+## направление существующему герою по таймеру, новых механик не добавляет.
+func _start_demo() -> void:
+	_demo_driver = Node.new()
+	_demo_driver.name = "DemoDriver"
+	_demo_driver.set_script(load(DEMO_SCRIPT))
+	add_child(_demo_driver)
+	_demo_driver.call("setup", _player, true)
+	print(
+		"DEMO_READY segments=%d duration_s=%.2f quit_when_done=true"
+		% [6, float(_demo_driver.call("total_duration"))]
 	)
 
 

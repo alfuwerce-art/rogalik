@@ -13,6 +13,7 @@ const FRAMES := 4
 @export var anim_fps := 9.0
 
 var _auto := Vector2.ZERO
+var _scripted_dir := Vector2.ZERO
 var _anim_time := 0.0
 var _report_time := 0.0
 var _start := Vector2.ZERO
@@ -37,6 +38,15 @@ func _parse_dir(text: String) -> Vector2:
 	return Vector2(float(parts[0]), 0.0)
 
 
+## Направление от сценария записи клипа (`--demo`). Игровую логику не меняет:
+## при ненулевом значении приоритет выше клавиш и `--auto`.
+func set_scripted_dir(dir: Vector2) -> void:
+	_scripted_dir = dir
+	# Новый отрезок маршрута — новый отчёт о столкновении: иначе первое
+	# столкновение «глушит» все следующие и столб ворот не будет виден в логе.
+	_blocked_reported = false
+
+
 func _physics_process(delta: float) -> void:
 	var direction := Vector2.ZERO
 	if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT):
@@ -49,6 +59,8 @@ func _physics_process(delta: float) -> void:
 		direction.y += 1.0
 	if _auto != Vector2.ZERO:
 		direction = _auto
+	if _scripted_dir != Vector2.ZERO:
+		direction = _scripted_dir
 
 	if direction != Vector2.ZERO:
 		velocity = direction.normalized() * speed
@@ -66,7 +78,11 @@ func _physics_process(delta: float) -> void:
 	# каждый пиксель арта попадает в целое число экранных пикселей.
 	sprite.position = global_position.round() - global_position
 
-	if _auto != Vector2.ZERO and not _blocked_reported and get_slide_collision_count() > 0:
+	if (
+		(_auto != Vector2.ZERO or _scripted_dir != Vector2.ZERO)
+		and not _blocked_reported
+		and get_slide_collision_count() > 0
+	):
 		if absf(global_position.x - _start.x) + absf(global_position.y - _start.y) > 4.0:
 			_blocked_reported = true
 			var collision := get_slide_collision(0)
