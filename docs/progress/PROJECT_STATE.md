@@ -26,11 +26,11 @@
 |---|---|
 | Рабочая директория | `C:\Users\bow\Desktop\Rogalik` |
 | Ветка | Этап 3 — **`stage3-hero`**, создана от опубликованного HEAD принятого Этапа 2 `a74f668` (= `origin/stage2-location-prototype`); удалённая ветка создаётся первым push |
-| Последний содержательный коммит | задача 3.1 — `feat(stage3): hero silhouette 48 px, 4 directions, idle` (SHA — `git log -1 --oneline stage3-hero`), публикация подтверждается `git rev-parse origin/stage3-hero` |
+| Последний содержательный коммит | `966cfc7` (задача 3.1) — **опубликован**: `git rev-parse origin/stage3-hero` = `966cfc7` |
 | Незакоммиченные файлы | нет; рабочее дерево чистое на момент записи |
-| Удалённые ветки | `origin/stage2-location-prototype` = `a74f668` (Этап 2 принят, D17; история `766da1c` → … → `26e7d65` → `a74f668`), `origin/stage1-playable-combat` = `77039f4` (приёмка D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `main` не изменялся |
-| Публикация | Этап 2 опубликован 2026-10-25 (D14); публикация задачи 3.1 — после коммита в `stage3-hero`, SHA сверяется в `origin` |
-| Артефакты 3.1 | `game/prototype/art/sprites/hero_idle_48.png`, `tools/stage3_hero/source/hero_idle_48.pxo`, 6 PNG в `reports/` + логи и отчёт `reports/stage3_task31_report.md` |
+| Удалённые ветки | `origin/stage3-hero` = `966cfc7` (ветка Этапа 3, создана от `a74f668`), `origin/stage2-location-prototype` = `a74f668` (Этап 2 принят, D17; история `766da1c` → … → `26e7d65` → `a74f668`), `origin/stage1-playable-combat` = `77039f4` (приёмка D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `main` не изменялся |
+| Публикация | **выполнена 2026-10-25** автоматически (D14): первый push ветки `stage3-hero` → удалённый SHA совпал с локальным (`966cfc7`), файлы проверены `git ls-tree -r origin/stage3-hero`; авторизация — штатный Git Credential Manager |
+| Артефакты 3.1 | `game/prototype/art/sprites/hero_idle_48.png` (`ASSET_DRAFT`), `tools/stage3_hero/source/hero_idle_48.pxo`, 10 PNG в `reports/`, отчёт `reports/stage3_task31_report.md` — `PUSHED` в `origin/stage3-hero` |
 | Артефакты 2.1 | 9 PNG в `reports/` и отчёт `reports/stage2_task21_report.md` — `PUSHED` в `origin/stage2-location-prototype` |
 | Оригиналы | 25 PNG в `assets/references/` + ZIP 65,38 MB в `assets/archives/` — `PUSHED` (blob `9b4977a3…` совпал с локальным) |
 

@@ -49,7 +49,7 @@
 
 | Коммит | Описание |
 |---|---|
-| см. `git log --oneline stage3-hero` | `feat(stage3): hero silhouette 48 px, 4 directions, idle` — ассет, `.pxo`, инструменты, код, отчёт, память; SHA фиксируется в `PROJECT_STATE.md` §3 после коммита |
+| `966cfc7` | задача 3.1: силуэт героя 48 px, 4 направления, `idle`, `.pxo` + экспорт Pixelorama, инструменты `tools/stage3_hero/`, интеграция в сцену, отчёт и память (35 файлов) — **`PUSHED`** в `origin/stage3-hero` (удалённый SHA совпал с локальным) |
 
 ## 7. Результаты технических проверок
 
