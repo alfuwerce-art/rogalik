@@ -117,12 +117,12 @@ requires_human_approval_for: ["новый канон", "финальный ар�
 
 ```text
 TASK:
-STATUS: PASS | NEEDS_REVIEW | BLOCKED
-BRANCH / COMMIT:
+STATUS: PASS | FIX_REQUIRED | NEEDS_REVIEW | BLOCKED | NOT_VERIFIED
+BRANCH / COMMIT (локальный, без push):
 WHAT CHANGED:
 WHAT WAS TESTED (commands + result):
-PRODUCTION STAGE / GATE: 
-PROXY_OR_FINAL: 
+STAGE / GATE (этап 0–6 по DEVELOPMENT_PLAN):
+ASSET_STATUS: NONE | PROXY_TECHNICAL | ASSET_DRAFT | ASSET_APPROVED
 VISUAL EVIDENCE (game camera, clip, sprite sheet): 
 VISUAL COMPARISON (if relevant):
 UNRESOLVED:
