@@ -1,0 +1,25 @@
+# Rogalik — правила обработки файлов (решение D13)
+#
+# Git LFS не подключён: уже закоммиченный ZIP нельзя перевести в LFS без перезаписи
+# истории. Бинарные типы помечаются как binary (без текстового diff и перекодирования).
+# Переводы строк остаются на усмотрение core.autocrlf — репозиторий хранит LF в индексе.
+
+* text=auto
+
+# --- Бинарные форматы ---
+*.png   binary
+*.pxo   binary
+*.zip   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
+*.ttf   binary
+*.otf   binary
+*.ttc   binary
+*.wav   binary
+*.ogg   binary
+*.mp3   binary
+*.exe   binary
+*.dll   binary
+*.pdb   binary

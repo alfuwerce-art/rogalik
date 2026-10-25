@@ -25,7 +25,7 @@
 
 Геймдизайн механик: [Система умений и благословений](SKILLS_AND_BOONS.md).
 
-> **Фактический статус:** 5 оригинальных PNG находятся в пакете `rogalik_all_concept_art_with_weapons.zip` (все 23 изображения проекта) и отдельно в `rogalik_weapon_references_5_sheets.zip`. Наличие файлов: `COMMITTED_LOCAL` в рабочей ветке; `PUSHED` — нет (D5).
+> **Фактический статус:** 5 оригинальных PNG находятся в пакете `rogalik_all_concept_art_with_weapons.zip` (все 23 изображения проекта) и отдельно в `rogalik_weapon_references_5_sheets.zip`. Наличие файлов: `COMMITTED_LOCAL` в рабочей ветке; `PUSHED` — после подтверждения в удалённой ветке GitHub (D3, D13).
 
 ## Проверка оригиналов перед и после импорта
 

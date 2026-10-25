@@ -50,9 +50,10 @@
 `3b46b44` | рабочая среда: Godot/Pixelorama/MCP-пресет и два локальных плагина |
 `04a91f1` | документирование живого MCP-процесса |
 `c9e5626` | MCP runtime-мост и проверка управления живой игрой |
-`61d1bda` | сохранение проверенной работы по референсам перед этапом 1 |
+`61d1bda` | сохранение проверенной работы по референсам перед этапом 1
+`D13` | организационная задача: GitHub как общий репозиторий, правила публикации, `.gitignore`/`.gitattributes`, `tools/git/check-memory-sync.ps1`, отчёт о первой публикации (SHA — `git log -1`) |
 
-Push не выполнялся.
+Push не выполнялся: первый push ожидает подтверждения владельцем отчёта о составе публикации (D13).
 
 ## 7. Результаты технических проверок
 
@@ -96,3 +97,4 @@ MCP | 157 инструментов; `get_godot_version` → 4.7.2; `read_scene` 
 - **Не перезапускать** уже подтверждённые проверки из §7 без технической необходимости; доказательства переиспользуются.
 - В `game/prototype` **нет игрового контента**: спрайт — `PROXY_TECHNICAL`, сцена — техническая комната.
 - Этап 2 не начат; начинать его можно только после `ACCEPTED` от владельца и в новом чате (D12).
+- **Публикация (D13):** рабочая ветка — `stage1-playable-combat`; первый push — после подтверждения [reports/d13_publication_report.md](../../reports/d13_publication_report.md). Перед push: `powershell -NoProfile -ExecutionPolicy Bypass -File tools/git/check-memory-sync.ps1 -Staged`. После push проверить `git rev-parse origin/stage1-playable-combat` и только затем ставить `PUSHED` в [CONCEPT_ART_INDEX.md](../CONCEPT_ART_INDEX.md).
