@@ -24,11 +24,12 @@
 | Поле | Значение |
 |---|---|
 | Рабочая директория | `C:\Users\bow\Desktop\Rogalik` |
-| Ветка | Этап 2 — `stage2-location-prototype` (создана от `stage1-playable-combat`); ветка Этапа 1 сохраняется на последнем коммите приёмки |
-| Последний опубликованный HEAD | см. `git log -1` и §3-примечание ниже; SHA фиксируется после каждого push |
+| Ветка | Этап 2 — `stage2-location-prototype` (создана от `stage1-playable-combat`, upstream настроен первым `push -u`); ветка Этапа 1 закрыта приёмкой на `77039f4` |
+| Последний опубликованный HEAD | `766da1c` (задача 2.1) = `origin/stage2-location-prototype`; финальный SHA памяти — `git log -1` |
 | Незакоммиченные файлы | нет; рабочее дерево чистое на момент записи |
-| Удалённые ветки | `origin/stage1-playable-combat` = `0978b5c` (первая публикация `b0db47e` → `a7744ad` → `0978b5c`), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки |
-| Публикация | **выполнена 2026-10-25** тремя автоматическими push (D14); 146 файлов в удалённой ветке, 14 коммитов сверх `origin/main` на момент записи (актуальное — `git rev-list --count origin/main..HEAD`); авторизация — штатный Git Credential Manager (аккаунт `alfuwerce-art`) |
+| Удалённые ветки | `origin/stage2-location-prototype` = `766da1c` (первая публикация), `origin/stage1-playable-combat` = `77039f4` (приёмка Этапа 1, D15), `origin/main` = `e9f9128`, `origin/rogalik-dev` = `c9e5626`; `origin/main` — предок рабочей ветки, `main` не изменялся |
+| Публикация | **выполнена 2026-10-25** автоматически (D14): `77039f4` в ветку Этапа 1 и `766da1c` в ветку Этапа 2; удалённый SHA совпал с локальным в обоих случаях; авторизация — штатный Git Credential Manager (аккаунт `alfuwerce-art`) |
+| Артефакты 2.1 | 9 PNG в `reports/` и отчёт `reports/stage2_task21_report.md` — `PUSHED` в `origin/stage2-location-prototype` |
 | Оригиналы | 25 PNG в `assets/references/` + ZIP 65,38 MB в `assets/archives/` — `PUSHED` (blob `9b4977a3…` совпал с локальным) |
 
 ## 4. Готовые игровые системы
