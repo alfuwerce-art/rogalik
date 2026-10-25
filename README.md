@@ -15,6 +15,11 @@ Roguelike game prototype
 - [Кандидат первой локации — «Проклятая слобода»](docs/FIRST_LOCATION_CONCEPT.md)
 - [Правила дизайна и проверки первой локации](docs/FIRST_LOCATION_ART_RULES.md)
 
+## Правила разработки и GitHub
+
+- [AGENTS.md — обязательные правила для DeepSeek и других ИИ-разработчиков](AGENTS.md)
+- [Подключение GitHub, защита main, рабочие ветки и импорт референсов](docs/GITHUB_WORKFLOW.md)
+
 ## Структура проекта
 
 - [Структура папок и правила импорта концепт-артов](docs/REPOSITORY_STRUCTURE.md)
