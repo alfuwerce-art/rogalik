@@ -1,0 +1,74 @@
+{
+  "a": {
+    "variant": "a",
+    "tile": 24,
+    "viewport": [
+      480,
+      270
+    ],
+    "content_scale": 4,
+    "hero_png": "hero_down_48.png",
+    "hero_pos": [
+      250.79999999999998,
+      230.88
+    ],
+    "hero_height": 48,
+    "hero_scale": 1,
+    "hero_screen_height": 192,
+    "light_png": "light_torch_24.png",
+    "light_pos": [
+      213.60000000000002,
+      133.67999999999998
+    ],
+    "light_scale": 1.0,
+    "world_png": "world_24.png"
+  },
+  "b": {
+    "variant": "b",
+    "tile": 32,
+    "viewport": [
+      640,
+      360
+    ],
+    "content_scale": 3,
+    "hero_png": "hero_down_64.png",
+    "hero_pos": [
+      334.4,
+      307.84
+    ],
+    "hero_height": 64,
+    "hero_scale": 1,
+    "hero_screen_height": 192,
+    "light_png": "light_torch_32.png",
+    "light_pos": [
+      284.8,
+      178.23999999999998
+    ],
+    "light_scale": 1.0,
+    "world_png": "world_32.png"
+  },
+  "c": {
+    "variant": "c",
+    "tile": 48,
+    "viewport": [
+      960,
+      540
+    ],
+    "content_scale": 2,
+    "hero_png": "hero_down_96.png",
+    "hero_pos": [
+      501.59999999999997,
+      461.76
+    ],
+    "hero_height": 96,
+    "hero_scale": 1,
+    "hero_screen_height": 192,
+    "light_png": "light_torch_48.png",
+    "light_pos": [
+      427.20000000000005,
+      267.35999999999996
+    ],
+    "light_scale": 1.0,
+    "world_png": "world_48.png"
+  }
+}

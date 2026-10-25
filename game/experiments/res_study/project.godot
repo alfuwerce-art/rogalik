@@ -1,0 +1,32 @@
+; Экспериментальный проект исследования разрешений (задача 3.1c).
+; Он НЕ заменяет game/prototype и не влияет на основную игру (D16 действует).
+; Окно всегда 1920×1080; логическое разрешение и масштаб задаёт scripts/study.gd
+; по флагу --variant=a|b|c.
+
+config_version=5
+
+[application]
+
+config/name="Rogalik — resolution study (3.1c)"
+config/description="A/B/C варианты исходной детализации героя и участка локации"
+run/main_scene="res://scenes/study.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/size/resizable=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
+environment/defaults/default_clear_color=Color(0.04, 0.045, 0.06, 1)

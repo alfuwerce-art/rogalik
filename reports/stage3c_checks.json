@@ -1,0 +1,132 @@
+{
+  "variants": {
+    "a": {
+      "expected_view": [
+        480,
+        270
+      ],
+      "tile": 24,
+      "hero_height": 48,
+      "hero_screen_height_expected": 192,
+      "fov_tiles": [
+        20.0,
+        11.25
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "hero_bbox_screen": [
+        972,
+        732,
+        1035,
+        919
+      ],
+      "hero_height_screen_measured": 188,
+      "hero_width_screen_measured": 64,
+      "diff_pixels": 8491,
+      "asset_world_24.png": {
+        "size": [
+          480,
+          270
+        ],
+        "semi_transparent_px": 0
+      },
+      "asset_hero_down_48.png": {
+        "size": [
+          36,
+          48
+        ],
+        "semi_transparent_px": 0
+      }
+    },
+    "b": {
+      "expected_view": [
+        640,
+        360
+      ],
+      "tile": 32,
+      "hero_height": 64,
+      "hero_screen_height_expected": 192,
+      "fov_tiles": [
+        20.0,
+        11.25
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "hero_bbox_screen": [
+        975,
+        732,
+        1031,
+        917
+      ],
+      "hero_height_screen_measured": 186,
+      "hero_width_screen_measured": 57,
+      "diff_pixels": 8099,
+      "asset_world_32.png": {
+        "size": [
+          640,
+          360
+        ],
+        "semi_transparent_px": 0
+      },
+      "asset_hero_down_64.png": {
+        "size": [
+          49,
+          64
+        ],
+        "semi_transparent_px": 0
+      }
+    },
+    "c": {
+      "expected_view": [
+        960,
+        540
+      ],
+      "tile": 48,
+      "hero_height": 96,
+      "hero_screen_height_expected": 192,
+      "fov_tiles": [
+        20.0,
+        11.25
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "hero_bbox_screen": [
+        976,
+        732,
+        1033,
+        919
+      ],
+      "hero_height_screen_measured": 188,
+      "hero_width_screen_measured": 58,
+      "diff_pixels": 7651,
+      "asset_world_48.png": {
+        "size": [
+          960,
+          540
+        ],
+        "semi_transparent_px": 0
+      },
+      "asset_hero_down_96.png": {
+        "size": [
+          73,
+          96
+        ],
+        "semi_transparent_px": 0
+      }
+    }
+  },
+  "problems": [],
+  "all_variants_same_fov": true,
+  "hero_screen_heights_measured": [
+    186,
+    188
+  ],
+  "hero_screen_height_identical": true,
+  "status": "PASS"
+}

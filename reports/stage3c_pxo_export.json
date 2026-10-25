@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "assets": 6,
+  "failed": 0,
+  "report": [
+    {
+      "asset": "a/hero_down_48.png",
+      "project": "tools/res_study/pxo/hero_down_48.pxo",
+      "export_ok": true,
+      "files": [
+        "hero_down_48.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        36,
+        48
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    },
+    {
+      "asset": "b/hero_down_64.png",
+      "project": "tools/res_study/pxo/hero_down_64.pxo",
+      "export_ok": true,
+      "files": [
+        "hero_down_64.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        49,
+        64
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    },
+    {
+      "asset": "c/hero_down_96.png",
+      "project": "tools/res_study/pxo/hero_down_96.pxo",
+      "export_ok": true,
+      "files": [
+        "hero_down_96.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        73,
+        96
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    },
+    {
+      "asset": "a/world_24.png",
+      "project": "tools/res_study/pxo/world_24.pxo",
+      "export_ok": true,
+      "files": [
+        "world_24.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        480,
+        270
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    },
+    {
+      "asset": "b/world_32.png",
+      "project": "tools/res_study/pxo/world_32.pxo",
+      "export_ok": true,
+      "files": [
+        "world_32.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        640,
+        360
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    },
+    {
+      "asset": "c/world_48.png",
+      "project": "tools/res_study/pxo/world_48.pxo",
+      "export_ok": true,
+      "files": [
+        "world_48.png"
+      ],
+      "problems": [],
+      "status": "PASS",
+      "size": [
+        960,
+        540
+      ],
+      "pixels_identical": true,
+      "max_channel_diff": 0
+    }
+  ]
+}
