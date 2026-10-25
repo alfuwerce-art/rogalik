@@ -1,0 +1,130 @@
+{
+  "a": {
+    "height": 48,
+    "polygon_points": 2,
+    "colours": 27,
+    "opaque": 543,
+    "silhouette": {
+      "height_px": 48,
+      "width_px": 16,
+      "head": {
+        "v": 0.104,
+        "width": 10,
+        "runs": 1,
+        "width_over_height": 0.208
+      },
+      "shoulders": {
+        "v": 0.271,
+        "width": 16,
+        "runs": 1,
+        "width_over_height": 0.333
+      },
+      "waist": {
+        "v": 0.375,
+        "width": 16,
+        "runs": 1,
+        "width_over_height": 0.333
+      },
+      "hips": {
+        "v": 0.479,
+        "width": 14,
+        "runs": 1,
+        "width_over_height": 0.292
+      },
+      "thigh": {
+        "v": 0.604,
+        "width": 12,
+        "runs": 1,
+        "width_over_height": 0.25
+      },
+      "knee": {
+        "v": 0.688,
+        "width": 12,
+        "runs": 1,
+        "width_over_height": 0.25
+      },
+      "hem": {
+        "v": 0.792,
+        "width": 10,
+        "runs": 1,
+        "width_over_height": 0.208
+      },
+      "calf": {
+        "v": 0.833,
+        "width": 10,
+        "runs": 1,
+        "width_over_height": 0.208
+      },
+      "feet": {
+        "v": 0.958,
+        "width": 10,
+        "runs": 2,
+        "width_over_height": 0.208
+      }
+    }
+  },
+  "b": {
+    "height": 96,
+    "polygon_points": 2,
+    "colours": 29,
+    "opaque": 1913,
+    "silhouette": {
+      "height_px": 95,
+      "width_px": 30,
+      "head": {
+        "v": 0.105,
+        "width": 16,
+        "runs": 1,
+        "width_over_height": 0.168
+      },
+      "shoulders": {
+        "v": 0.284,
+        "width": 29,
+        "runs": 1,
+        "width_over_height": 0.305
+      },
+      "waist": {
+        "v": 0.379,
+        "width": 29,
+        "runs": 1,
+        "width_over_height": 0.305
+      },
+      "hips": {
+        "v": 0.474,
+        "width": 25,
+        "runs": 1,
+        "width_over_height": 0.263
+      },
+      "thigh": {
+        "v": 0.6,
+        "width": 21,
+        "runs": 1,
+        "width_over_height": 0.221
+      },
+      "knee": {
+        "v": 0.684,
+        "width": 21,
+        "runs": 1,
+        "width_over_height": 0.221
+      },
+      "hem": {
+        "v": 0.789,
+        "width": 20,
+        "runs": 2,
+        "width_over_height": 0.211
+      },
+      "calf": {
+        "v": 0.842,
+        "width": 17,
+        "runs": 2,
+        "width_over_height": 0.179
+      },
+      "feet": {
+        "v": 0.958,
+        "width": 17,
+        "runs": 2,
+        "width_over_height": 0.179
+      }
+    }
+  }
+}

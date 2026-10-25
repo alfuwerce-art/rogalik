@@ -19,6 +19,7 @@ var variant: String = "a"
 var data: Dictionary = {}
 var lights_on: bool = true
 var hero_on: bool = true
+var shadows_on: bool = true
 var flicker: bool = true
 var shot_path: String = ""
 var frames_until_shot: int = 8
@@ -48,6 +49,8 @@ func _parse_args() -> void:
             lights_on = false
         elif arg == "--no-hero":
             hero_on = false
+        elif arg == "--no-shadow":
+            shadows_on = false
         elif arg == "--no-flicker":
             flicker = false
         elif arg.begins_with("--shot="):
@@ -84,7 +87,7 @@ func _configure_window() -> void:
 
 
 func _build_scene() -> void:
-    var base := "res://art/%s/" % variant
+    var base := "res://art/%s/" % String(data.get("source_variant", variant))
 
     world_sprite = Sprite2D.new()
     world_sprite.name = "World"
@@ -99,7 +102,7 @@ func _build_scene() -> void:
     if hero_on:
         hero_sprite = Sprite2D.new()
         hero_sprite.name = "Hero"
-        hero_sprite.texture = load(base + String(data["hero_png"]))
+        hero_sprite.texture = load(String(data["hero_png"]))
         hero_sprite.centered = true
         hero_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
         # Увеличение делает content_scale логического разрешения. Спрайт остаётся
@@ -109,6 +112,8 @@ func _build_scene() -> void:
         hero_sprite.position = Vector2(float(hero_pos[0]),
                                        float(hero_pos[1]) - hero_height * scale_factor * 0.5)
         add_child(hero_sprite)
+        if bool(data.get("occluder", false)):
+            _add_hero_occluders()
     else:
         print("STUDY hero=disabled (--no-hero): кадр-эталон для замера силуэта")
 
@@ -127,9 +132,41 @@ func _build_scene() -> void:
         torch_light.texture_scale = float(data["light_scale"])
         torch_light.position = Vector2(float(light_pos[0]), float(light_pos[1]))
         torch_light.color = Color(1.0, 0.70, 0.38)
-        torch_light.energy = base_energy
+        torch_light.energy = float(data.get("light_energy", base_energy))
         torch_light.blend_mode = Light2D.BLEND_MODE_ADD
+        if shadows_on:
+            # настоящие динамические тени: свет отбрасывает силуэт героя
+            torch_light.shadow_enabled = true
+            torch_light.shadow_filter = Light2D.SHADOW_FILTER_NONE
+            torch_light.shadow_color = Color(0, 0, 0, 0.55)
         add_child(torch_light)
+
+
+func _add_hero_occluders() -> void:
+    """Полигоны-окклюдеры из альфы спрайта: факел отбрасывает тень героя.
+
+    Полигоны строит сам движок (`BitMap.opaque_to_polygons`), поэтому контур
+    точный, включая просвет между ногами и между рукой и корпусом.
+    """
+    var texture := hero_sprite.texture as Texture2D
+    if texture == null:
+        return
+    var bitmap := BitMap.new()
+    bitmap.create_from_image_alpha(texture.get_image(), 0.5)
+    var polygons := bitmap.opaque_to_polygons(
+            Rect2i(Vector2i.ZERO, texture.get_size()), 1.0)
+    var origin := hero_sprite.position - texture.get_size() * 0.5
+    for points in polygons:
+        if points.size() < 3:
+            continue
+        var occluder := LightOccluder2D.new()
+        var shape := OccluderPolygon2D.new()
+        shape.polygon = points
+        shape.cull_mode = OccluderPolygon2D.CULL_DISABLED
+        occluder.occluder = shape
+        occluder.position = origin
+        add_child(occluder)
+    print("STUDY occluders=%d (dynamic hero shadow from the torch)" % polygons.size())
 
 
 func _report() -> void:
@@ -151,7 +188,7 @@ func _process(delta: float) -> void:
     if torch_light != null and flicker:
         # мягкое мерцание: два несинхронных колебания, без дрожания пикселей
         var f := sin(elapsed * 7.3) * 0.06 + sin(elapsed * 3.1 + 1.7) * 0.05
-        torch_light.energy = base_energy * (1.0 + f)
+        torch_light.energy = float(data.get("light_energy", base_energy)) * (1.0 + f)
     if shot_path != "":
         frames_until_shot -= 1
         if frames_until_shot <= 0:
