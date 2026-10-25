@@ -90,6 +90,8 @@
 | `c24d629` | задача 3.1a: доработанный силуэт (пропорции, волосы, повязка, одежда, профили), новый `.pxo` и PNG, лист сравнения «было → стало», отчёт, память, актуализация ветки в `AGENTS.md` (25 файлов) — **`PUSHED`** в `origin/stage3-hero` (удалённый SHA совпал с локальным) |
 | `1609925` | задача REFS-1 (D18): новый `docs/GAME_REFERENCES.md`, запись `D18` в `DECISIONS.md`, ссылки в `AGENTS.md` §1/§5 и `AI_STUDIO_PLAYBOOK.md` §1, память (6 файлов) — **`PUSHED`** в `origin/stage3-hero`: `git ls-remote --heads origin stage3-hero` = `1609925`, blob `docs/GAME_REFERENCES.md` (`e7c1988…`) совпал с локальным |
 | `8ea5cfe` | задача REFS-2 (D19): полный регламент вместо каркаса, запись `D19` (D18 не изменён — diff `+22/−0`, блок идентичен), обновлены `AGENTS.md` §1/§5 (ред. D19), `AI_STUDIO_PLAYBOOK.md` §1, память (6 файлов, +235/−79) — **`PUSHED`** в `origin/stage3-hero`: `git ls-remote` = `8ea5cfe`, blob `677990e…` (40 099 байт) совпал с локальным |
+| `45603db` | запись публикации REFS-2 в память (D14) — **`PUSHED`**; было последним подтверждённым удалённым HEAD до задачи 3.1b |
+| `130e116` | задача 3.1b: калибровочная сцена (`calibration.tscn`, `calibration.gd`), 19 новых ассетов + `.pxo` + исходники, инструменты `tools/stage3_calibration/`, герой 3.1b (`author_hero.py`, PNG, `.pxo`), кадры/клип/лист сравнения, отчёт, память (111 файлов: 74 бинарника 24,70 MB, 37 текстов 296 KB) — **`PUSHED`** в `origin/stage3-hero`: `git ls-remote` = `130e116`, blob-и `izba_24.png` (`398a7e4…`), `stage3b_calib_frame.png` (`7c794dd…`) и `STAGE_03.md` (`ee6b3af…`) совпали с локальными |
 
 ## 7. Результаты технических проверок
 
