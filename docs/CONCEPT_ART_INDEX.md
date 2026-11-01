@@ -20,7 +20,7 @@
 
 | Категория | `VISUAL_APPROVED` | `VISUAL_CANDIDATE` | Нет референса |
 |---|---|---|---|
-| Главный герой | 1 (референс дизайна, `hero/hero_reference_front_back.png`) | — | — |
+| Главный герой | 1 (новый чёрно-золотой H01, PNG передан владельцу, в GitHub `NOT_PUSHED`) | — | — |
 | Оружие | 5 листов, 20 видов | — | — |
 | Боссы | 5 (B01–B05) | — | 4 (B06–B09) — `BLOCKED_NEEDS_REFERENCE` |
 | Обычные враги | 7 файлов (E01–E03, база E04) | 1 (3 варианта E04) | 6 семейств (E05–E10) — `BLOCKED_NEEDS_REFERENCE` |
@@ -77,20 +77,20 @@
 
 Названия и композиции описаны в [FIRST_LOCATION_CONCEPT.md](FIRST_LOCATION_CONCEPT.md). При разработке обязательно учитывать [FIRST_LOCATION_ART_RULES.md](FIRST_LOCATION_ART_RULES.md).
 
-## Главный герой — референс передан владельцем 2026-10-25
+## Главный герой — единственный референс D25, 01.11.2026
 
-| Файл | Статус | Источник | SHA-256 |
+| Файл | Художественный статус | Наличие | SHA-256 |
 |---|---|---|---|
-| `assets/references/hero/hero_reference_front_back.png` | `VISUAL_APPROVED` (дизайн, D7) | чат владельца, 2026-10-25; PNG 1536×1024, 2 110 834 байта | `53c9ace7a25dd16916c2cd7dfbba7ef7410a8a701090b3a2fe042f788c99f985` |
+| `assets/references/hero/H01_approved_visual_master_2026-11-01.png` | `VISUAL_APPROVED` (D25): чёрная рубаха, золотая вышивка, чёрная повязка, умеренное сложение | `NOT_PUSHED` — PNG нужно физически загрузить в GitHub | `5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217` |
 
-Подробно: [HERO_REFERENCE.md](HERO_REFERENCE.md). Утверждённого пиксельного спрайта героя **нет**; в `game/prototype/art/` и `tools/stage1_art/` есть только `PROXY_TECHNICAL` (D8), утверждён исключительно референс внешности.
+**Прежние изображения, в том числе `hero_reference_front_back.png`, отменены D25.** Не брать из них внешность, оттенки, пропорции, голый торс, старую повязку или обувь. Новый лист содержит четыре поворота и детали, но не является игровым спрайтом. Полный контракт — [HERO_REFERENCE.md](HERO_REFERENCE.md).
 
 ### Игровой силуэт героя (задачи 3.1 → 3.1a → 3.1b, Этап 3)
 
 | Файл | Статус | Примечание |
 |---|---|---|
-| `game/prototype/art/sprites/hero_idle_48.png` | `ASSET_DRAFT` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; арт-версия **3.1b** (светотень в 4 тона кожи, плечи 20 px, талия 8 px, повязка в 3 ряда, обмотки темнее кожи, рваные штаны); экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
-| `tools/stage3_hero/source/hero_idle_48.pxo` | `ASSET_DRAFT` | редактируемый исходник Pixelorama 1.2.3, 8 кадров, теги `idle_down|up|left|right` |
+| `game/prototype/art/sprites/hero_idle_48.png` | `PROXY_TECHNICAL` | 8 кадров 32×48 в одном ряду: 4 направления × 2 кадра `idle`; арт-версия **3.1b** (светотень в 4 тона кожи, плечи 20 px, талия 8 px, повязка в 3 ряда, обмотки темнее кожи, рваные штаны); экспорт Pixelorama CLI из `tools/stage3_hero/source/hero_idle_48.pxo` |
+| `tools/stage3_hero/source/hero_idle_48.pxo` | `PROXY_TECHNICAL` | редактируемый исходник Pixelorama 1.2.3, 8 кадров, теги `idle_down|up|left|right` |
 
 Статусы по осям D3: художественное решение — референс `VISUAL_APPROVED` (D7), сам спрайт **не** утверждён; готовность ассета — `ASSET_DRAFT` (художественная приёмка за владельцем). Боковые виды на референсе отсутствуют и являются рабочей интерпретацией. Версии сохранены в Git: 3.1 — `966cfc7`, 3.1a — `c24d629`. См. [STAGE_03.md](progress/STAGE_03.md), отчёты [3.1](../reports/stage3_task31_report.md), [3.1a](../reports/stage3_task31a_report.md) и [3.1b](../reports/stage3_task31b_report.md), листы сравнения [3.1a](../reports/stage3a_hero_compare.png) и [3.1b](../reports/stage3b_calibration_compare.png).
 
