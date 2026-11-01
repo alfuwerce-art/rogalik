@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "H01",
+  "category": "characters",
+  "display_name": "Главный герой Rogalik",
+  "profile_id": "ROGALIK_HD4X_PILOT",
+  "master": {
+    "external_master_path": "assets/references/hero/H01_approved_visual_master_2026-11-01.png",
+    "internal_master_path": null,
+    "sha256": "5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217",
+    "presence": "NOT_VERIFIED_IN_GITHUB",
+    "visual_status": "VISUAL_APPROVED_D25"
+  },
+  "next_expected_export": "H01_idle_down_right_000.png",
+  "directions_required": [
+    "down",
+    "down_right",
+    "right",
+    "up_right",
+    "up",
+    "up_left",
+    "left",
+    "down_left"
+  ],
+  "files": [],
+  "animations": {},
+  "status": {
+    "presence": "NOT_IMPORTED",
+    "technical_export": "NOT_VERIFIED",
+    "godot": "GODOT_NOT_TESTED",
+    "art_approval": "GAME_EXPORT_PENDING_OWNER_REVIEW",
+    "github": "METADATA_ONLY"
+  },
+  "godot_resource_path": null,
+  "world_footprint_tiles": null,
+  "canvas_px": null,
+  "pivot_px": null,
+  "updated_at": "2026-11-01"
+}
