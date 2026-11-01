@@ -57,6 +57,7 @@ rogalik/
 ├── tools/                       # пайплайн, импорт референсов, локальные скрипты
 │   ├── pixel_pipeline/          # .pxo → Pixelorama CLI → PNG/атлас, валидация
 │   ├── reference_import/        # импорт и проверка оригиналов
+│   ├── art/                     # D31: inventory_assets.py, validate_asset_library.py, validate_game_export.py
 │   ├── stage1_art/              # PROXY_TECHNICAL: процедурный автор спрайтов героя
 │   ├── git/                     # check-memory-sync.ps1 — синхронность памяти и правил
 │   └── setup-godot-mcp.ps1
@@ -77,6 +78,8 @@ rogalik/
 **Путь Windows:** `C:\Users\bow\Desktop\Rogalik\assets\references\gpt_asset_library`.
 
 Категории: `characters`, `enemies`, `bosses`, `weapons`, `props`, `environment`, `tilesets`, `textures`, `vfx`, `ui`. Полное дерево, роли `master/sources/frames/atlases`, формат `<ID>_<animation>_<direction>_<NNN>.png`, правила ID и `asset_index.json` → `asset.json` определены в [README библиотеки](../assets/references/gpt_asset_library/README.md). **D31 — нормативная раскладка:** у любого ID каталог `<category>/<ID>_<slug>/`, `asset.json`, неизменные GPT-оригиналы в `sources/`, мастер в `master/`, кадры в `frames/<clip>/<direction>/`, статика в `sprites/`, тайлы в `tiles/`, текстуры/UI в `exports/`. Сначала `asset_index.json` → `asset.json` → настоящие PNG и SHA; для новых ресурсов Godot-копии в `game/prototype/art/gpt/<category>/<ID>_<slug>/...`. Прежние референсы (`hero/`, `bosses/`, `weapons/` и т. п.) не перемещать до отдельной безопасной миграции. Новые GAME_EXPORT не подменяют утверждённые мастера, их Godot-копии располагаются отдельно. Первый H01 представлен карточкой со статусом `NOT_IMPORTED` — сам PNG не публиковался.
+
+**Состояние локальной организации (2026-11-01, задача 3.1f):** категории существуют локально; для `characters/H01_hero/` созданы пустые `master/`, `sources/`, `frames/idle/<8 направлений>`, `atlases/` (Git пустые каталоги не хранит; `move/attack/…` не создавались до D22). Мастер D25 физически найден и сверен по SHA-256, но остаётся `LOCAL_ONLY` по внешнему пути `assets/references/hero/…`; переносов, переименований и удалений не выполнялось. Инвентаризация и проверка каталога: `python tools/art/inventory_assets.py` и `python tools/art/validate_asset_library.py` → [отчёт](../reports/d31_asset_organization_report.md), [инвентаризация](../reports/d31_asset_inventory.md), [валидация](../reports/d31_library_validation.json).
 
 ## 2. Уже подготовленные оригинальные концепты для импорта
 

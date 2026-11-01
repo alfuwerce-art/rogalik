@@ -1,0 +1,3747 @@
+{
+  "generated_by": "tools/art/inventory_assets.py",
+  "task": "D31 local asset library organization",
+  "branch": "stage3-hero",
+  "head": "e4241b5fc43344fdf998a113ce666f6c1c91b128",
+  "remote_ref": "origin/stage3-hero",
+  "remote_head": "e4241b5fc43344fdf998a113ce666f6c1c91b128",
+  "zones": {
+    "library": "assets/references/gpt_asset_library",
+    "archives": "assets/archives",
+    "godot_prototype": "game/prototype/art",
+    "godot_experiments": "game/experiments",
+    "references": "assets/references"
+  },
+  "counts": {
+    "records": 141,
+    "images": 73,
+    "by_zone": {
+      "library": 4,
+      "archives": 1,
+      "godot_prototype": 78,
+      "godot_experiments": 33,
+      "references": 25
+    }
+  },
+  "manifest": {
+    "status": "OK",
+    "entries_total": 23,
+    "match": 23,
+    "absent": [],
+    "mismatch": [],
+    "detail": [
+      {
+        "path": "assets/references/bosses/koschei_bessmertny.png",
+        "expected": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+        "actual": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/bosses/likho_odnoglazoe.png",
+        "expected": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+        "actual": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/bosses/poludnitsa.png",
+        "expected": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+        "actual": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/bosses/utoplennitsa.png",
+        "expected": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+        "actual": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/bosses/zmey_gorynych.png",
+        "expected": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+        "actual": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/bellringers/bellringer_base.png",
+        "expected": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+        "actual": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/bellringers/bellringer_variants_triptych.png",
+        "expected": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+        "actual": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/dead_archer/dead_archer_base.png",
+        "expected": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+        "actual": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/dead_archer/dead_archer_variants_triptych_candidate.png",
+        "expected": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+        "actual": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/fallen_warriors/fallen_warrior_base.png",
+        "expected": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+        "actual": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/fallen_warriors/fallen_warrior_variants_triptych.png",
+        "expected": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+        "actual": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_base.png",
+        "expected": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+        "actual": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png",
+        "expected": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+        "actual": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/locations/first_location/cursed_sloboda_master_concept.png",
+        "expected": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+        "actual": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/locations/first_location/first_location_master_candidate.png",
+        "expected": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+        "actual": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/locations/first_location/village_interior_01.png",
+        "expected": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+        "actual": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/locations/first_location/village_interior_02.png",
+        "expected": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+        "actual": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/locations/first_location/village_interior_03.png",
+        "expected": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+        "actual": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/weapons/01_two_handed_weapons.png",
+        "expected": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+        "actual": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/weapons/02_magic_staves.png",
+        "expected": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+        "actual": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/weapons/03_dual_weapons.png",
+        "expected": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+        "actual": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/weapons/04_bows.png",
+        "expected": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+        "actual": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+        "state": "MATCH"
+      },
+      {
+        "path": "assets/references/weapons/05_combat_staves.png",
+        "expected": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+        "actual": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+        "state": "MATCH"
+      }
+    ]
+  },
+  "findings": {
+    "orphan_import_files": [
+      "game/experiments/res_study/art/hero34/hero34_48.png.import",
+      "game/experiments/res_study/art/hero34/hero34_96.png.import",
+      "game/experiments/res_study/art/hero_master/hero_master_48.png.import",
+      "game/experiments/res_study/art/hero_master/hero_master_96.png.import"
+    ],
+    "unreferenced_godot_pngs": [
+      "game/prototype/art/sprites/hero_proxy_48.png",
+      "game/experiments/res_study/art/a/world_24_ns.png",
+      "game/experiments/res_study/art/c/world_48_ns.png"
+    ],
+    "untracked_art_files": [
+      "assets/references/hero/H01_approved_visual_master_2026-11-01.png"
+    ],
+    "tracked_not_in_remote": []
+  },
+  "files": [
+    {
+      "path": "assets/references/gpt_asset_library/_templates/asset.template.json",
+      "zone": "library",
+      "kind": "json",
+      "bytes": 729,
+      "sha256": "94e7f13dd915383107c6cfdd792eef80f77d4f35c8e9fb2b761e3648bfed1e2c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "assets/references/gpt_asset_library/asset_index.json",
+      "zone": "library",
+      "kind": "json",
+      "bytes": 743,
+      "sha256": "173a1392b7e7c630fee70a90098afa5c822c09899ef04feb896e6ee6305c56ec",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "assets/references/gpt_asset_library/characters/H01_hero/asset.json",
+      "zone": "library",
+      "kind": "json",
+      "bytes": 4509,
+      "sha256": "f5387c359c11d9262b8ab11374a152c85ab48a4aa774380928c5895ec741b37a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "assets/references/gpt_asset_library/README.md",
+      "zone": "library",
+      "kind": "md",
+      "bytes": 19344,
+      "sha256": "86aea0c68ef3779916c41176a047a12d0176a0fa2395fc9b83fe3c02e0bfa11c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "assets/archives/rogalik_all_concept_art_with_weapons.zip",
+      "zone": "archives",
+      "kind": "zip",
+      "bytes": 68551781,
+      "sha256": "e900eaad8806b881eb91d51ea649d9f2ad1131974a3687bd67628a3515169b23",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/prototype/art/calibration/banner_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 418,
+      "sha256": "9b718b5599b9bc2cc6c77707ca0a8a248eaa77e26f2a338baf2e5df8b3285998",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          24,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          24,
+          41
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          24,
+          41
+        ],
+        "alpha_zero_px": 411,
+        "alpha_full_px": 741,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          24,
+          41
+        ],
+        "unique_colors": 10
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/banner_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "bf4df25f0f1f3781cffd2630b305df5a003bcb540675788370cb354cd6438aef",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/chapel_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 2590,
+      "sha256": "d29be1decea6700cf9526ae2406198eb5e351385a6a4ec6352382148229f7cf9",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          168,
+          120
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          168,
+          120
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          168,
+          120
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 20160,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          168,
+          120
+        ],
+        "unique_colors": 19
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/chapel_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "5fbc93e5bc33e66686b31ae18b90d67f52da6c9c3588b1aa000bc267a1c02a2a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/dead_tree_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 2760,
+      "sha256": "b4ea2c40eed2f97299ee70c3931e5ab4ce5fe3742709bd7924f7c3a7bea9ea2c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          120,
+          144
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          2,
+          0,
+          116,
+          143
+        ],
+        "bbox_alpha_ge16": [
+          2,
+          0,
+          116,
+          143
+        ],
+        "alpha_zero_px": 13684,
+        "alpha_full_px": 3596,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          114,
+          143
+        ],
+        "unique_colors": 12
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/dead_tree_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 955,
+      "sha256": "47c63161a36c78361e5d5af8370a0a37fcafa7ea65903c68ba44e8a5f3f5e760",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/fog_a_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 5357,
+      "sha256": "1e7c32d8134a1dddf87ea43fb60e156310c009b6a577df29bddafd06aa4b68d5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          320,
+          160
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          18,
+          227,
+          149
+        ],
+        "bbox_alpha_ge16": [
+          6,
+          34,
+          191,
+          131
+        ],
+        "alpha_zero_px": 29247,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 21953,
+        "bbox_agent_ge16_size": [
+          185,
+          97
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/fog_a_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 944,
+      "sha256": "358d0c148a682fab51989a482e865229131cb57f939bcfd25c20f314078cc41f",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/fog_b_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 3426,
+      "sha256": "9671e42588cda5a98845aac12f32cd93702669db1625d5da08e385b171a02eb4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          320,
+          160
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          56,
+          307,
+          135
+        ],
+        "bbox_alpha_ge16": [
+          84,
+          68,
+          269,
+          117
+        ],
+        "alpha_zero_px": 35059,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 16141,
+        "bbox_agent_ge16_size": [
+          185,
+          49
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/fog_b_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 944,
+      "sha256": "bb824c9a3e345c7c48c7a6b863f8329050236bd7994eefbe0bc9360da98ef395",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/forest_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1988,
+      "sha256": "733e9b7298bb5a53ccf9c3c4b1dca0e5b661e14c19230aa0593b86befc877fee",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          200,
+          100
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          5,
+          200,
+          100
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          5,
+          200,
+          100
+        ],
+        "alpha_zero_px": 7711,
+        "alpha_full_px": 12289,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          200,
+          95
+        ],
+        "unique_colors": 5
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/forest_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "0e15f9aa391af39160737e8545f1735d1759c95c67d1032de7746617633a82ac",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/gate_calib_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1724,
+      "sha256": "3d965fe4d44d79a65009dd6823d3836bbeae6d9e491f41ec6cdf78e9cbb1d10c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          96,
+          96
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "alpha_zero_px": 1299,
+        "alpha_full_px": 7917,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          96,
+          96
+        ],
+        "unique_colors": 25
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/gate_calib_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 958,
+      "sha256": "f355d09e127e6b4bc84982ce14413160f6af4c9f1a4357378feca0c2af22ee68",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/glow_cold_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 7529,
+      "sha256": "65bac69072554d15888394f6448b965f6f604a832d18a9d2b8da8a166b56ff86",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          128
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          8,
+          8,
+          121,
+          121
+        ],
+        "bbox_alpha_ge16": [
+          22,
+          22,
+          107,
+          107
+        ],
+        "alpha_zero_px": 6720,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 9664,
+        "bbox_agent_ge16_size": [
+          85,
+          85
+        ],
+        "unique_colors": 107
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/glow_cold_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 956,
+      "sha256": "7256352461e308af4e36d592934adcc498eccf2f2eaf7e8f15dc54b6324a7fb2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/glow_warm_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 8967,
+      "sha256": "fea3ed98cc6273fc28c08bc16b621fb727373aecb0c3335dcee29179c2dc67da",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          128
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          4,
+          4,
+          125,
+          125
+        ],
+        "bbox_alpha_ge16": [
+          16,
+          16,
+          113,
+          113
+        ],
+        "alpha_zero_px": 5258,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 11126,
+        "bbox_agent_ge16_size": [
+          97,
+          97
+        ],
+        "unique_colors": 160
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/glow_warm_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 956,
+      "sha256": "be7b83044ad7b250b1d694d42cf58d267bec65bd8c17c449885e8b4a855c87b3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/ground_calib_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1176,
+      "sha256": "7858c636a99b096d36ffaf6554e0cc828b8c1161eeb89acba2d859ec9e82c5b3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          96,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          96,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          96,
+          48
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 4608,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          96,
+          48
+        ],
+        "unique_colors": 15
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/ground_calib_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 965,
+      "sha256": "cac4579be7debe4dd87c90e32c2244e1080c945db9587dfd57ebdd973d5dbff5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/izba_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 3388,
+      "sha256": "feee08c9a3e3fdacd2ae475560b9107e61b14436834d08b0ce4167453d3229f7",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          192,
+          120
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          192,
+          120
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          192,
+          120
+        ],
+        "alpha_zero_px": 4187,
+        "alpha_full_px": 18853,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          192,
+          120
+        ],
+        "unique_colors": 22
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/izba_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 940,
+      "sha256": "1714179b3e9505f44c4d0ed7ddd42a84aef22c30fe436354ae9fc9fe75d8e8b4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/palisade_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 528,
+      "sha256": "2ab86a24b73f363e874891e5726d68f3fdfb9d3a823b41fd80cb39c4c989abf7",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          48,
+          72
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          8,
+          48,
+          71
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          8,
+          48,
+          71
+        ],
+        "alpha_zero_px": 810,
+        "alpha_full_px": 2646,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          48,
+          63
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/palisade_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "967b5793090a630f148fd12ea6d2467827a5247bb963fb7ac73a6e1f76eaf9cb",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/props_calib_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 829,
+      "sha256": "319a970ec32d411117c8d8638225bc4f03c7c9092a66ba253a4455222c95ed02",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          96,
+          24
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          5,
+          3,
+          92,
+          24
+        ],
+        "bbox_alpha_ge16": [
+          5,
+          3,
+          92,
+          24
+        ],
+        "alpha_zero_px": 1325,
+        "alpha_full_px": 979,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          87,
+          21
+        ],
+        "unique_colors": 15
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/props_calib_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 962,
+      "sha256": "85d67298fc44d2e28d47381632a541424bff3a0e5e4183a720e63d80eb36739b",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_a_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 307,
+      "sha256": "79ff6c7894f46bc8c61176e9943697679c6a515bd81af9bfdbde82bfa8c1576c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          54,
+          18
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          8,
+          3,
+          46,
+          16
+        ],
+        "bbox_alpha_ge16": [
+          8,
+          3,
+          46,
+          16
+        ],
+        "alpha_zero_px": 590,
+        "alpha_full_px": 382,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          38,
+          13
+        ],
+        "unique_colors": 6
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_a_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "8bef844838e528409ca38df61fd553187145deea1583b5067227a16b8747cc6e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_b_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 233,
+      "sha256": "a0d63c044872d30c7a859fe43d4be800ca45851113fe236c281d44ecc3288202",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          36,
+          14
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          6,
+          3,
+          31,
+          12
+        ],
+        "bbox_alpha_ge16": [
+          6,
+          3,
+          31,
+          12
+        ],
+        "alpha_zero_px": 319,
+        "alpha_full_px": 185,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          25,
+          9
+        ],
+        "unique_colors": 7
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_b_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 953,
+      "sha256": "b6011e7fa6332701d08b5bafe516f1033fef8d4e197ece4f4557b2d70ccf2c8e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_c_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 338,
+      "sha256": "a1547ae8029d2b0d5ccc7ddc6bbce07fd230a2a0470983248c8692f81d796a38",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          72,
+          24
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          11,
+          4,
+          62,
+          21
+        ],
+        "bbox_alpha_ge16": [
+          11,
+          4,
+          62,
+          21
+        ],
+        "alpha_zero_px": 1026,
+        "alpha_full_px": 702,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          51,
+          17
+        ],
+        "unique_colors": 7
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/puddle_c_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 953,
+      "sha256": "ae0764eef14fc6a8789f7050e726ab69a4080a8fbcb456dc88f3139e1a43dc67",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/shadow_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 359,
+      "sha256": "851d463df4d7e0ef3e6ad70e4ebc32d621d5652bc30b288bc1d743fe3767dbeb",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          44,
+          16
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          1,
+          1,
+          43,
+          15
+        ],
+        "bbox_alpha_ge16": [
+          1,
+          1,
+          43,
+          15
+        ],
+        "alpha_zero_px": 217,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 487,
+        "bbox_agent_ge16_size": [
+          42,
+          14
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/shadow_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "5317376ed30ef6a37ad4bd4c994c86471503d09bb12b2221fc83b222d1ba6c8e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/torch_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 659,
+      "sha256": "cba16cc81a8d27e27f01c97f5a3615f85c7e233a46c7c8492671f359e66f01c9",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          48,
+          72
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          4,
+          4,
+          44,
+          71
+        ],
+        "bbox_alpha_ge16": [
+          4,
+          4,
+          44,
+          71
+        ],
+        "alpha_zero_px": 2498,
+        "alpha_full_px": 958,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          40,
+          67
+        ],
+        "unique_colors": 16
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/torch_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 944,
+      "sha256": "97b6a6263ca22918a6890a18e1a23389794ef2d68aef9deb0f7e7e8cf9478777",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/calibration/vignette_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 47731,
+      "sha256": "6fc5e0bad8c7a76100af8c73e3df1cfec8811b8cdd9a2942a167f123d08b6a48",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          480,
+          270
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          480,
+          270
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          480,
+          270
+        ],
+        "alpha_zero_px": 21776,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 107824,
+        "bbox_agent_ge16_size": [
+          480,
+          270
+        ],
+        "unique_colors": 198
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/calibration/vignette_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "93e723d5560f13fc4072ce75d35b7e18f3c3dbb0f15c69936f47080c6b0e0e95",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/atlas/hero_walk_atlas.json",
+      "zone": "godot_prototype",
+      "kind": "json",
+      "bytes": 628,
+      "sha256": "ba02824984e4dc1236bddd6bff3fe7b599b5bff695e9bef004cf11462b1c86a2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/atlas/hero_walk_atlas.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 501,
+      "sha256": "2e75ac06b14111feb2fb9fdeeafab3eef0e23a3926673aeeb838a6a39b85f5b2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          64,
+          64
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          11,
+          5,
+          53,
+          63
+        ],
+        "bbox_alpha_ge16": [
+          11,
+          5,
+          53,
+          63
+        ],
+        "alpha_zero_px": 3220,
+        "alpha_full_px": 844,
+        "alpha_partial_px": 32,
+        "bbox_agent_ge16_size": [
+          42,
+          58
+        ],
+        "unique_colors": 8
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/art/demo-tool/demo.json",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/art/demo-tool/atlas/hero_walk_atlas.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/atlas/hero_walk_atlas.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 968,
+      "sha256": "dd1ac3f966606592e2f75c3d5d586b6e6e76987994dc7eabcb4728ddc19a46f4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/demo.json",
+      "zone": "godot_prototype",
+      "kind": "json",
+      "bytes": 2706,
+      "sha256": "59ca5e5f96bd6b0d61797b40dfe8a62e761d478b8103e6e06e6239fcb0db7c39",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/export/hero_walk.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 507,
+      "sha256": "1dd0069b82ad2171b9900d85a35cf558f0ed1ba140afa76043628a8576e5392f",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          32
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "bbox_alpha_ge16": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "alpha_zero_px": 3220,
+        "alpha_full_px": 844,
+        "alpha_partial_px": 32,
+        "bbox_agent_ge16_size": [
+          106,
+          26
+        ],
+        "unique_colors": 8
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scenes/main.tscn",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/art/demo-tool/demo.json",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/art/demo-tool/report.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/export/hero_walk.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "83277f3c471a8574da60f890cc8206dc83aa27e116109b0ddd986019841d1c7c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/hero_sheet_source.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 472,
+      "sha256": "501445b94f76544a6faa8ea5f9a065814c62c9361ec866951d6778890f6025f6",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          32
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "bbox_alpha_ge16": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "alpha_zero_px": 3220,
+        "alpha_full_px": 844,
+        "alpha_partial_px": 32,
+        "bbox_agent_ge16_size": [
+          106,
+          26
+        ],
+        "unique_colors": 8
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/art/demo-tool/demo.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/hero_sheet_source.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 969,
+      "sha256": "5d540fef1eb20d48aafccf4d07bd364cecf12836ab85762a47c35402f0018896",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/hero_walk.pxo",
+      "zone": "godot_prototype",
+      "kind": "pxo",
+      "bytes": 3158,
+      "sha256": "6d3ec2b2fbb7b5b1ee580d414add4cfb199f6171eeed1ef291bb7dce2916e06e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/prototype/art/demo-tool/report.json",
+      "zone": "godot_prototype",
+      "kind": "json",
+      "bytes": 1623,
+      "sha256": "211be02ac36294ed30bbf66446fa96eb04a6ff020c4320dd4794e0a8836b9ec0",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/prototype/art/lights/light_soft.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1304,
+      "sha256": "4133abe0d38f1b0e7ae6b03595f0aa2dd2ca56acaf9ad817c702ec2dd953dae8",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          64,
+          64
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          2,
+          2,
+          62,
+          62
+        ],
+        "bbox_alpha_ge16": [
+          6,
+          6,
+          59,
+          59
+        ],
+        "alpha_zero_px": 1485,
+        "alpha_full_px": 1,
+        "alpha_partial_px": 2610,
+        "bbox_agent_ge16_size": [
+          53,
+          53
+        ],
+        "unique_colors": 25
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/location.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/lights/light_soft.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 945,
+      "sha256": "fcfe76741ffef60150f868f7ba593c3f218cdd112e1be178abb5ee9267e8fa70",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/gate_16.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 613,
+      "sha256": "ca07fd1b74e7d50fd91a4a2fe0e94401b45841ece2c7bdbf8896a457f763fea1",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          48,
+          32
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          48,
+          32
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          48,
+          32
+        ],
+        "alpha_zero_px": 298,
+        "alpha_full_px": 1238,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          48,
+          32
+        ],
+        "unique_colors": 15
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/gate_16.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "ef40de9abe5d938dbbfdff539164d85dea3b0f81ead18941cd2f9d53bce82552",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/gate_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 707,
+      "sha256": "532fa56742957c6862d78c1989b3b56e5f5988fa048ac60f6fd655a130452fce",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          72,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          72,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          72,
+          48
+        ],
+        "alpha_zero_px": 820,
+        "alpha_full_px": 2636,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          72,
+          48
+        ],
+        "unique_colors": 14
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/gate_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "4e8063e9d669c7850058a7db6dc10b7d98898d8b0bbfd1eefc4dd7312a96b464",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/gate_32.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 834,
+      "sha256": "d339c4384ea4cc8de89fb061fea9a07158e3d3caf0c5cb2990b0a319e8bb6cc4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          96,
+          64
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          96,
+          64
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          96,
+          64
+        ],
+        "alpha_zero_px": 1527,
+        "alpha_full_px": 4617,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          96,
+          64
+        ],
+        "unique_colors": 15
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/gate_32.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "552ff478466dfb310873e3bcff5102727fe97109c879f3e5c03efaab6dc237b0",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/tree_16.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 621,
+      "sha256": "94800ec169d0dc453adc64d1e7fca95bdeca0a9f9e8d09fd279a6212d3df5f7a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          32,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          32,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          32,
+          48
+        ],
+        "alpha_zero_px": 505,
+        "alpha_full_px": 991,
+        "alpha_partial_px": 40,
+        "bbox_agent_ge16_size": [
+          32,
+          48
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/tree_16.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "967d7ced19afd84eacd9e0eafc8a3a0d9e432cc42bc55e2a6e1166d2fffb3725",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/tree_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1008,
+      "sha256": "34e0eadd500a386387cbd93d97e583ce1ddc4cc48a7ca09a2b849d969810e278",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          48,
+          72
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          48,
+          72
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          48,
+          72
+        ],
+        "alpha_zero_px": 1192,
+        "alpha_full_px": 2168,
+        "alpha_partial_px": 96,
+        "bbox_agent_ge16_size": [
+          48,
+          72
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/calibration.gd",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/tree_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "a759b2e3f33ba3d40a101f3366c6d4cd01075731024e4db7307789a604437b56",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/props/tree_32.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1418,
+      "sha256": "472c40a09d0b4b2652fb94887fa3acde3f9acb48250d65fb9915beb6ba2cd226",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          64,
+          96
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          64,
+          96
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          64,
+          96
+        ],
+        "alpha_zero_px": 2194,
+        "alpha_full_px": 3774,
+        "alpha_partial_px": 176,
+        "bbox_agent_ge16_size": [
+          64,
+          96
+        ],
+        "unique_colors": 9
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/props/tree_32.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 935,
+      "sha256": "0d97fccbe069e4146910a1273d21c4a5d18dad32dadbdbecc937efd1292360e8",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_idle_48.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 3066,
+      "sha256": "c6f12cbd6fe1d56536dcda9748f48416614e726c274a32df90418e2f29f94253",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          256,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          4,
+          0,
+          250,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          4,
+          0,
+          250,
+          48
+        ],
+        "alpha_zero_px": 6116,
+        "alpha_full_px": 6172,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          246,
+          48
+        ],
+        "unique_colors": 19
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_idle_48.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "39b89c21c00b9c2cd6be35dfc953771a31c97357acacf9c267d47ec1d9119445",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_32.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 501,
+      "sha256": "61ea0756cf2edad7ea9daf1f95ebb5b7eeabafcf0a01d75284c19a4fe1b4dec3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          32
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          6,
+          0,
+          122,
+          27
+        ],
+        "bbox_alpha_ge16": [
+          6,
+          0,
+          122,
+          27
+        ],
+        "alpha_zero_px": 2241,
+        "alpha_full_px": 1855,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          116,
+          27
+        ],
+        "unique_colors": 10
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_32.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 955,
+      "sha256": "85fe707bef8e17d9e695067b02cbeacfa0f240d8b35fc14986c50dd947682fad",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_48.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 598,
+      "sha256": "f2d57ca591cd44131d95b9c9b7dc236d36c0a5e738169c9ef08fa6e0069919c5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          192,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          10,
+          0,
+          182,
+          44
+        ],
+        "bbox_alpha_ge16": [
+          10,
+          0,
+          182,
+          44
+        ],
+        "alpha_zero_px": 5097,
+        "alpha_full_px": 4119,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          172,
+          44
+        ],
+        "unique_colors": 10
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_UNREFERENCED",
+      "decision_reason": "No Godot reference found, but D31 requires an explicit decision before migrating."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_48.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 954,
+      "sha256": "195c35590f422e09a04c5d95d95352661b8c3b953a14917fc9d47536ea300f41",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_64.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 734,
+      "sha256": "9b4003e547da0ce46064ea20ec95b936c0e7348f7b36f29aa36107903a23d6e2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          256,
+          64
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          13,
+          1,
+          243,
+          59
+        ],
+        "bbox_alpha_ge16": [
+          13,
+          1,
+          243,
+          59
+        ],
+        "alpha_zero_px": 9213,
+        "alpha_full_px": 7171,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          230,
+          58
+        ],
+        "unique_colors": 10
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_proxy_64.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 955,
+      "sha256": "6c6d1df237cecacad39f171b8f4f3a78b78c35141e13d2c1d4d631d3a2cccef8",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_walk.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 507,
+      "sha256": "1dd0069b82ad2171b9900d85a35cf558f0ed1ba140afa76043628a8576e5392f",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          32
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "bbox_alpha_ge16": [
+          11,
+          5,
+          117,
+          31
+        ],
+        "alpha_zero_px": 3220,
+        "alpha_full_px": 844,
+        "alpha_partial_px": 32,
+        "bbox_agent_ge16_size": [
+          106,
+          26
+        ],
+        "unique_colors": 8
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scenes/main.tscn",
+          "how": "project_relative_path"
+        },
+        {
+          "file": "game/prototype/art/demo-tool/demo.json",
+          "how": "filename"
+        },
+        {
+          "file": "game/prototype/art/demo-tool/report.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/sprites/hero_walk.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 943,
+      "sha256": "8ef9a1727a155f64eeabfebec8d2f906e2c6e2bbc458c35d678e670088fbbe82",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_16.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1107,
+      "sha256": "fa2268c533df7126ec79f5730f20619769e802ee7e188b626adec7e2f0e50d3f",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          64,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          64,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          64,
+          48
+        ],
+        "alpha_zero_px": 107,
+        "alpha_full_px": 2965,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          64,
+          48
+        ],
+        "unique_colors": 17
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_16.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "58b7d895971d934e85598626f372388028b06c83843b5bfd4a3ef921d5a14564",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_24.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 1973,
+      "sha256": "b5231db1a2e7b858a46e36ddd5ded18b71793a4a18e7c1c78a71010342a39ef5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          96,
+          72
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          96,
+          72
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          96,
+          72
+        ],
+        "alpha_zero_px": 234,
+        "alpha_full_px": 6678,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          96,
+          72
+        ],
+        "unique_colors": 17
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_24.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 947,
+      "sha256": "43d8f1fa1469218c9b1504c860895d092245b573e1a7290e7a75f563e7aba5be",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_32.png",
+      "zone": "godot_prototype",
+      "kind": "png",
+      "bytes": 2938,
+      "sha256": "e2787a5a2999b2fd81b8e0862b7acb896efb598e39a592d45796c691665f4fb3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          128,
+          96
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          128,
+          96
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          128,
+          96
+        ],
+        "alpha_zero_px": 381,
+        "alpha_full_px": 11907,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          128,
+          96
+        ],
+        "unique_colors": 17
+      },
+      "godot_refs": [
+        {
+          "file": "game/prototype/scripts/world/pixel_profiles.gd",
+          "how": "project_relative_path"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/prototype/art/tilesets/tileset_32.png.import",
+      "zone": "godot_prototype",
+      "kind": "import",
+      "bytes": 946,
+      "sha256": "c94480b001dd82a61ed42c0f39e8f8975a9be547eab93e6ebe3a7b6e84c8c82c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/hero_down_48.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 1153,
+      "sha256": "643e5c34d426b71b9a24992284db66cda055379a32443231c2d5016246206dea",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          36,
+          48
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          10,
+          0,
+          26,
+          48
+        ],
+        "bbox_alpha_ge16": [
+          10,
+          0,
+          26,
+          48
+        ],
+        "alpha_zero_px": 1169,
+        "alpha_full_px": 559,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          16,
+          48
+        ],
+        "unique_colors": 26
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/hero_down_48.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 946,
+      "sha256": "b204d44be0664defa8c1c78833ee159d2a32500bd3eba2439e8e8bd0f57438c5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/light_torch_24.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 10412,
+      "sha256": "125ebae3f39c533694fb342cd29f32e834c06bf6bd4df433b84b84136617242a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          240,
+          240
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          4,
+          4,
+          236,
+          236
+        ],
+        "bbox_alpha_ge16": [
+          21,
+          21,
+          219,
+          219
+        ],
+        "alpha_zero_px": 15144,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 42456,
+        "bbox_agent_ge16_size": [
+          198,
+          198
+        ],
+        "unique_colors": 248
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/light_torch_24.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "ad6256fcd3be914ef8b24d329bbcffb897c35e7a587c3f28104cce9ad71c219e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/world_24.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 10646,
+      "sha256": "2144b113f1fa10c717ceb6dde014120853bb52318d7f6575d1bc87eddb215a2b",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          480,
+          270
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          480,
+          270
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          480,
+          270
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 129600,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          480,
+          270
+        ],
+        "unique_colors": 33
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/world_24.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 933,
+      "sha256": "2eca40eba566f949533886d108cd53879f3c6f24986d2aa0b72fe23d33d730e4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/world_24_ns.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 8843,
+      "sha256": "e5605d4dc625db8b2d0f8a9898cf14e6dcd974d8c57af1a93ba09169e420ec71",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          480,
+          270
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 33
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_UNREFERENCED",
+      "decision_reason": "No Godot reference found, but D31 requires an explicit decision before migrating."
+    },
+    {
+      "path": "game/experiments/res_study/art/a/world_24_ns.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 943,
+      "sha256": "be04fb55d8f118ec756fb313b1c37872963f9f464cb2ffdcd1f01bf6824d864c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/hero_down_64.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 1642,
+      "sha256": "848610c8cd15905446a32582819a0120e3adf9d06fc3289fd441865858d8cdc7",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          49,
+          64
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          15,
+          0,
+          34,
+          63
+        ],
+        "bbox_alpha_ge16": [
+          15,
+          0,
+          34,
+          63
+        ],
+        "alpha_zero_px": 2196,
+        "alpha_full_px": 940,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          19,
+          63
+        ],
+        "unique_colors": 26
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/hero_down_64.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 946,
+      "sha256": "f18d03a5530aabe0b8f06205149b7d602889d4c5032f84f8752d30481f8355f1",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/light_torch_32.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 15976,
+      "sha256": "a14dcc9aabbbc478fa67038ee6ff1a00aab171352440af2cf32c5ab97f1cd4c2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          320,
+          320
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          5,
+          5,
+          315,
+          315
+        ],
+        "bbox_alpha_ge16": [
+          28,
+          28,
+          292,
+          292
+        ],
+        "alpha_zero_px": 26912,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 75488,
+        "bbox_agent_ge16_size": [
+          264,
+          264
+        ],
+        "unique_colors": 252
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/light_torch_32.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "c967324e9ada94cf4ce43b04484a31c28e865d3aee362b19d0cb9c59f037ba85",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/world_32.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 43951,
+      "sha256": "600ecbdaa3e05c67ebc9ef7d400a1314cadd8b5d54dc931e13b8c72100d1236e",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          640,
+          360
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 230400,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          640,
+          360
+        ],
+        "unique_colors": 34
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/b/world_32.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 934,
+      "sha256": "99208f62a7b49859b6e9413fc40b7ab67a2d3f8021335e969856a646a6c3630b",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/hero_down_96.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 2634,
+      "sha256": "d71cb4fdc2793bb14585adb3740098a050640f281b6b9ea6452e0ec116268a8b",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          73,
+          96
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          22,
+          0,
+          51,
+          95
+        ],
+        "bbox_alpha_ge16": [
+          22,
+          0,
+          51,
+          95
+        ],
+        "alpha_zero_px": 5023,
+        "alpha_full_px": 1985,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          29,
+          95
+        ],
+        "unique_colors": 29
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/hero_down_96.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 945,
+      "sha256": "cbbe56238dc91658b3d0d97027c9f7eb83a55932de26af70c225acac472273ec",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/light_torch_48.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 27535,
+      "sha256": "40ceacf875a8b2325a4ce1a8d0447eba4411574db8e8dea74ebacaa2f8587080",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          480,
+          480
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          8,
+          8,
+          472,
+          472
+        ],
+        "bbox_alpha_ge16": [
+          43,
+          43,
+          437,
+          437
+        ],
+        "alpha_zero_px": 60640,
+        "alpha_full_px": 0,
+        "alpha_partial_px": 169760,
+        "bbox_agent_ge16_size": [
+          394,
+          394
+        ],
+        "unique_colors": 254
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/light_torch_48.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 952,
+      "sha256": "837e4552c0516ada82e3101e15179e0ef9d46d8d73723f471869abcfeb90322a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/world_48.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 132308,
+      "sha256": "87c4edf49b11674a6aef00f67c2d1c7aec37ddbc3a2f17125b5d0ca359cc3e0c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          960,
+          540
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          960,
+          540
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          960,
+          540
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 518400,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          960,
+          540
+        ],
+        "unique_colors": 35
+      },
+      "godot_refs": [
+        {
+          "file": "game/experiments/res_study/art/layout.json",
+          "how": "filename"
+        }
+      ],
+      "decision": "KEEP_IN_PLACE_USED_BY_GODOT",
+      "decision_reason": "Referenced from Godot scripts/scenes; moving it would risk the playable build."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/world_48.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 934,
+      "sha256": "bded4b473f844ceedf4ca4b382a51e33af3ac7fa4aeeba72e7fd783ccb364649",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/world_48_ns.png",
+      "zone": "godot_experiments",
+      "kind": "png",
+      "bytes": 105085,
+      "sha256": "6463f7e152012b6182ec6bc84549df1f7f9a9715b65a63c61fe50d9bd4865094",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          960,
+          540
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 39
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_UNREFERENCED",
+      "decision_reason": "No Godot reference found, but D31 requires an explicit decision before migrating."
+    },
+    {
+      "path": "game/experiments/res_study/art/c/world_48_ns.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 942,
+      "sha256": "ec77e52282dec4916ea94f5fd0d84ddcbee930e814231ea4f5255b2d8928860c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Godot import metadata whose PNG exists."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero34/hero34_48.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 942,
+      "sha256": "e5f512e35e82d1b2122fc73873045788c1c0298963db61ff49d19e627cfd4ac4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": false,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "ORPHAN: import metadata without its PNG (pre-existing state)."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero34/hero34_48_occluder.json",
+      "zone": "godot_experiments",
+      "kind": "json",
+      "bytes": 99,
+      "sha256": "6ffa1ceaa3fe21468cb3637f8aeb2a27f31ec6369090aa7d4f58086eb1051acd",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero34/hero34_96.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 942,
+      "sha256": "07701099be1d5a75c0c2fbb464bf7c47f4105c6e98754ad91f09da613bbf7811",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": false,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "ORPHAN: import metadata without its PNG (pre-existing state)."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero34/hero34_96_occluder.json",
+      "zone": "godot_experiments",
+      "kind": "json",
+      "bytes": 99,
+      "sha256": "9b97517846cef6daefdeffd7ec8f18a389d650f1de65c1b7520719b6fdf36063",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero_master/hero_master_48.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 962,
+      "sha256": "15a841b3e8e2bf61a8553774e7666262c8daf31f6bab8dc2c6b8dac7dd3382c9",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": false,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "ORPHAN: import metadata without its PNG (pre-existing state)."
+    },
+    {
+      "path": "game/experiments/res_study/art/hero_master/hero_master_96.png.import",
+      "zone": "godot_experiments",
+      "kind": "import",
+      "bytes": 962,
+      "sha256": "87893ef4fc26641bee13880c91633dada11a56d3cbc5dc87b02a232f92b64f73",
+      "tracked": true,
+      "in_remote_branch": true,
+      "import_target_exists": false,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "ORPHAN: import metadata without its PNG (pre-existing state)."
+    },
+    {
+      "path": "game/experiments/res_study/art/layout.json",
+      "zone": "godot_experiments",
+      "kind": "json",
+      "bytes": 1446,
+      "sha256": "b08bbb10c0e7c3e3ceb31828b260b115b8b3dc5cc7dda1b09c082a37164e1df9",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/project.godot",
+      "zone": "godot_experiments",
+      "kind": "godot",
+      "bytes": 1269,
+      "sha256": "7cbeef58d025df3d2e12b559759a3ec6852b4bb6df87cd1ab1cb027d3a43378a",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/scenes/study.tscn",
+      "zone": "godot_experiments",
+      "kind": "tscn",
+      "bytes": 198,
+      "sha256": "059163d455585af5da164c44bf2c59f57abf75bfe30c89aaa924a0b9216a5c89",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/scripts/study.gd",
+      "zone": "godot_experiments",
+      "kind": "gd",
+      "bytes": 9098,
+      "sha256": "e21189d79d36dbe4e76197d5b12492b76fbdd143774dfc3ab54396ad0700871c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "game/experiments/res_study/scripts/study.gd.uid",
+      "zone": "godot_experiments",
+      "kind": "uid",
+      "bytes": 20,
+      "sha256": "6bffc598fd708cb99e28cf5d0d9139671816170cc7ba1314e39fab61d88334b3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "decision": "KEEP_IN_PLACE",
+      "decision_reason": "Non-image file inside an art zone."
+    },
+    {
+      "path": "assets/references/bosses/koschei_bessmertny.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2695734,
+      "sha256": "c58d792f38cd05a24a7a5fc3d7c9f045bd63383326add53f21ecfd30ae6eea1d",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1122,
+          1402
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 115638
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/bosses/likho_odnoglazoe.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2928980,
+      "sha256": "11d5a37f2b4ca784a63e025f888e42b58b07583d42cb967bdf490e2d38d2fae4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 174785
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/bosses/poludnitsa.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2716015,
+      "sha256": "fb1bf760eaee8b6aa8fc9cb10b7ae8c3bbde292f5345eb15ff5ffaeed0ab64e8",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/bosses/utoplennitsa.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2725848,
+      "sha256": "2e160986e5cd9be059706ebf61745cab1cb62a6f8c55604fe87033024ecd75e1",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 105883
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/bosses/zmey_gorynych.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3075120,
+      "sha256": "3e4c8ebe2b4931572d557d7a82f21796eb79da9aecec8947df237512d6bd09bd",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1122,
+          1402
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 144565
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/bellringers/bellringer_base.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2756353,
+      "sha256": "eea463f705ba9611ee0a95d3cb5d184e21d0823c073853005df2663149bf1f34",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 113836
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/bellringers/bellringer_variants_triptych.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3166858,
+      "sha256": "999ca3299ad0f1f5af7539da3ef1d0268f4fd1cfaa580e98a4e1fdd2a14183bf",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 165334
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/dead_archer/dead_archer_base.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2865919,
+      "sha256": "da07ef6e263852513024dade04709a2c2c1979fb5b63128987f4a4620a4f3008",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 140367
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/dead_archer/dead_archer_variants_triptych_candidate.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3057234,
+      "sha256": "e6f0a7a4b48404565bca4514eaaa4d0cd48c6eb2b8000f20fefd4ca67ae19289",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 155542
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/fallen_warriors/fallen_warrior_base.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2615419,
+      "sha256": "7b456d24e0ed524465cf1fc2b6c7dd73476c0e60ec6ac5c69179c34000290fa2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 85111
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/fallen_warriors/fallen_warrior_variants_triptych.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3153633,
+      "sha256": "ac1d31adef7122c20bb0007120793b4c807ff007b6acbf8b9b57467437ae1509",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 147105
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_base.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2880261,
+      "sha256": "54883ab8abe1c33af142915611bcec80791dc102f7df3f979319720c54b2b80f",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1024,
+          1536
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 137680
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/enemies/morovoi_volkhv/morovoi_volkhv_variants_triptych.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3159833,
+      "sha256": "e1ed8bdbad444d7bab9c92062364892848ef6100fbde516b1a829f481b0cf0ff",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1448,
+          1086
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 189561
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/gameplay/gameplay_look_reference.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3051027,
+      "sha256": "c04d11f71ae2d2c98e8199ee654040b57dd3d451fa2d07943fb8556a744d9ae2",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/hero/H01_approved_visual_master_2026-11-01.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 1674973,
+      "sha256": "5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217",
+      "tracked": false,
+      "in_remote_branch": false,
+      "png": {
+        "size_px": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 46074
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/locations/first_location/cursed_sloboda_master_concept.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3193111,
+      "sha256": "8a34019a591239229ab7c3d8b677fbdf8bc3f5fbfe89e6025fae49bd98e995c3",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/locations/first_location/first_location_master_candidate.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2903510,
+      "sha256": "e701db0a8f1b44e4037e326d50df276c2f0664607927e2f1a154ad18e7e6e0fa",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": 195181
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/locations/first_location/village_interior_01.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3082139,
+      "sha256": "8ea7f8d2d54ec9cb8d7990706a458fd3f7204662f0044d2696372a95c741df96",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/locations/first_location/village_interior_02.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3151708,
+      "sha256": "002892f1f4c0eff9d68a311b213779002b39734171c13045350e8357c5e8ebb4",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/locations/first_location/village_interior_03.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 2892984,
+      "sha256": "49b8a5d93c5de3b3be49fbe564e773c1fa5b0be238fe97c864bb6a7f9d3617a5",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/weapons/01_two_handed_weapons.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3286880,
+      "sha256": "a95f7e606b6a40bde71c4704f425458cb26e7d7af639d93d4e12c9b682d80bd0",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 1573352,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          1672,
+          941
+        ],
+        "unique_colors": 167725
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/weapons/02_magic_staves.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3284487,
+      "sha256": "861774fb7fcabc8dad1d4cb36f6ab7e5d16c956b13b95e6c240c95b74a017452",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 1573352,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          1672,
+          941
+        ],
+        "unique_colors": "ABOVE_200000"
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/weapons/03_dual_weapons.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3418979,
+      "sha256": "f82ce5d88d888cba76d280be4ef2ac2115f95d93e1f5a187359714d9763cffd1",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 1573352,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          1672,
+          941
+        ],
+        "unique_colors": 179725
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/weapons/04_bows.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3195264,
+      "sha256": "d28986462a987d62a05c4f545accfa19c65237fd108034da9eae0ed0cb22c76c",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 1573352,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          1672,
+          941
+        ],
+        "unique_colors": 134052
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    },
+    {
+      "path": "assets/references/weapons/05_combat_staves.png",
+      "zone": "references",
+      "kind": "png",
+      "bytes": 3185219,
+      "sha256": "f7c53ef5c76990ef43f59a6a1af1b8b9ae3b752162f3292e808e2ca82b766269",
+      "tracked": true,
+      "in_remote_branch": true,
+      "png": {
+        "size_px": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "has_alpha_channel": true,
+        "bbox_alpha_gt0": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "bbox_alpha_ge16": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "alpha_zero_px": 0,
+        "alpha_full_px": 1573352,
+        "alpha_partial_px": 0,
+        "bbox_agent_ge16_size": [
+          1672,
+          941
+        ],
+        "unique_colors": 162687
+      },
+      "godot_refs": [],
+      "decision": "KEEP_IN_PLACE_HISTORICAL",
+      "decision_reason": "Historical owner-provided reference; D31 forbids automatic migration."
+    }
+  ]
+}

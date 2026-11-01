@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "asset_id": "H01",
   "category": "characters",
   "display_name": "Главный герой Rogalik",
@@ -8,8 +8,20 @@
     "external_master_path": "assets/references/hero/H01_approved_visual_master_2026-11-01.png",
     "internal_master_path": null,
     "sha256": "5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217",
-    "presence": "NOT_VERIFIED_IN_GITHUB",
-    "visual_status": "VISUAL_APPROVED_D25"
+    "bytes": 1674973,
+    "measured": {
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "has_alpha_channel": false
+    },
+    "presence": "LOCAL_ONLY",
+    "visual_status": "VISUAL_APPROVED_D25",
+    "verified_at": "2026-11-01",
+    "verified_by": "tools/art/inventory_assets.py",
+    "note": "Файл физически найден в рабочей копии, байты и SHA-256 совпали с записью D25 (1 674 973 байта, 1536x1024 RGB). В Git и в origin не закоммичен — присутствие LOCAL_ONLY, не PUSHED. D31: путь мастера не меняется без отдельного решения владельца, в master/ он не переносился."
   },
   "next_expected_export": "H01_idle_down_right_000.png",
   "directions_required": [
@@ -22,6 +34,23 @@
     "left",
     "down_left"
   ],
+  "library_tree": {
+    "created_locally": [
+      "master/",
+      "sources/",
+      "frames/",
+      "frames/idle/down/",
+      "frames/idle/down_right/",
+      "frames/idle/right/",
+      "frames/idle/up_right/",
+      "frames/idle/up/",
+      "frames/idle/up_left/",
+      "frames/idle/left/",
+      "frames/idle/down_left/",
+      "atlases/"
+    ],
+    "note": "Пустые каталоги созданы только под фактически запланированные idle 8 направлений (D29); каталоги move/attack/dodge/hurt/death не создавались, пока D22 ART_PRODUCTION_GATE не пройден. Git пустые каталоги не хранит."
+  },
   "files": [],
   "animations": {},
   "status": {
@@ -38,5 +67,30 @@
   "updated_at": "2026-11-01",
   "source_author": "ChatGPT",
   "next_expected_export_path": "characters/H01_hero/frames/idle/down_right/H01_idle_down_right_000.png",
-  "note": "D31: this is an expected path only; files[] is empty until PNG is physically present and verified; canonical D25 master remains at external path until separately migrated."
+  "absent_exports": [
+    {
+      "expected_path": "characters/H01_hero/frames/idle/down_right/H01_idle_down_right_000.png",
+      "state": "NOT_IMPORTED",
+      "checked_at": "2026-11-01",
+      "searched": "весь репозиторий: файлов с именем H01_idle_down_right_000.png или *H01*/*idle_down*/*down_right* PNG не найдено; файлов с суффиксом (1)/(2) не найдено",
+      "note": "Файл не создавался и не подменялся. Из мастер-образа PNG не выводился: D24/D26 запрещают изготовление игрового кадра в DeepSeek."
+    }
+  ],
+  "verification": {
+    "tools": [
+      "tools/art/inventory_assets.py",
+      "tools/art/validate_asset_library.py"
+    ],
+    "reports": [
+      "reports/d31_asset_inventory.json",
+      "reports/d31_library_validation.json"
+    ],
+    "checks": [
+      "SHA-256 мастер-файла сверен с записью D25 — совпал",
+      "размеры и цветовой режим мастера измерены (1536x1024 RGB, без альфа-канала)",
+      "файлы files[] отсутствуют, потому что игровых PNG нет — несуществующие кадры не регистрировались",
+      "Godot-ссылок на библиотеку нет: ни одна сцена/скрипт не используют res:// пути внутрь gpt_asset_library"
+    ]
+  },
+  "note": "D31: мастер H01 D25 подтверждён локально по SHA и НЕ перенесён (D25/README §7 фиксируют этот путь). Игровой кадр H01_idle_down_right_000.png отсутствует — NOT_IMPORTED. files[] пуст до появления реального проверенного PNG; статус ART_APPROVED не присваивается."
 }

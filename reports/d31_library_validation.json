@@ -1,0 +1,32 @@
+{
+  "generated_by": "tools/art/validate_asset_library.py",
+  "library_root": "assets/references/gpt_asset_library",
+  "status": "PASS",
+  "assets_in_index": 1,
+  "cards_checked": 1,
+  "files_checked": 0,
+  "failures": [],
+  "warnings": [],
+  "checks": [
+    {
+      "check": "index",
+      "result": "PASS",
+      "message": "asset_index.json: 1 entries"
+    },
+    {
+      "check": "master-sha",
+      "result": "PASS",
+      "message": "characters/H01_hero/asset.json: master `assets/references/hero/H01_approved_visual_master_2026-11-01.png` verified by SHA-256"
+    },
+    {
+      "check": "files",
+      "result": "PASS",
+      "message": "checked files[] entries: 0"
+    },
+    {
+      "check": "categories",
+      "result": "PASS",
+      "message": "all 10 categories exist locally"
+    }
+  ]
+}

@@ -81,7 +81,9 @@
 
 | Файл | Художественный статус | Наличие | SHA-256 |
 |---|---|---|---|
-| `assets/references/hero/H01_approved_visual_master_2026-11-01.png` | `VISUAL_APPROVED` (D25): чёрная рубаха, золотая вышивка, чёрная повязка, умеренное сложение | `NOT_PUSHED` — PNG нужно физически загрузить в GitHub | `5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217` |
+| `assets/references/hero/H01_approved_visual_master_2026-11-01.png` | `VISUAL_APPROVED` (D25): чёрная рубаха, золотая вышивка, чёрная повязка, умеренное сложение | `LOCAL_ONLY` — файл физически есть в рабочей копии, байты и SHA сверены 2026-11-01 (`tools/art/inventory_assets.py`); в Git и в `origin/stage3-hero` **не закоммичен** → `NOT_PUSHED` | `5748b3f218294cd8ee158ae282ff1e4bf50f69907f983bc300dee4e723cb0217` |
+
+**Локальная сверка 2026-11-01 (задача D31):** мастер измерен — 1536×1024, режим `RGB` (альфа-канала нет), 1 674 973 байта; SHA-256 совпал с записью D25 и с `master.sha256` в `assets/references/gpt_asset_library/characters/H01_hero/asset.json`. Файл **не переносился** и не перезаписывался: D25 и README библиотеки §7 фиксируют этот путь как канонический. Публикация бинарника в GitHub — отдельное решение владельца (`NEEDS_OWNER_DECISION`), см. [отчёт D31](../reports/d31_asset_organization_report.md).
 
 **Прежние изображения, в том числе `hero_reference_front_back.png`, отменены D25.** Не брать из них внешность, оттенки, пропорции, голый торс, старую повязку или обувь. Новый лист содержит четыре поворота и детали, но не является игровым спрайтом. Полный контракт — [HERO_REFERENCE.md](HERO_REFERENCE.md).
 

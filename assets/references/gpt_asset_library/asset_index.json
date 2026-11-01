@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "library_root": "assets/references/gpt_asset_library",
   "source_author": "ChatGPT",
-  "notes": "D30-D31 index for ID lookup. Only verified real PNGs may be listed in asset.json files[]. H01 graphics are NOT_IMPORTED until physically checked and indexed.",
+  "notes": "D30-D31 index for ID lookup. Only verified real PNGs may be listed in asset.json files[]. H01 game export is NOT_IMPORTED: no H01_idle_down_right_000.png exists in the working tree or in origin/stage3-hero. The D25 visual master exists locally only (LOCAL_ONLY) and is deliberately not migrated.",
   "assets": [
     {
       "asset_id": "H01",
@@ -10,7 +10,9 @@
       "slug": "H01_hero",
       "manifest_path": "characters/H01_hero/asset.json",
       "presence": "NOT_IMPORTED",
-      "readiness": "NOT_GAME_READY"
+      "readiness": "NOT_GAME_READY",
+      "master_presence": "LOCAL_ONLY",
+      "game_export_present": false
     }
   ]
 }
