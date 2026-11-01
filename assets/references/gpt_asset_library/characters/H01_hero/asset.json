@@ -35,5 +35,6 @@
   "world_footprint_tiles": null,
   "canvas_px": null,
   "pivot_px": null,
-  "updated_at": "2026-11-01"
+  "updated_at": "2026-11-01",
+  "source_author": "ChatGPT"
 }
