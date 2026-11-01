@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "library_root": "assets/references/gpt_asset_library",
   "source_author": "ChatGPT",
-  "notes": "Index is for lookup only; presence and approval must be verified. No PNGs imported as part of D30.",
+  "notes": "D30-D31 index for ID lookup. Only verified real PNGs may be listed in asset.json files[]. H01 graphics are NOT_IMPORTED until physically checked and indexed.",
   "assets": [
     {
       "asset_id": "H01",
