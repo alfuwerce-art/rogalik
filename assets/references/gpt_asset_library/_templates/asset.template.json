@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "EXAMPLE_ONLY",
+  "category": "characters",
+  "display_name": "EXAMPLE_ONLY",
+  "profile_id": null,
+  "master": {
+    "external_master_path": null,
+    "internal_master_path": null,
+    "sha256": null,
+    "presence": "NOT_VERIFIED",
+    "visual_status": "NOT_VERIFIED"
+  },
+  "files": [],
+  "animations": {},
+  "status": {
+    "presence": "NOT_IMPORTED",
+    "technical_export": "NOT_VERIFIED",
+    "godot": "GODOT_NOT_TESTED",
+    "art_approval": "NOT_VERIFIED",
+    "github": "NOT_VERIFIED"
+  },
+  "godot_resource_path": null,
+  "world_footprint_tiles": null,
+  "canvas_px": null,
+  "pivot_px": null,
+  "updated_at": null
+}
