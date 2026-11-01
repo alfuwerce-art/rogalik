@@ -77,3 +77,7 @@ ChatGPT создаёт файлы и сопровождает их ID/назна
 ## D29 — восемь направлений, первое изображение как технический эксперимент
 
 8 ID: `down, down_right, right, up_right, up, up_left, left, down_left`. Сначала **один** `H01_idle_down_right_000.png` (SE) под `ROGALIK_HD4X_PILOT`, видимая высота H01=192 native px, RGBA без фона, top-down перспектива, отдельный файл + QA + измеренный pivot. **После** проверки владельцем, только по следующей отдельной команде, произвести оставшиеся семь направлений с сохранением единого холста/pivot/палитры/масштаба, master и PNG на каждый вид. У персонажа со спины не выводить фронтальные черты. Это обновление D16 только по 8 направлениям; тестовый размер HD4X всё ещё не финальный. Полную анимацию не делать до D22.
+
+## D30 — куда ChatGPT кладёт реальные кадры
+
+Для нового H01 и любой графики GPT использовать `assets/references/gpt_asset_library/` по [README](../assets/references/gpt_asset_library/README.md), [корневому индексу](../assets/references/gpt_asset_library/asset_index.json) и `asset.json` каждого ID. Пример будущего кадра: `characters/H01_hero/frames/idle/down_right/H01_idle_down_right_000.png`. Источник GPT хранить отдельно в `sources/`, утверждённый мастер в `master/` либо неизменный старый внешний путь с SHA, игровые PNG в `frames/`; DeepSeek публикует производную Godot-копию отдельно в `game/prototype/art/`. Не записывать несуществующий файл в манифест как имеющийся; отсутствие PNG = `NOT_IMPORTED`. D28/D29 профиль и D22-гейт сохраняются.
