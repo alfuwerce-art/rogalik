@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D26: validate structural readiness of generated Rogalik PNG game assets.
+"""D26/D27: validate structural readiness of generated Rogalik PNG game assets.
 
 This does not validate artistic quality, seamlessness, or actual Godot rendering.
 """
@@ -8,11 +8,13 @@ import hashlib
 import json
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 
 def validate(paths, kind, figure_height, pivot, tile_size):
     errors, records, canvas = [], [], None
+    if kind in ("sprite", "animation") and figure_height is None:
+        errors.append("Missing --figure-height: sprite scale cannot be validated")
     if kind in ("sprite", "animation", "object", "vfx") and pivot is None:
         errors.append("Missing --pivot X Y: origin must be recorded, not guessed")
     for path in paths:
@@ -36,10 +38,18 @@ def validate(paths, kind, figure_height, pivot, tile_size):
         if im.mode != "RGBA":
             errors.append(f"{path}: expected RGBA, got {im.mode}")
         alpha = im.convert("RGBA").getchannel("A")
-        bbox = alpha.getbbox()
-        rec["alpha_bbox"] = list(bbox) if bbox else None
+        raw_bbox = alpha.getbbox()
+        # Alpha >= 16 suppresses near-invisible specks from image generators.
+        # Both raw and robust bboxes are reported: never silently crop away artefacts.
+        strong = alpha.point(lambda v: 255 if v >= 16 else 0)
+        bbox = strong.getbbox()
+        rec["raw_alpha_bbox"] = list(raw_bbox) if raw_bbox else None
+        rec["alpha_bbox_threshold16"] = list(bbox) if bbox else None
+        hist = alpha.histogram()
+        visible = sum(hist[16:])
+        rec["fully_opaque_fraction_core"] = round(hist[255] / visible, 5) if visible else None
         if bbox is None:
-            errors.append(f"{path}: image is empty/fully transparent")
+            errors.append(f"{path}: no visible opaque body (alpha >= 16)")
         else:
             rec["figure_height_px"] = bbox[3] - bbox[1]
             if figure_height is not None and rec["figure_height_px"] != figure_height:
@@ -47,6 +57,20 @@ def validate(paths, kind, figure_height, pivot, tile_size):
             if kind in ("sprite", "animation", "object", "vfx"):
                 if bbox[0] == 0 or bbox[1] == 0 or bbox[2] == w or bbox[3] == h:
                     errors.append(f"{path}: painted pixels touch the canvas border")
+            if kind in ("sprite", "animation"):
+                # Pixel-art character bodies are opaque; soften only intentionally for VFX.
+                if rec["fully_opaque_fraction_core"] < 0.95:
+                    errors.append(f"{path}: only {rec['fully_opaque_fraction_core']:.1%} of core pixels fully opaque; transparency halo/body suspected")
+                outside = alpha.copy()
+                ImageDraw.Draw(outside).rectangle(
+                    (bbox[0], bbox[1], bbox[2] - 1, bbox[3] - 1), fill=0
+                )
+                specks = sum(1 for v in outside.getdata() if v > 0)
+                rec["low_alpha_specks_outside_body"] = specks
+                if specks:
+                    errors.append(f"{path}: {specks} stray alpha pixels outside visible body; raw bbox is unreliable")
+                if pivot is not None and abs(pivot[1] - (bbox[3] - 1)) > 3:
+                    errors.append(f"{path}: pivot y must be within 3px of sole/ground for standing character; verify visually")
         if kind in ("sprite", "animation", "object", "vfx"):
             corners = [alpha.getpixel(pt) for pt in
                        [(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)]]
@@ -68,7 +92,14 @@ def validate(paths, kind, figure_height, pivot, tile_size):
         "target_figure_height": figure_height, "tile_size": tile_size,
         "assets": records, "errors": errors, "art_status": "ART_REVIEW_PENDING",
         "godot_status": "GODOT_NOT_TESTED",
-        "limits": "Does not prove artistic quality, pixel readability, tile seams, pose consistency or Godot integration."
+        "visual_review_required": [
+            "pixel-level readability at 48px in-game",
+            "three-quarter top-down view, not eye-level frontal",
+            "fidelity to actual approved master image",
+            "no baked floor shadow or background",
+            "consistent silhouette and pixel grid, no interpolation blur"
+        ],
+        "limits": "Structural QA only. Does not prove artistic quality, pixel-level readability, camera view, seamlessness, animation consistency or Godot integration."
     }
 
 
