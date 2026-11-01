@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D26/D27: validate structural readiness of generated Rogalik PNG game assets.
+"""D26/D27/D28: validate structural readiness of generated Rogalik PNG game assets.
 
 This does not validate artistic quality, seamlessness, or actual Godot rendering.
 """
@@ -110,10 +110,43 @@ def main():
                    required=True)
     p.add_argument("--figure-height", type=int)
     p.add_argument("--pivot", type=int, nargs=2, metavar=("X", "Y"))
-    p.add_argument("--tile-size", type=int, default=24)
+    p.add_argument("--tile-size", type=int, default=None)
+    p.add_argument("--profile", type=Path, help="Machine-readable art profile JSON. HD4X source sizes differ from D16 world units.")
+    p.add_argument("--asset-id", help="Asset ID: use H01 for the hero. This locks target height for selected profile.")
     p.add_argument("--json-out", type=Path)
     args = p.parse_args()
-    result = validate(args.png, args.kind, args.figure_height, args.pivot, args.tile_size)
+    profile = None
+    expected_height = args.figure_height
+    expected_tile_size = args.tile_size or 24
+    conflict = []
+    if args.profile is not None:
+        try:
+            profile = json.loads(args.profile.read_text(encoding="utf-8"))
+            expected_tile = int(profile["source_art_pixels"]["tile"][0])
+            if profile["source_art_pixels"]["tile"] != [expected_tile, expected_tile]:
+                conflict.append("Profile tile must be square for current tile QA")
+            if args.tile_size is not None and args.tile_size != expected_tile:
+                conflict.append(f"--tile-size {args.tile_size} differs from profile {expected_tile}")
+            expected_tile_size = expected_tile
+            if args.asset_id == "H01":
+                expected_hero = int(profile["source_art_pixels"]["hero_visible_height"])
+                if args.figure_height is not None and args.figure_height != expected_hero:
+                    conflict.append(f"--figure-height {args.figure_height} differs from H01 profile {expected_hero}")
+                expected_height = expected_hero
+            if profile.get("status") == "PILOT_NOT_FINAL":
+                # Pass refers to the PNG's technical checks only, never production profile approval.
+                pass
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            conflict.append(f"Cannot parse art profile: {exc}")
+    result = validate(args.png, args.kind, expected_height, args.pivot, expected_tile_size)
+    if conflict:
+        result["errors"].extend(conflict)
+        result["qa_status"] = "NOT_GAME_READY"
+    if profile is not None:
+        result["profile_id"] = profile.get("profile_id")
+        result["profile_status"] = profile.get("status")
+        result["pixel_density"] = profile.get("pixel_density")
+    result["asset_id"] = args.asset_id
     output = json.dumps(result, ensure_ascii=False, indent=2)
     print(output)
     if args.json_out:
