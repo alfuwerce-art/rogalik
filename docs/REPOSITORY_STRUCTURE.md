@@ -36,7 +36,12 @@ rogalik/
 │   ├── VISUAL_REFERENCES.md              # ARCHIVED
 │   └── tasks/                   # задания и рубежи
 ├── assets/
-│   ├── references/              # ИСХОДНЫЕ концепт-арты, не игровые ассеты
+│   ├── references/              # старые источники + новая структурированная библиотека ChatGPT
+│   │   ├── gpt_asset_library/    # D30: источники GPT + проверенные GAME_EXPORT по ID
+│   │   │   ├── README.md         # обязательный стандарт хранения и поиска
+│   │   │   ├── asset_index.json  # машинный каталог ID -> asset.json
+│   │   │   ├── _templates/       # шаблон манифеста; не настоящий арт
+│   │   │   └── characters/H01_hero/asset.json  # NOT_IMPORTED, без PNG
 │   │   ├── bosses/
 │   │   ├── enemies/
 │   │   │   ├── fallen_warriors/
@@ -65,7 +70,13 @@ rogalik/
         └── art/                 # sprites/, demo-tool/ — PROXY_TECHNICAL
 ```
 
-В Git папки без файлов не сохраняются. **Движок один — Godot** (D1); Unity/Unreal в проекте не используются. 2D-ассеты (спрайты, тайлсеты, атласы, анимации) живут в `assets/references/` (оригиналы) и `game/prototype/art/` (игровые заготовки); оригиналы никогда не смешиваются с игровыми файлами.
+В Git папки без файлов не сохраняются. **D30:** новая папка [`assets/references/gpt_asset_library/`](../assets/references/gpt_asset_library/README.md) содержит исходники GPT и подготовленные GAME_EXPORT, разложенные по постоянным ID; это **оговорённое исключение** к старой схеме «все `references/` — только концепты». Интегрированные игровые ресурсы по-прежнему отдельно в Godot `game/prototype/art/`, старые источники и канонические пути не меняются автоматически. Каталог и карточки — не доказательство наличия бинарных изображений. **Движок один — Godot** (D1); Unity/Unreal в проекте не используются. 2D-ассеты (спрайты, тайлсеты, атласы, анимации) живут в `assets/references/` (оригиналы) и `game/prototype/art/` (игровые заготовки); оригиналы никогда не смешиваются с игровыми файлами.
+
+## 1.1. D30 — единая библиотека ChatGPT
+
+**Путь Windows:** `C:\Users\bow\Desktop\Rogalik\assets\references\gpt_asset_library`.
+
+Категории: `characters`, `enemies`, `bosses`, `weapons`, `props`, `environment`, `tilesets`, `textures`, `vfx`, `ui`. Полное дерево, роли `master/sources/frames/atlases`, формат `<ID>_<animation>_<direction>_<NNN>.png`, правила ID и `asset_index.json` → `asset.json` определены в [README библиотеки](../assets/references/gpt_asset_library/README.md). Прежние референсы (`hero/`, `bosses/`, `weapons/` и т. п.) не перемещать до отдельной миграции. Новые GAME_EXPORT не подменяют утверждённые мастера, их Godot-копии располагаются отдельно. Первый H01 представлен карточкой со статусом `NOT_IMPORTED` — сам PNG не публиковался.
 
 ## 2. Уже подготовленные оригинальные концепты для импорта
 
