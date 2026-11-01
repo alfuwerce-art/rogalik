@@ -24,5 +24,6 @@
   "world_footprint_tiles": null,
   "canvas_px": null,
   "pivot_px": null,
-  "updated_at": null
+  "updated_at": null,
+  "source_author": "ChatGPT"
 }
