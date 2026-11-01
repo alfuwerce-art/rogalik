@@ -128,4 +128,6 @@ atlases/
 
 ## 11. Публикация
 
-Коммит и `push` — в рабочую ветку `stage3-hero`; фактический удалённый SHA зафиксирован в `docs/progress/PROJECT_STATE.md` §3. `main` не затрагивался.
+Коммит **`1d3b91a766f378786ec83d48413c90cef1c58021`** опубликован в рабочую ветку `stage3-hero` (`git push origin stage3-hero`); `git ls-remote --heads origin stage3-hero` → `1d3b91a…`, 7 blob-ов сверены с локальными (`inventory_assets.py` `50372624…`, `validate_asset_library.py` `82ebf292…`, `d31_asset_inventory.json` `089c0bf1…`, `d31_library_validation.json` `71bd441c…`, `d31_asset_organization_report.md` `a1fb4d50…`, `H01_hero/asset.json` `3a1a8b2c…`, `asset_index.json` `6d3687fa…`). Удалённая ветка содержит 490 файлов. `main` не затрагивался.
+
+**Мастер D25 в коммит не входит:** `git ls-tree -r origin/stage3-hero -- assets/references/hero` → пусто. Файл остаётся `LOCAL_ONLY` до решения владельца (D31-1).

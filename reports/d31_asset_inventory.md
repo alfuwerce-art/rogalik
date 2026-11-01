@@ -2,8 +2,8 @@
 
 Сгенерировано: `tools/art/inventory_assets.py` (только чтение, ничего не перемещает).
 
-- ветка: `stage3-hero`, HEAD `e4241b5fc43344fdf998a113ce666f6c1c91b128`
-- удалённая ветка: `origin/stage3-hero` = `e4241b5fc43344fdf998a113ce666f6c1c91b128`
+- ветка: `stage3-hero`, HEAD `1d3b91a766f378786ec83d48413c90cef1c58021`
+- удалённая ветка: `origin/stage3-hero` = `1d3b91a766f378786ec83d48413c90cef1c58021`
 
 ## Сводка
 
