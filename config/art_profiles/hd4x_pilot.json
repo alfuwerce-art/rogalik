@@ -1,8 +1,8 @@
 {
   "profile_id": "ROGALIK_HD4X_PILOT",
   "status": "PILOT_NOT_FINAL",
-  "decision": "D28",
-  "profile_version": "1.0",
+  "decision": "D28_D29",
+  "profile_version": "1.1",
   "intent": "Higher native pixel detail while preserving D16 world dimensions, no automatic production switch",
   "pixel_density": 4,
   "world_units": {
@@ -19,9 +19,19 @@
       96
     ],
     "hero_visible_height": 192,
-    "orientation_count": 4,
+    "orientation_count": 8,
     "animation_frame_canvas": "must be locked for each clip and direction after first approved frame",
-    "character_base_weapon_embedded": false
+    "character_base_weapon_embedded": false,
+    "direction_ids": [
+      "down",
+      "down_right",
+      "right",
+      "up_right",
+      "up",
+      "up_left",
+      "left",
+      "down_left"
+    ]
   },
   "godot_test_only": {
     "window_px": [
@@ -59,7 +69,8 @@
     "owner_art_approval_required": true,
     "camera_projection_visual_review": true,
     "frame_pivot_lock": true,
-    "no_unverified_PASSES": true
+    "no_unverified_PASSES": true,
+    "required_direction_count": 8
   },
   "approval_gate": {
     "requires_art_and_gameplay_comparison": true,
