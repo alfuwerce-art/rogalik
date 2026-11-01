@@ -36,5 +36,7 @@
   "canvas_px": null,
   "pivot_px": null,
   "updated_at": "2026-11-01",
-  "source_author": "ChatGPT"
+  "source_author": "ChatGPT",
+  "next_expected_export_path": "characters/H01_hero/frames/idle/down_right/H01_idle_down_right_000.png",
+  "note": "D31: this is an expected path only; files[] is empty until PNG is physically present and verified; canonical D25 master remains at external path until separately migrated."
 }
