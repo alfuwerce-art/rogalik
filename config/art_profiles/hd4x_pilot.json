@@ -1,0 +1,68 @@
+{
+  "profile_id": "ROGALIK_HD4X_PILOT",
+  "status": "PILOT_NOT_FINAL",
+  "decision": "D28",
+  "profile_version": "1.0",
+  "intent": "Higher native pixel detail while preserving D16 world dimensions, no automatic production switch",
+  "pixel_density": 4,
+  "world_units": {
+    "tile": 24,
+    "hero_standing_height": 48,
+    "camera_visible_area_at_1920x1080": [
+      480,
+      270
+    ]
+  },
+  "source_art_pixels": {
+    "tile": [
+      96,
+      96
+    ],
+    "hero_visible_height": 192,
+    "orientation_count": 4,
+    "animation_frame_canvas": "must be locked for each clip and direction after first approved frame",
+    "character_base_weapon_embedded": false
+  },
+  "godot_test_only": {
+    "window_px": [
+      1920,
+      1080
+    ],
+    "render_viewport_px": [
+      1920,
+      1080
+    ],
+    "camera_zoom": 4,
+    "sprite_visual_scale": 0.25,
+    "tilemap_visual_scale": 0.25,
+    "texture_filter": "nearest",
+    "pixel_snap": "evaluate and record, no blind enabling",
+    "world_physics_units_preserved": true,
+    "hud_requires_separate_review": true
+  },
+  "game_export": {
+    "format": "PNG",
+    "mode": "RGBA",
+    "background_alpha": 0,
+    "opaque_body_alpha_min_fraction": 0.95,
+    "no_baked_floor_shadow": true,
+    "no_labels_or_concept_sheet": true,
+    "manifest_required": true,
+    "required_pivot": "measured_ground_contact_in_source_pixels",
+    "no_arbitrary_downscale": true
+  },
+  "qa": {
+    "native_source_1x": true,
+    "actual_1920x1080_godot_frame": true,
+    "full_alpha_bbox": true,
+    "visible_alpha_bbox_threshold": 16,
+    "owner_art_approval_required": true,
+    "camera_projection_visual_review": true,
+    "frame_pivot_lock": true,
+    "no_unverified_PASSES": true
+  },
+  "approval_gate": {
+    "requires_art_and_gameplay_comparison": true,
+    "final_D16_replacement_requires_separate_owner_decision": true
+  }
+}
